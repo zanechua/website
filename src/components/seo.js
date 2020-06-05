@@ -18,6 +18,8 @@ function SEO({ description, lang, meta, keywords, title }) {
 
   const metaDescription = description || site.siteMetadata.description;
 
+  const titleTemplate = (title === 'Home') ? site.siteMetadata.title : `%s | ${site.siteMetadata.title}`;
+
   return (
     <Helmet
       htmlAttributes={{
@@ -67,7 +69,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         )
         .concat(meta)}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={titleTemplate}
     />
   );
 }
