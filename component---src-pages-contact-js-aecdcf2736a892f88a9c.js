@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"Cuy+":function(t,e,n){"use strict";n.r(e);var a=n("q1tI"),c=n.n(a),l=n("Bl7J"),i=n("vrFN");e.default=function(){return c.a.createElement(l.a,null,c.a.createElement(i.a,{keywords:["gatsby","tailwind","react","tailwindcss"],title:"Contact"}),c.a.createElement("section",null))}}}]);
+//# sourceMappingURL=component---src-pages-contact-js-aecdcf2736a892f88a9c.js.map

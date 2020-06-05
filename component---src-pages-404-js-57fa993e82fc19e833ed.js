@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{w2l6:function(e,t,a){"use strict";a.r(t);var l=a("q1tI"),n=a.n(l),o=a("Bl7J"),i=a("vrFN");t.default=function(){return n.a.createElement(o.a,null,n.a.createElement(i.a,{title:"404: Not found"}),n.a.createElement("div",null,n.a.createElement("h2",{className:"bg-yellow-400 text-2xl font-bold inline-block my-8 p-3"},"Looks like this page is a ghost that got abducted by aliens...")))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-57fa993e82fc19e833ed.js.map
