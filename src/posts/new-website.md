@@ -12,3 +12,5 @@ This site is now built with Gatsby, hosted on GitHub and distributed via CloudFl
 Intending to write up a few posts about the rubbish I explore into.
 
 Also intend to document my HomeLab here.
+
+Stay tune!
