@@ -67,14 +67,12 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Fira Code`,
-            variants: [`400`, `700`]
-          }
-        ]
+          `fira code:400,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
       }
     }
   ],
