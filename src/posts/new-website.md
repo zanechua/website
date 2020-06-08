@@ -13,4 +13,4 @@ Intending to write up a few posts about the rubbish I explore into.
 
 Also intend to document my HomeLab here.
 
-Stay tune!
+Stay tuned!
