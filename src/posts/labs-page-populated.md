@@ -5,7 +5,7 @@ featuredImage: ../images/posts/featured/labs-page-populated.png
 title: "Labs Page Populated"
 ---
 
-So I finally had some time and decided to quickly populate the lab page with the equipment that I currently have in my server rack. You'll notice that Lab 2 is still empty, and it is intended to because I can't really go to that location at the moment due to all the restrictions due to COVID. But ideally it'll get populated some time soon.
+So I finally had some time and decided to quickly populate the lab page with the equipment that I currently have in my server rack. You'll notice that Lab 2 is still empty, and it will be so until I can head down to the location to record the equipment that's there. But ideally it'll get populated some time soon.
 
 The page is designed in such a way that there are a total of 42 rows due to my rack being an APC Netshelter SX 42U. On mobile, the height of the rows may get skewed a bit due to the text overflowing but on desktop you should be able to see the rows have equal heights according to the units that they take up in the server rack. The columns for the 0U mounts have also been added at the sides.
 
