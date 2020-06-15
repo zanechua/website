@@ -15,7 +15,7 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } }}) => {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[`zanechua`, `homelab`, `zane j chua`, `tech geek`]}
         title="Home"
       />
 

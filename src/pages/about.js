@@ -7,13 +7,14 @@ function AboutPage() {
   return (
     <Layout>
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[`zanechua`, `homelab`, `zane j chua`, `tech geek`]}
         title="About"
       />
 
       <section className="flex flex-col items-center md:flex-row">
         <div className="md:w-2/3 md:mr-8">
-          <p>Not sure what to put here for now, probably some short paragraph about myself or something.</p>
+          <p>Tech Geek, Home Labber, Software Engineer experienced in both web and mobile</p>
+          <p>I love tinkering with stuff, taking things apart and putting them back. </p>
         </div>
       </section>
     </Layout>

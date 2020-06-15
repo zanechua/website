@@ -8,17 +8,20 @@
     font-family: 'Fira Code', monospace;
 }
 
-body { background: white; color: black; }
+body { background: #ffffff; color: #000000; }
 
 p {
     margin-bottom: 0.7rem;
 }
 
 @media (prefers-color-scheme: light) {
-    body { background: white; color: black; }
+    body { background: #ffffff; color: #000000; }
 }
 
 @media (prefers-color-scheme: dark) {
-    body { background: black; color: white; }
-    h1, h2, h3, h4, h5, h6, a, p { color: white; }
+    body { background: #000000; color: #ffffff; }
+    h1, h2, h3, h4, h5, h6, a, p { color: #ffffff; }
+    ul li {
+        color: #ffffff;
+    }
 }

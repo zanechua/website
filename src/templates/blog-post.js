@@ -13,7 +13,7 @@ const Template = ({ data }) => {
   return (
     <Layout className="blog-post-container">
       <SEO
-        keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
+        keywords={[`zanechua`, `homelab`, `zane j chua`, `tech geek`]}
         title={frontmatter.title}
       />
 
