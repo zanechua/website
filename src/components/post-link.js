@@ -10,7 +10,7 @@ const PostLink = ({ post }) => {
 
   return (
     <Link to={post.frontmatter.slug}>
-      <div className="w-full lg:flex">
+      <div className="w-full lg:flex py-4">
         <div
           className="h-56 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
           style={{backgroundImage: `url(${featuredSrc})`, backgroundPosition: 'center center' }} title={post.frontmatter.title}>
