@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{QFMt:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),l=n.n(a),c=n("Bl7J"),i=n("vrFN");t.default=function(){return l.a.createElement(c.a,null,l.a.createElement(i.a,{keywords:["gatsby","tailwind","react","tailwindcss"],title:"Lab"}),l.a.createElement("section",null))}}}]);
-//# sourceMappingURL=component---src-pages-lab-js-02c3aeba95fbebfc6f3c.js.map
