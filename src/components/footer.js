@@ -30,7 +30,7 @@ function Footer() {
             },
           ].map((link) => (
             <a
-              className="block mt-4 font-bold no-underline md:inline-block md:mt-0 md:ml-6"
+              className="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6"
               key={link.title}
               href={link.route}
             >
