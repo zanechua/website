@@ -1,7 +1,7 @@
 ---
 slug: "/blog/labs-page-populated"
 date: "2020-06-16"
-featuredImage: ../images/posts/featured/labs-page-populated.png
+featuredImage: ../images/featured/labs-page-populated.png
 title: "Labs Page Populated"
 ---
 
