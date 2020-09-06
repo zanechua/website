@@ -47,6 +47,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-featured-images`,
+        path: `${__dirname}/src/images/featured`,
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-posts-images`,
         path: `${__dirname}/src/images/posts`,
       }
     },

@@ -1,7 +1,7 @@
 ---
 slug: "/blog/new-website"
 date: "2020-06-05"
-featuredImage: ../images/featured/new-website.png
+featuredImage: "../images/featured/new-website.png"
 title: "New website"
 ---
 
