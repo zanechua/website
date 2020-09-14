@@ -30,7 +30,7 @@ const Template = ({ data }) => {
           <Img fluid={featuredImgFluid} />
         </div>
         <div
-          className="blog-post-content"
+          className="blog-post-content markdown"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </section>
