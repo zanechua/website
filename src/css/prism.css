@@ -14,20 +14,9 @@
  * and overflow that we removed from <pre>.
  */
 .gatsby-highlight {
-    /*background-color: #fdf6e3;*/
-    border-radius: 0;
-    /*margin: 0.5em 0;*/
-    /*padding: 1em;*/
+    max-width: 90vw;
     overflow: auto;
-    /* TODO: Need to fix this */
-    max-width: 450px;
-    /*overflow-x: scroll;*/
-    /*overflow-y: scroll;*/
-    /*@apply w-full;*/
-    /*@apply max-w-3xl;*/
-    /*@apply px-2;*/
-    @apply py-4;
-    /*@apply mx-auto;*/
+    @apply py-2;
 }
 
 /**
