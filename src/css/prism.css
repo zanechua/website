@@ -19,10 +19,12 @@
     /*margin: 0.5em 0;*/
     /*padding: 1em;*/
     overflow: auto;
+    /* TODO: Need to fix this */
+    max-width: 450px;
     /*overflow-x: scroll;*/
     /*overflow-y: scroll;*/
     /*@apply w-full;*/
-    @apply max-w-3xl;
+    /*@apply max-w-3xl;*/
     /*@apply px-2;*/
     @apply py-4;
     /*@apply mx-auto;*/
@@ -37,7 +39,6 @@
  */
 .gatsby-highlight pre[class*="language-"] {
     border-radius: 0;
-    background-color: transparent;
     margin: 0;
     padding: 0;
     overflow: initial;
