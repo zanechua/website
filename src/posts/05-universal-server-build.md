@@ -64,7 +64,7 @@ I had to... crimp my own USB header cable because all the header cables that are
 ### Motherboard
 The motherboard itself runs pretty well. Except that the PCH temperature affects how the fan spins up and down. Before adding a 40mm fan on top of the PCH heatsink, the temps were hovering around 70C. Now they are closer to 55C.
 
-![Fan on PCH and NVMe](../images/posts/universal-server-build/02.jpg)
+![Fan on PCH and NVMe drive](../images/posts/universal-server-build/02.jpg)
 
 Certain fans don't play well with Supermicro's fan curve, some fans made a ton of whining noise especially at low pwm speeds and it gets really irritating to me. I think there is a study somewhere that basically we humans perceive low pitched hums to be softer than they really are. Well at least to me it does. Other fans would cause the board to spin all fans up as the fan would drop out due to the voltage.
 
