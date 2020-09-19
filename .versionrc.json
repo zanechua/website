@@ -1,5 +1,5 @@
 {
-  "header": "# Changelog\r\n",
+  "header": "# Changelog\n",
   "types": [
     {"type": "feat", "section": "Features"},
     {"type": "fix", "section": "Bug Fixes"},
