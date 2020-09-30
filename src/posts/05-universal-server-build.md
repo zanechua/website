@@ -5,7 +5,7 @@ featuredImage: "../images/featured/universal-server-build.png"
 title: "Universal Server Build"
 ---
 
-This server build has been going on for a while now... like 2 years from planning to what I consider "complete", and it's mainly because I have a list of objectives that I would've liked to achieved with this particular build. This has had me sourcing the correct parts for the server, and I've also hit some snags along the way. I'll be mentioning some issues that I've faced during this particular build.
+This server build has been going on for a while now... like 2 years from planning to what I consider "complete", and it's mainly because I have a list of objectives that I would've liked to achieved with this particular build. This has had me sourcing the correct parts for the server, and I've also hit some snags along the way. I'll be writing abouut the issues that I've faced during this particular build.
 
 List of objectives:
 * 2U Form Factor
@@ -49,15 +49,15 @@ Here's what I run on the server itself:
 * FreePBX
 
 ## Build Process
-This built was planned because at that point of time, the 4U server that I was using was really hot and honestly I didn't need that many hard drives to be running all the time. The 4U Server was an old server with dual Xeon E5-2670 v1's. So it does really produce a decent amount of heat and in my climate, it's already hot enough. I sit in the same room as my server rack does and the room itself doesn't have air conditioning. The ambient temperatures here in Singapore are 28-ish Celsius (82F for the old people) and I ain't a big fan of heat.
+This build was planned because at that point of time, the 4U server that I was using as my daily driver was really heating up the room it was in and honestly I didn't need that many hard drives to be running all the time. The 4U Server was an old server with dual Xeon E5-2670 v1's. So it does really produce a decent amount of heat and in my climate, it's already hot enough. I sit in the same room as my server rack does, and the room itself doesn't have air conditioning. The ambient temperatures here in Singapore is 28-ish Celsius (82F for the old people), and I ain't a big fan of heat.
 
 ### OS
-When I initially installed everything and decided to migrate the VMs over, I was hitting an issue where the ESXi Datastore would just randomly drop out. Turns out other people were experiencing the same issue and the summary of it was basically the NVVMe drive was getting too hot and just saying `nope` and dropping out of the OS. Only a reboot would redetect the drive and it'll eventually drop out again. Putting a heatsink and fans on the NVMe drive did resolve this issue. Haven't had it drop out since.
+After completing the build, I decided to migrate the VMs over during the first run. I ended up hitting an issue where the ESXi Datastore would just randomly drop out. Turns out other people were experiencing the same issue, and the summary of it was basically the NVVMe drive was getting too hot, just saying `nope` and dropping out of the OS. Only a reboot would re-initialize the drive and it'll eventually drop out again. Putting a heat sink with fans on the NVMe drive did resolve this issue. Haven't had it drop out since.
 
 ![NVMe heatsink](../images/posts/universal-server-build/01.jpg)
 
 ### Case
-Did I mention this case gave me everything I wanted out of the box? Of course I didn't because it didn't. There was a weird 2.5" hard drive cage in the case that I found useless so I threw it out. Never figured out a way to get the 6-32 UNC posts out of the case so I just left them in there. I barely managed to squeeze twelve 2.5" SSDs in there. 
+Did I mention this case gave me everything I wanted out of the box? Of course, I didn't because it didn't. There was a weird 2.5" hard drive cage in the case that I found useless, so I threw it out. Never figured out a way to get the 6-32 UNC posts out of the case, so I just left them in there. I barely managed to squeeze twelve 2.5" SSDs in there. 
 
 I had to... crimp my own USB header cable because all the header cables that are available in the market are so freaking stiff, including the one that came with the case.
 
@@ -66,7 +66,7 @@ The motherboard itself runs pretty well. Except that the PCH temperature affects
 
 ![Fan on PCH and NVMe drive](../images/posts/universal-server-build/02.jpg)
 
-Certain fans don't play well with Supermicro's fan curve, some fans made a ton of whining noise especially at low pwm speeds and it gets really irritating to me. I think there is a study somewhere that basically we humans perceive low pitched hums to be softer than they really are. Well at least to me it does. Other fans would cause the board to spin all fans up as the fan would drop out due to the voltage.
+Certain fans don't play well with Supermicro's fan curve, some fans made a ton of whining noise especially at low pwm speeds, and it annoys the heck out of me. I think there is a study somewhere that shows that we humans perceive low-pitched hums to be softer than they really are. Well at least to me it does. Certain fans would cause the board to kick into a `failed fan` mode which would spin up all fans connected to the board as the fan couldn't support the pwm voltage that was being supplied to it.
 
 ### CPU
 I have no problems with the ES CPU except the ES CPU does prevent you from upgrading the bios on the motherboard to anything about v2.1 if I'm not mistaken. But hey, if it works, it works. You don't really need to upgrade the bios if nothing is broken. Who needs security patches that decrease performance in a homelab environment. 🤔
@@ -75,38 +75,38 @@ I have no problems with the ES CPU except the ES CPU does prevent you from upgra
 Since the build started in late 2018, a lot changed since then and now. I unfortunately bought memory while the prices were twice the price than they are now. 😭
 
 ### PSU 
-The PSU itself works great but there was a bit of modifying I had to do to the case so that I could pull both modular units out. Just some filing for one corner of the PSU for about 10minutes.
+The PSU itself works great but there was a bit of modifying I had to do to the case so that I could pull both modular units out. Just some filing for one corner of server chassis for about 10minutes.
 
-The other thing that bothered me were the fans that were installed in the modules. They should be really good fans but they were just too noisy. They were replaced with the same Delta 40mm fans that I am using for the server itself and they are much quieter now. The connectors on the main board were using the 4-pin VGA fan connector and I didn't want to cut the normal 4-pin fan connectors off so I bought some adapters from AliExpress.
+The other thing that bothered me were the fans that were installed in the PSU  modules. They should be really good fans but they produced a high-pitched whine when running. They were replaced with the same Delta 40mm fans that I am using for the server, and I've definitely noticed that it is much quieter now. The connectors on the main board were using the 4-pin VGA fan connector, and I didn't want to cut the normal 4-pin fan connectors off, so I bought some adapters from AliExpress.
 
-Generally I don't recommend touching the PSU but in this instance I have a ton of air being pushed through them so it should be fine.
+Generally I don't recommend touching the PSU but in this instance I have a ton of air being pushed through them, so it should be fine.
 
 I am using a few molex to sata power extensions for the SSDs as there weren't enough, just remember to not use the molded sata ones.
 
 ### Network
-Initially, an Mellanox ConnectX-2 10Gb network card was added into the server and used as the WAN port. However, I did recent upgrades to the switches in my lab and WAN is still limited to 1Gbps but LAN is being backed by 40Gbps now. 
+For the first build, I used a Mellanox ConnectX-2 10Gb network card, and it served as the WAN port. However, I did recent upgrades to the switches in my lab and while WAN is still limited to 1Gbps, LAN is supported with a 40Gbps backbone now. 
 
 ![Mellanox ConnectX-3 + QSFP+ transceiver](../images/posts/universal-server-build/03.jpg)
 
-We still need to use a SFP+ adapter and thankyfully Mellanox makes the MAM1Q00A-QSA-SP QSFP+ to SFP+ adapters that allow you to use your SFP+ adapters in QSFP+ slots. 
+There was still a need to use a QSFP+ to SFP+ adapter, and thankfully Mellanox makes the MAM1Q00A-QSA-SP QSFP+ to SFP+ adapters that allow you to use your SFP+ adapters in QSFP+ slots. 
 
 ![Mellanox QSFP+ to SFP+ adapter](../images/posts/universal-server-build/04.jpg)
 
 ### Fans
-The build itself went pretty well and I think the most challenging part of this build was finding the correct set of fans. The build came with holes for 2 x 80mm fans at the rear but I think that wasn't enough. I bought a hole drill and drilled a 60mm hole to add a 60mm fan. After taking some measurements for the front, I determined that I could fit four 40mm fans.
+The build itself went pretty well, and I think the most challenging part of this build was finding the correct set of fans. The build came with holes for 2 x 80mm fans in the rear, but I think that wasn't enough. I bought a hole drill and drilled a 60mm hole to add a 60mm fan. After taking some measurements for the front, I determined that I could fit four 40mm fans.
 
-The motherboard didn't play well at all with the 60mm fan as mentioned above, and I had to go through quite a number of them (I'll post my fan "collection" at the end of this section). Eventually I manage to find the curent San Ace fan that fits right into my expectations. I had to crimp the fan myself as it didn't come with the connector.
+The motherboard didn't play well at all with the 60mm fan as mentioned above, and I had to go through quite a number of them (I'll post my fan "collection" at the end of this section). Eventually I manage to find the current San Ace fan that fits right into my expectations. I had to crimp the fan myself as it didn't come with the connector.
 
-Initially I had configured the fans to exhaust heat out the front as that was the way the cpu cooler was recommended to be installed. Except that my case is front IO.. and that would mean that the heat would be coming out from the front while the rest of my server appliances would be drawing cool air from the front. Took me awhile to realise this but I switched from front exhaust to rear exhaust. Temps improved by 10C with just this change.
+I had configured the fans to exhaust heat out the front as that was the way the cpu cooler was recommended to be installed. Except that my case has front IO... and that would mean that the heat would be coming out from the front while the rest of my servers would be drawing cool air from the front and expelling heat out the back. Took me awhile to realise this but I switched from front exhaust to rear exhaust. Temps improved by 10C with just this change.
 
-The fans were all mounted with anti-vibration mounts and it was a pain trying to find thin anti-vibration mounts for the 40mm fans as they were so thick and the mounting holes were not the open air variant. Eventually I did find some but even then, the mounts would break after a while. Possibly due to the stress and just the low quality of them. I switched to using long 35mm screws + washers + nuts and that's definitely not going to "break".
+The fans were all mounted with anti-vibration mounts, and it was a pain trying to find thin anti-vibration mounts for the 40mm fans as they were so thick with mounting holes that were not the through hole variant. Eventually I did find some but even then, the mounts would break after a while. Possibly due to the stress and just the low quality of them. I switched to using long 35mm screws + washers + nuts and that's definitely not going to "break".
 
 ![Fan Collection](../images/posts/universal-server-build/05.jpg)
 
 ## Summary
 For the most part, I didn't work out all the issues at once. It was more of an iterative process to figure it all out over the course of using the server. It's been pretty much running as my day-to-day for the past year or so.
 
-I definitely went over-budget with this server and don't plan to do another build like this anytime soon. The one thing I would do better is to probably try to spec out for NVMe drives the next time as NVMe drives have came down in price. That way I'll definitely be able to saturate 10Gb speeds. I will talk more about the services that I listed in another post as there's quite a ton to explain for the services themselves. Perhaps I'll also go into network setup and/or physical setup.
+I definitely went over-budget with this server and don't plan to do another build like this anytime soon. The one thing I would do better is to probably try to spec out for NVMe drives the next time as NVMe drives have recently came down in price. That way I'll definitely be able to saturate with 10Gb speeds. I will talk more about the services that I listed in another post as there's quite a ton to explain for the services themselves. Perhaps I'll also go into network setup and/or physical setup.
 
 ![Top View of the Server](../images/posts/universal-server-build/06.jpg)
 
