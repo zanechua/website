@@ -84,6 +84,14 @@ module.exports = {
         path: `${__dirname}/src/images/posts`,
       }
     },
+    'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/comments`,
+        name: 'comments',
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {

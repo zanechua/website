@@ -4,10 +4,12 @@ import { graphql } from "gatsby"
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Img from "gatsby-image"
+import CommentSection from '../components/comment-section';
+import CommentForm from '../components/comment-form';
 
 // the data prop will be injected by the GraphQL query below.
 const Template = ({ data }) => {
-  const { posts } = data // data.posts holds your post data
+  const { posts, comments } = data // data.posts holds your post data
   const { frontmatter, html } = posts;
 
   let featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid
@@ -35,6 +37,9 @@ const Template = ({ data }) => {
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </section>
+
+      {comments.edges.length > 1 && <CommentSection className="comment-section flex-1 pt-8" comments={comments} />}
+      <CommentForm className="comment-form-section flex-1 pt-8" slug={frontmatter.slug}/>
     </Layout>
   )
 };
@@ -56,16 +61,31 @@ export const pageQuery = graphql`
                 }
             }
         }
+        comments: allCommentsYaml(filter: { slug: { eq: $slug } }) {
+            edges {
+                node {
+                    id
+                    slug
+                    name
+                    date(formatString: "DD MMMM, YYYY [at] h:MM A")
+                    message
+                }
+            }
+        }
     }
 `
 
 Template.propTypes = {
   data: PropTypes.shape({
+    comments: PropTypes.shape({
+      edges: PropTypes.array
+    }),
     posts: PropTypes.shape({
       html: PropTypes.string,
       frontmatter: PropTypes.shape({
         title: PropTypes.string,
         date: PropTypes.string,
+        slug: PropTypes.string,
         featuredImage: PropTypes.shape({
           childImageSharp: PropTypes.shape({
             fluid: PropTypes.any

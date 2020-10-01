@@ -34,8 +34,23 @@ p {
     text-orientation: mixed;
 }
 
+.rainbow-button {
+    background: #ffffff;
+}
+
+.rainbow-button:hover {
+    background: linear-gradient(90deg, #b8c2cc, #e3342f, #f6993f, #ffed4a, #38c172, #4dc0b5, #3490dc, #6574cd, #9561e2, #f66d9b);
+}
+
 @media (prefers-color-scheme: light) {
     body { background: #ffffff; color: #000000; }
+    .comment-section .comment-container {
+        color: #ffffff;
+    }
+
+    .comment-form-section .comment-form-container {
+        color: #ffffff;
+    }
 }
 
 @media (prefers-color-scheme: dark) {

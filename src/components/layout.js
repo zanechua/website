@@ -9,7 +9,7 @@ function Layout(props) {
   return (
     <div className={`flex flex-col min-h-screen font-firacode ${className || ''}`}>
       <Header />
-      <main className="flex flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8">
+      <main className="flex flex-col flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8">
         {children}
       </main>
       <Footer />
