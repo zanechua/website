@@ -48,8 +48,11 @@ export const pageQuery = graphql`
                 node {
                     id
                     excerpt(pruneLength: 250)
+                    fields {
+                        urlPath
+                    }
                     frontmatter {
-                        date(formatString: "MMMM DD, YYYY")
+                        date(formatString: "DD MMMM, YYYY")
                         slug
                         title
                         featuredImage {

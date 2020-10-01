@@ -1,5 +1,5 @@
 ---
-slug: "/blog/universal-server-build"
+slug: "universal-server-build"
 date: "2020-09-17"
 featuredImage: "../images/featured/universal-server-build.png"
 title: "Universal Server Build"

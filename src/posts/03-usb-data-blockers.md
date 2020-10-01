@@ -1,5 +1,5 @@
 ---
-slug: "/blog/usb-data-blockers"
+slug: "usb-data-blockers"
 date: "2020-07-04"
 featuredImage: "../images/featured/usb-data-blockers.png"
 title: "USB Data Blockers"

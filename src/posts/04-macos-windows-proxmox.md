@@ -1,5 +1,5 @@
 ---
-slug: "/blog/macos-windows-proxmox"
+slug: "macos-windows-proxmox"
 date: "2020-08-31"
 featuredImage: "../images/featured/macos-windows-proxmox.png"
 title: "MacOS and Windows running on Proxmox"

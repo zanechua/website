@@ -1,5 +1,5 @@
 ---
-slug: "/blog/new-website"
+slug: "new-website"
 date: "2020-06-05"
 featuredImage: "../images/featured/new-website.png"
 title: "New website"

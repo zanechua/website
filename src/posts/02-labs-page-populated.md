@@ -1,5 +1,5 @@
 ---
-slug: "/blog/labs-page-populated"
+slug: "labs-page-populated"
 date: "2020-06-16"
 featuredImage: "../images/featured/labs-page-populated.png"
 title: "Labs Page Populated"

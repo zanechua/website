@@ -7,8 +7,9 @@ import Img from "gatsby-image"
 
 // the data prop will be injected by the GraphQL query below.
 const Template = ({ data }) => {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark
+  const { posts } = data // data.posts holds your post data
+  const { frontmatter, html } = posts;
+
   let featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid
   return (
     <Layout className="blog-post-container">
@@ -40,10 +41,10 @@ const Template = ({ data }) => {
 
 export const pageQuery = graphql`
     query($slug: String!) {
-        markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+        posts: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
             html
             frontmatter {
-                date(formatString: "MMMM DD, YYYY")
+                date(formatString: "DD MMMM, YYYY")
                 slug
                 title
                 featuredImage {
@@ -58,10 +59,9 @@ export const pageQuery = graphql`
     }
 `
 
-
 Template.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
+    posts: PropTypes.shape({
       html: PropTypes.string,
       frontmatter: PropTypes.shape({
         title: PropTypes.string,

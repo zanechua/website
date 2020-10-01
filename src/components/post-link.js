@@ -9,7 +9,7 @@ const PostLink = ({ post }) => {
   // const imageLink = featuredSrcSet.substring(0, featuredSrcSet.indexOf(' 200w'));
 
   return (
-    <Link to={post.frontmatter.slug}>
+    <Link to={post.fields.urlPath}>
       <div className="w-full lg:flex py-4">
         <div
           className="h-56 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
@@ -35,6 +35,9 @@ const PostLink = ({ post }) => {
 PostLink.propTypes = {
   post: PropTypes.shape({
     excerpt: PropTypes.string,
+    fields: PropTypes.shape({
+      urlPath: PropTypes.string,
+    }),
     frontmatter: PropTypes.shape({
       slug: PropTypes.string,
       title: PropTypes.string,

@@ -5,12 +5,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark(
+      posts: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
         edges {
           node {
+            fields {
+              urlPath
+            }
             frontmatter {
               slug
             }
@@ -26,9 +29,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.posts.edges.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.slug,
+      path: node.fields.urlPath,
       component: blogPostTemplate,
       context: {
         // additional data can be passed via context
@@ -36,4 +39,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     })
   })
+}
+
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+  if (
+    node.internal.type === `MarkdownRemark` &&
+    node.fileAbsolutePath.includes("posts")
+  ) {
+    const slug = node.frontmatter.slug
+
+    createNodeField({
+      node,
+      name: `urlPath`,
+      value: `/blog/${slug}`, // Here we are, the path prefix
+    })
+  }
 }
