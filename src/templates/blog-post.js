@@ -12,6 +12,8 @@ const Template = ({ data }) => {
   const { posts, comments } = data // data.posts holds your post data
   const { frontmatter, html } = posts;
 
+  console.log(comments);
+
   let featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid
   return (
     <Layout className="blog-post-container">
@@ -38,7 +40,7 @@ const Template = ({ data }) => {
         />
       </section>
 
-      {comments.edges.length > 1 && <CommentSection className="comment-section flex-1 pt-8" comments={comments} />}
+      {comments.edges.length >= 1 && <CommentSection className="comment-section flex-1 pt-8" comments={comments} />}
       <CommentForm className="comment-form-section flex-1 pt-8" slug={frontmatter.slug}/>
     </Layout>
   )

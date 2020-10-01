@@ -88,8 +88,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/comments`,
         name: 'comments',
+        path: `${__dirname}/src/comments`
       },
     },
     `gatsby-plugin-sharp`,
