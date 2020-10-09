@@ -10,9 +10,7 @@ import CommentForm from '../components/comment-form';
 // the data prop will be injected by the GraphQL query below.
 const Template = ({ data }) => {
   const { posts, comments } = data // data.posts holds your post data
-  const { frontmatter, html } = posts;
-
-  console.log(comments);
+  const { frontmatter, excerpt, html } = posts;
 
   let featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid
   return (
@@ -20,6 +18,7 @@ const Template = ({ data }) => {
       <SEO
         keywords={[`zanechua`, `homelab`, `zane j chua`, `tech geek`]}
         title={frontmatter.title}
+        description={excerpt}
       />
 
       <section className="blog-post flex-1">
@@ -50,6 +49,7 @@ export const pageQuery = graphql`
     query($slug: String!) {
         posts: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
             html
+            excerpt(pruneLength: 250)
             frontmatter {
                 date(formatString: "DD MMMM, YYYY")
                 slug
@@ -84,6 +84,7 @@ Template.propTypes = {
     }),
     posts: PropTypes.shape({
       html: PropTypes.string,
+      excerpt: PropTypes.string,
       frontmatter: PropTypes.shape({
         title: PropTypes.string,
         date: PropTypes.string,
