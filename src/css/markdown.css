@@ -48,7 +48,7 @@
 }
 
 .markdown ul li {
-    @apply break-all;
+    @apply break-words;
 }
 
 /* Blockquotes */

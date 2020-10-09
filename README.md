@@ -2,14 +2,13 @@
 
 Website for zanechua.com
 
-
 # Deployment
 ```bash
-yarn run deploy
+yarn deploy
 ```
 
 # Development
 ```bash
 yarn install
-yarn run develop
+yarn develop
 ```
