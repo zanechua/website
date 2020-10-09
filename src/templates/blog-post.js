@@ -12,13 +12,14 @@ const Template = ({ data }) => {
   const { posts, comments } = data // data.posts holds your post data
   const { frontmatter, excerpt, html } = posts;
 
-  let featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid
+  const featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid
   return (
     <Layout className="blog-post-container">
       <SEO
         keywords={[`zanechua`, `homelab`, `zane j chua`, `tech geek`]}
         title={frontmatter.title}
         description={excerpt}
+        path={location.pathname}
       />
 
       <section className="blog-post flex-1">

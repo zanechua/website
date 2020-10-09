@@ -9,6 +9,7 @@ function AboutPage() {
       <SEO
         keywords={[`zanechua`, `homelab`, `zane j chua`, `tech geek`]}
         title="About"
+        path={location.pathname}
       />
 
       <section className="flex flex-1 items-center md:flex-row">

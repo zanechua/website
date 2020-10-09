@@ -8,6 +8,7 @@ module.exports = {
     title: `Zane Chua`,
     description: `Website where Zane Chua writes about his crazy shit`,
     author: `@zanejchua`,
+    siteURL: `https://zanechua.com`,
   },
   plugins: [
     {

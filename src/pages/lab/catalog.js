@@ -9,6 +9,7 @@ function LabPage() {
       <SEO
         keywords={[`zanechua`, `homelab`, `zane j chua`, `tech geek`]}
         title="Lab"
+        path={location.pathname}
       />
       <div className="flex-col">
         <section className="flex-1">

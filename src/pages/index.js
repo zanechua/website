@@ -17,6 +17,7 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } }}) => {
       <SEO
         keywords={[`zanechua`, `homelab`, `zane j chua`, `tech geek`]}
         title="Home"
+        path={location.pathname}
       />
 
       <section className="flex-1">
