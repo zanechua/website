@@ -6,13 +6,17 @@ import SEO from '../components/seo';
 import Img from "gatsby-image"
 import CommentSection from '../components/comment-section';
 import CommentForm from '../components/comment-form';
+import Helmet from 'react-helmet';
 
 // the data prop will be injected by the GraphQL query below.
 const Template = ({ data, location }) => {
-  const { posts, comments } = data // data.posts holds your post data
+  const { site, posts, comments } = data // data.posts holds your post data
   const { frontmatter, excerpt, html } = posts;
 
   const featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid
+  const imageLink = featuredImgFluid.src;
+  const { siteMetadata: { siteURL }} = site;
+
   return (
     <Layout className="blog-post-container">
       <SEO
@@ -20,6 +24,26 @@ const Template = ({ data, location }) => {
         title={frontmatter.title}
         description={excerpt}
         path={location.pathname}
+      />
+      <Helmet
+        meta={[
+          {
+            name: `image`,
+            content: `${siteURL}${imageLink}`,
+          },
+          {
+            name: `og:image`,
+            content: `${siteURL}${imageLink}`,
+          },
+          {
+            name: `og:image:alt`,
+            content: frontmatter.title,
+          },
+          {
+            name: `twitter:image`,
+            content: `${siteURL}${imageLink}`,
+          },
+        ]}
       />
 
       <section className="blog-post flex-1">
@@ -48,6 +72,11 @@ const Template = ({ data, location }) => {
 
 export const pageQuery = graphql`
     query($slug: String!) {
+        site: site {
+            siteMetadata {
+                siteURL
+            }
+        }
         posts: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
             html
             excerpt(pruneLength: 250)
@@ -79,7 +108,13 @@ export const pageQuery = graphql`
 `
 
 Template.propTypes = {
+  location: PropTypes.object,
   data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.PropTypes.shape({
+        siteURL: PropTypes.string,
+      })
+    }),
     comments: PropTypes.shape({
       edges: PropTypes.array
     }),

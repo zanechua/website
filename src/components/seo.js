@@ -33,6 +33,10 @@ function SEO({ description, lang, meta, keywords, title, path }) {
           content: metaDescription,
         },
         {
+          name: `url`,
+          content: `${siteUrl}${path}`,
+        },
+        {
           property: `og:title`,
           content: title,
         },
