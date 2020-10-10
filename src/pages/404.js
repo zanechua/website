@@ -2,8 +2,9 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import PropTypes from 'prop-types';
 
-function NotFoundPage() {
+function NotFoundPage({ location }) {
   return (
     <Layout>
       <SEO
@@ -18,5 +19,10 @@ function NotFoundPage() {
     </Layout>
   );
 }
+
+NotFoundPage.propTypes = {
+  location: PropTypes.object,
+};
+
 
 export default NotFoundPage;

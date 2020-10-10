@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 import { graphql } from "gatsby"
 
-const IndexPage = ({ data: { allMarkdownRemark: { edges } }}) => {
+const IndexPage = ({ data: { allMarkdownRemark: { edges } }, location}) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
@@ -32,6 +32,7 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } }}) => {
 }
 
 IndexPage.propTypes = {
+  location: PropTypes.object,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array

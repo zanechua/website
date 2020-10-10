@@ -2,8 +2,9 @@ import React from "react";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
+import PropTypes from 'prop-types';
 
-function LabPage() {
+function LabCatalogPage({ location }) {
   return (
     <Layout>
       <SEO
@@ -112,4 +113,9 @@ function LabPage() {
   );
 }
 
-export default LabPage;
+LabCatalogPage.propTypes = {
+  location: PropTypes.object,
+};
+
+
+export default LabCatalogPage;

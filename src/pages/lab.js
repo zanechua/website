@@ -2,9 +2,10 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import PropTypes from 'prop-types';
 import {Link} from 'gatsby';
 
-function LabPage() {
+function LabPage({ location }) {
   return (
     <Layout>
       <SEO
@@ -131,5 +132,10 @@ function LabPage() {
     </Layout>
   );
 }
+
+LabPage.propTypes = {
+  location: PropTypes.object,
+};
+
 
 export default LabPage;

@@ -2,8 +2,9 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import PropTypes from 'prop-types';
 
-function AboutPage() {
+function AboutPage({ location }) {
   return (
     <Layout>
       <SEO
@@ -21,5 +22,10 @@ function AboutPage() {
     </Layout>
   );
 }
+
+AboutPage.propTypes = {
+  location: PropTypes.object,
+};
+
 
 export default AboutPage;

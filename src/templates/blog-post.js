@@ -8,7 +8,7 @@ import CommentSection from '../components/comment-section';
 import CommentForm from '../components/comment-form';
 
 // the data prop will be injected by the GraphQL query below.
-const Template = ({ data }) => {
+const Template = ({ data, location }) => {
   const { posts, comments } = data // data.posts holds your post data
   const { frontmatter, excerpt, html } = posts;
 
