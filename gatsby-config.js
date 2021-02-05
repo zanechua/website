@@ -31,8 +31,9 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: fullConfig.theme.colors.white,
-        theme_color: fullConfig.theme.colors.teal["400"],
-        display: `minimal-ui`
+        theme_color: fullConfig.theme.colors.teal,
+        display: `minimal-ui`,
+        icon: `static/icon.png`,
       }
     },
     {
