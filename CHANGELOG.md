@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.1](https://github.com/zanechua/website/compare/v2.0.0...v2.0.1) (2021-02-16)
+
+
+### Bug Fixes
+
+* Wrong date for mini ryzen nas post ([46efed7](https://github.com/zanechua/website/commit/46efed7deb4f688fb18fd8d7e2a8b139348bdffd))
+
 ## [2.0.0](https://github.com/zanechua/website/compare/v1.1.0...v2.0.0) (2021-02-16)
 
 
