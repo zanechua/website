@@ -1,6 +1,6 @@
 ---
 slug: "mini-ryzen-nas"
-date: "2020-02-17"
+date: "2021-02-17"
 featuredImage: "../images/featured/mini-ryzen-nas.png"
 title: "Mini Ryzen NAS"
 ---
