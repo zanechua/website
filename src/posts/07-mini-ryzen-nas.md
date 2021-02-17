@@ -67,7 +67,7 @@ The last issue was with the way the drives are mounted. Not sure if that was the
 ![Drive Connector Orientation](../images/posts/mini-ryzen-nas/07.jpg)
 
 ### Motherboard
-The motherboard itself is pretty interesting. It's basically an AMD AM4 board with LGA1156 cooler mount. The backplate is glued to the board so the easiest way to mount a cooler is to thread some M4x20mm screws through them instead of risking the removal of the backplate. It has 2 x Intel  X550-AT2 10Gb LAN to boot. That's a lot of hardware to pack in such a small board. The folks over at [LevelOneTechs](https://forum.level1techs.com/t/asrock-x570d4i-2t/154306) found that the PCH and LAN chips were a little toasty and have added active cooling over the heatsinks. I have done the same with the Noctua A4x20, one of them zip tied and the other taped to the IO Plate with 3M VHB tape which you can see above in the Case section.
+The motherboard itself is pretty interesting. It's basically an AMD AM4 board with LGA1156 cooler mount. The backplate is glued to the board so the easiest way to mount a cooler is to thread some M3x20mm screws through them instead of risking the removal of the backplate. It has 2 x Intel  X550-AT2 10Gb LAN to boot. That's a lot of hardware to pack in such a small board. The folks over at [LevelOneTechs](https://forum.level1techs.com/t/asrock-x570d4i-2t/154306) found that the PCH and LAN chips were a little toasty and have added active cooling over the heatsinks. I have done the same with the Noctua A4x20, one of them zip tied and the other taped to the IO Plate with 3M VHB tape which you can see above in the Case section.
 
 ![ASRock Rack X570D4I-2T](../images/posts/mini-ryzen-nas/08.jpg)
 
