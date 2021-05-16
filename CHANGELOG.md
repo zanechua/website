@@ -1,5 +1,24 @@
 # Changelog
 
+## [3.0.0](https://github.com/zanechua/website/compare/v2.0.1...v3.0.0) (2021-05-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update dependencies
+
+### Bug Fixes
+
+* Error in mini ryzen nas post ([46662e2](https://github.com/zanechua/website/commit/46662e253a33a72cbe49e6d22d61274e0f1341a2))
+
+
+### Maintenance
+
+* New comment on macos-windows-proxmox ([d4a2011](https://github.com/zanechua/website/commit/d4a20118207a27aa731478df8feb89b6f246004e))
+
+
+* Update dependencies ([641f94a](https://github.com/zanechua/website/commit/641f94a1d4fddd89d02a16e29633b310a19ec627))
+
 ### [2.0.1](https://github.com/zanechua/website/compare/v2.0.0...v2.0.1) (2021-02-16)
 
 
