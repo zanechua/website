@@ -1,0 +1,2 @@
+(self.webpackChunkzanechua_dot_com=self.webpackChunkzanechua_dot_com||[]).push([[883],{9616:function(e,t,a){"use strict";a.r(t);var n=a(7294),l=a(967),o=a(6179);t.default=function(e){var t=e.location;return n.createElement(l.Z,null,n.createElement(o.Z,{title:"404: Not found",path:t.pathname}),n.createElement("div",null,n.createElement("h2",{className:"text-2xl font-bold inline-block my-8 p-3"},"Poowf! This page does not exist, it must have disappeared into thin air like magic ...")))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-2610701bb34b38818366.js.map
