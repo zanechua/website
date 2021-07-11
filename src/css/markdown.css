@@ -105,4 +105,12 @@
     .markdown h2 {
         @apply text-white;
     }
+
+    ol li {
+        color: #ffffff;
+    }
+
+    blockquote p {
+        color: #000000;
+    }
 }
