@@ -56,7 +56,11 @@ p {
 @media (prefers-color-scheme: dark) {
     body { background: #000000; color: #ffffff; }
     h1, h2, h3, h4, h5, h6, a, p { color: #ffffff; }
-    ul li {
+    ul li, ol li {
         color: #ffffff;
+    }
+
+    blockquote p {
+        color: #000000;
     }
 }

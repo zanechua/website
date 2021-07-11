@@ -8,7 +8,7 @@ function Footer() {
         <p className="text-white">
           <Link
             className="font-bold no-underline"
-            key={'kopirun-main'}
+            key={'zanechua-main'}
             to={'/'}
           >
             &#169; zanechua.com {new Date().getFullYear()}

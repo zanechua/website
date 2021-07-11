@@ -6,15 +6,28 @@
 }
 
 /* Headers */
-.markdown h1,
-.markdown h2 {
+.markdown h1 {
     @apply text-2xl my-6 font-bold;
 }
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
+
+.markdown h2 {
     @apply text-xl my-3 font-semibold;
+}
+
+.markdown h3 {
+    @apply text-lg my-3 font-semibold;
+}
+
+.markdown h4 {
+    @apply text-base my-3 font-semibold;
+}
+
+.markdown h5 {
+    @apply text-sm mt-3 font-semibold;
+}
+
+.markdown h6 {
+    @apply text-xs mt-3 font-semibold;
 }
 
 /* Links */

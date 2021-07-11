@@ -44,3 +44,5 @@
 .gatsby-highlight pre[class*="language-"].line-numbers .line-numbers-rows {
     margin-left: 0.3em;
 }
+
+code[class*="language-"] { white-space: pre-wrap !important; }
