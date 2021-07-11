@@ -23,7 +23,7 @@
 }
 
 .markdown h5 {
-    @apply text-sm mt-3 font-semibold;
+    @apply text-sm mt-3 mb-0 font-semibold;
 }
 
 .markdown h6 {
