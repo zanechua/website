@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from "gatsby"
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Img from "gatsby-image"
+import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image";
 import CommentSection from '../components/comment-section';
 import CommentForm from '../components/comment-form';
 import Helmet from 'react-helmet';
@@ -13,9 +13,11 @@ const Template = ({ data, location }) => {
   const { site, posts, comments } = data // data.posts holds your post data
   const { frontmatter, excerpt, html } = posts;
 
-  const featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid
-  const imageLink = featuredImgFluid.src;
+  const featuredImg = getImage(frontmatter.featuredImage);
+  const imageLink = getSrc(frontmatter.featuredImage);
   const { siteMetadata: { siteURL }} = site;
+
+  console.log(imageLink);
 
   return (
     <Layout className="blog-post-container">
@@ -56,7 +58,7 @@ const Template = ({ data, location }) => {
           </h2>
         </div>
         <div className="blog-post-featured-image pb-4">
-          <Img fluid={featuredImgFluid} />
+          <GatsbyImage image={featuredImg} alt={frontmatter.title} />
         </div>
         <div
           className="blog-post-content markdown"
@@ -86,9 +88,7 @@ export const pageQuery = graphql`
                 title
                 featuredImage {
                     childImageSharp {
-                        fluid(maxWidth: 800) {
-                            ...GatsbyImageSharpFluid
-                        }
+                        gatsbyImageData
                     }
                 }
             }
@@ -127,7 +127,7 @@ Template.propTypes = {
         slug: PropTypes.string,
         featuredImage: PropTypes.shape({
           childImageSharp: PropTypes.shape({
-            fluid: PropTypes.any
+            gatsbyImageData: PropTypes.any
           })
         })
       })

@@ -1,10 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import PropTypes from 'prop-types';
+import { getSrc } from 'gatsby-plugin-image';
 
 const PostLink = ({ post }) => {
-  const featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
-  const featuredSrc = featuredImgFluid.src;
+  const featuredSrc = getSrc(post.frontmatter.featuredImage);
   // const featuredSrcSet = featuredImgFluid.srcSet;
   // const imageLink = featuredSrcSet.substring(0, featuredSrcSet.indexOf(' 200w'));
 
@@ -44,7 +44,7 @@ PostLink.propTypes = {
       date: PropTypes.string,
       featuredImage: PropTypes.shape({
         childImageSharp: PropTypes.shape({
-          fluid: PropTypes.any
+          gatsbyImageData: PropTypes.any
         })
       })
     })

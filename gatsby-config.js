@@ -100,7 +100,19 @@ module.exports = {
         path: `${__dirname}/src/comments`
       },
     },
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `blurred`,
+          quality: 50,
+          breakpoints: [800, 1080, 1366, 1920],
+          backgroundColor: `transparent`
+        }
+      }
+    },
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
