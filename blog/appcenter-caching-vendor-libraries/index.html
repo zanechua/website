@@ -22,6 +22,7 @@
 <p>Please create a storage container in the <code class="language-text">US</code> region, I used <code class="language-text">West US 2</code> and got speeds in the excess of 2000Mb/s for both downloading and uploading the cache. You will have to configure an application id with the appropriate access rights configured to access your storage container. Please follow the docs <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-auth-aad-app" target="_blank" rel="nofollow noopener noreferrer">here</a></p>
 <p>Once you have created your storage container, you will need to define the following environment variables in AppCenter:</p>
 <ul>
+<li>AZCOPY_SPA_CLIENT_SECRET</li>
 <li>AZCOPY_APPLICATION_ID</li>
 <li>AZCOPY_TENANT_ID</li>
 <li>AZURE_STORAGE_ACCOUNT_NAME</li>
