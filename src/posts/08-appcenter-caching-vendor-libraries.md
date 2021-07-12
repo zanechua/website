@@ -36,6 +36,7 @@ Please create a storage container in the `US` region, I used `West US 2` and got
 
 Once you have created your storage container, you will need to define the following environment variables in AppCenter:
 
+* AZCOPY_SPA_CLIENT_SECRET
 * AZCOPY_APPLICATION_ID
 * AZCOPY_TENANT_ID
 * AZURE_STORAGE_ACCOUNT_NAME
