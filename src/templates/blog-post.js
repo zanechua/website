@@ -17,8 +17,6 @@ const Template = ({ data, location }) => {
   const imageLink = getSrc(frontmatter.featuredImage);
   const { siteMetadata: { siteURL }} = site;
 
-  console.log(imageLink);
-
   return (
     <Layout className="blog-post-container">
       <SEO
