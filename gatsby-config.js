@@ -6,7 +6,7 @@ const fullConfig = resolveConfig(tailwindConfig);
 module.exports = {
   siteMetadata: {
     title: `Zane Chua`,
-    description: `Website where Zane Chua writes about his crazy shit`,
+    description: `Website where Zane Chua writes about tech and more`,
     author: `@zanejchua`,
     siteURL: `https://zanechua.com`,
   },
@@ -33,8 +33,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-tailwind`,
-        short_name: `starter`,
+        name: `zanechua.com`,
+        short_name: `ZaneChua`,
         start_url: `/`,
         background_color: fullConfig.theme.colors.white,
         theme_color: fullConfig.theme.colors.teal,
