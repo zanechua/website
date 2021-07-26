@@ -3,12 +3,14 @@ const tailwindConfig = require("./tailwind.config.js");
 
 const fullConfig = resolveConfig(tailwindConfig);
 
+const siteUrl = `https://zanechua.com`;
+
 module.exports = {
   siteMetadata: {
     title: `Zane Chua`,
-    description: `Website where Zane Chua writes about tech and more`,
+    description: `Website where Zane Chua writes about tech, homelab and more`,
     author: `@zanejchua`,
-    siteURL: `https://zanechua.com`,
+    siteUrl: siteUrl,
   },
   plugins: [
     {
@@ -27,6 +29,54 @@ module.exports = {
         // Defaults to null
         defaultDataLayer: { platform: "gatsby" },
       },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+          {
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+            allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+              edges {
+                node {
+                  fields {
+                    urlPath
+                  }
+                  frontmatter {
+                    date
+                  }
+                }
+              }
+            }
+          }
+        `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({ allSitePage: { nodes: allPages }, allMarkdownRemark: { edges: allRemarkEdges } }) => {
+          const remarkEdgeMap = allRemarkEdges.reduce((acc, edge) => {
+            const { urlPath: uri } = edge.node.fields
+            acc[uri] = edge
+
+            return acc
+          }, {})
+
+          return allPages.map(page => {
+            return { ...page, ...remarkEdgeMap[page.path] }
+          })
+        },
+        serialize: (pageData) => {
+          const { path } = pageData;
+          const modifiedGmt = pageData?.node?.frontmatter?.date;
+          // Not all pages have dates
+          return {
+            url: path,
+            lastmod: modifiedGmt
+          }
+        }
+      }
     },
     `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,

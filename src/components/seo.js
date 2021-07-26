@@ -11,13 +11,13 @@ function SEO({ description, lang, meta, keywords, title, path }) {
           title
           description
           author
-          siteURL
+          siteUrl
         }
       }
     }
   `);
 
-  const siteUrl = site.siteMetadata.siteURL;
+  const siteUrl = site.siteMetadata.siteUrl;
   const metaDescription = description || site.siteMetadata.description;
 
   const titleTemplate = (title === 'Home') ? site.siteMetadata.title : `%s | ${site.siteMetadata.title}`;

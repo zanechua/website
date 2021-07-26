@@ -15,7 +15,7 @@ const Template = ({ data, location }) => {
 
   const featuredImg = getImage(frontmatter.featuredImage);
   const imageLink = getSrc(frontmatter.featuredImage);
-  const { siteMetadata: { siteURL }} = site;
+  const { siteMetadata: { siteUrl }} = site;
 
   return (
     <Layout className="blog-post-container">
@@ -29,11 +29,11 @@ const Template = ({ data, location }) => {
         meta={[
           {
             name: `image`,
-            content: `${siteURL}${imageLink}`,
+            content: `${siteUrl}${imageLink}`,
           },
           {
             name: `og:image`,
-            content: `${siteURL}${imageLink}`,
+            content: `${siteUrl}${imageLink}`,
           },
           {
             name: `og:image:alt`,
@@ -41,7 +41,7 @@ const Template = ({ data, location }) => {
           },
           {
             name: `twitter:image`,
-            content: `${siteURL}${imageLink}`,
+            content: `${siteUrl}${imageLink}`,
           },
         ]}
       />
@@ -74,7 +74,7 @@ export const pageQuery = graphql`
     query($slug: String!) {
         site: site {
             siteMetadata {
-                siteURL
+                siteUrl
             }
         }
         posts: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
@@ -110,7 +110,7 @@ Template.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.PropTypes.shape({
-        siteURL: PropTypes.string,
+        siteUrl: PropTypes.string,
       })
     }),
     comments: PropTypes.shape({

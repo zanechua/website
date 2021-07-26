@@ -37,7 +37,7 @@
 
 /* Adjust the position of the line numbers */
 .gatsby-highlight pre[class*="language-"].line-numbers {
-    padding-left: 2.4em;
+    padding-left: 2.6em;
 }
 
 /* Adjust the position of the line number row */
@@ -45,4 +45,32 @@
     margin-left: 0.3em;
 }
 
-code[class*="language-"] { white-space: pre-wrap !important; }
+/*pre[class*="language-"] { white-space: pre-wrap !important; }*/
+
+/*pre[class*="language-"].line-numbers { white-space: pre-wrap !important; }*/
+
+code[class*="language-"] {
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
+}
+
+.command-line-prompt > span:before {
+    color: #999;
+    content: " ";
+    display: block;
+    padding-right: 0.8em;
+}
+
+/* Prompt for all users */
+.command-line-prompt > span[data-user]:before {
+    content: "[" attr(data-user) "@" attr(data-host) "] $";
+}
+
+/* Prompt for root */
+.command-line-prompt > span[data-user="root"]:before {
+    content: "[" attr(data-user) "@" attr(data-host) "] #";
+}
+
+.command-line-prompt > span[data-prompt]:before {
+    content: attr(data-prompt);
+}
