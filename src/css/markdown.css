@@ -84,6 +84,15 @@
     @apply mb-6;
 }
 
+.markdown a.remark-header-anchor {
+    @apply -mb-0.5;
+}
+
+.markdown a #header-anchor-icon {
+    @apply fill-current;
+    @apply text-blue-500;
+}
+
 /* Images */
 .markdown img {
 }

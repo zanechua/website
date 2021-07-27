@@ -214,7 +214,7 @@ I think for most of us, we have the front IO on our case for easy usb access and
 
 All in all, this was a fun side project to work on and make usable. I am sure I'll still be making small improvements here and there but the gist of the information is here. I was wrecking my brains out at how to get all of this working at the start but this should serve as a good summary/build log for my future self when I revisit this topic again. If you've made it this far, thanks for reading! If you've any questions, ping me on twitter [@zanejchua][10] as I still haven't gotten comments set-up on my site.
 
-#### References:
+#### References
 * [https://gist.github.com/tavinus/08a63e7269e0f70d27b8fb86db596f0d][1]
 * [https://pve.proxmox.com/wiki/Package_Repositories#sysadmin_no_subscription_repo][2]
 * [https://www.nicksherlock.com/2020/04/installing-macos-catalina-on-proxmox-with-opencore/][3]
