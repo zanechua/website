@@ -7,7 +7,8 @@ title: "Universal Server Build"
 
 This server build has been going on for a while now... like 2 years from planning to what I consider "complete", and it's mainly because I have a list of objectives that I would've liked to achieved with this particular build. This has had me sourcing the correct parts for the server, and I've also hit some snags along the way. I'll be writing abouut the issues that I've faced during this particular build.
 
-List of objectives:
+## Objectives
+
 * 2U Form Factor
 * Front Facing IO
 * ATX PSU

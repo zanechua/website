@@ -7,7 +7,8 @@ title: "MacOS and Windows running on Proxmox"
 
 I've been working on this tiny turned big sized project on running both MacOS and Windows on a single workstation at the same time. There were a lot of challenges with this build from various usability issues to issues that I faced with my personal set-up.
 
-Here's a list of requirements that I figured out along the way:
+## Objectives
+(that I figured out along the way)
 * Single Audio Input/Output for both OSes
 * Single Video Input for both OSes
 * Convenient access to USB ports for both OSes
@@ -193,8 +194,9 @@ My Windows VM has the following specifications:
 * VID: USB HDMI Capture (1080@30)
 * OPT: Intel C602 Sata SCU
 
-As for Windows, there really isn't much to say. You'll have to install the VirtIO drivers since we want to get full network speed and as much performance as possible. The only issue I have noticed so far is when I first installed the FL 1100 card, my audio interface refused to work. Pro Tip: Don't install the Fresco Logic drivers, use the one that comes with Windows.
+As for Windows, there really isn't much to say. You'll have to install the VirtIO drivers since we want to get full network speed and as much performance as possible. The only issue I have noticed so far is when I first installed the FL 1100 card, my audio interface refused to work. 
 
+> Pro Tip: Don't install the Fresco Logic drivers, use the one that comes with Windows.
 
 ## Usage
 

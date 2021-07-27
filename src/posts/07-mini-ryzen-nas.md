@@ -7,7 +7,8 @@ title: "Mini Ryzen NAS"
 
 I had some spare 10TB drives due to a previous server build failing and not panning out. I looked at the current available pre-built solutions on the market like Synology and QNAP but was unsatisfied with the pricing especially when you factored in 10Gb connectivity. The available solutions were lacking in other areas too, such as memory; expandability as compared to something I could build and would be more modular for future potential.
 
-List of objectives:
+## Objectives
+
 * Mini ITX Form Factor
 * Not loud like rockets (My fan is louder than the server)
 
