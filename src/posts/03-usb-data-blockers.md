@@ -3,6 +3,7 @@ slug: "usb-data-blockers"
 date: "2020-07-04"
 featuredImage: "../images/featured/usb-data-blockers.png"
 title: "USB Data Blockers"
+tags: ["hardware"]
 ---
 
 I've been slowly upgrading my workstation with the relevant hardware and since this is a server board, we don't have modern things like USB3 or HDMI ports. We're left with a VGA port that's uses the onboard gpu to output. I would like to get this working in the event of debugging due to the host OS being proxmos and I have MacOS  + Windows guests.

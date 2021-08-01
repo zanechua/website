@@ -22,7 +22,7 @@ const Template = ({ data, location }) => {
   return (
     <Layout className="blog-post-container">
       <SEO
-        keywords={[`zanechua`, `homelab`, `zane j chua`, `tech geek`]}
+        keywords={[`zanechua`, `homelab`, `zane j chua`, `tech geek`].concat(tags)}
         title={frontmatter.title}
         description={excerpt}
         path={location.pathname}

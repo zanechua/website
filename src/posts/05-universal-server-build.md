@@ -3,6 +3,7 @@ slug: "universal-server-build"
 date: "2020-09-17"
 featuredImage: "../images/featured/universal-server-build.png"
 title: "Universal Server Build"
+tags: ["homelab", "hardware", "xeon"]
 ---
 
 This server build has been going on for a while now... like 2 years from planning to what I consider "complete", and it's mainly because I have a list of objectives that I would've liked to achieved with this particular build. This has had me sourcing the correct parts for the server, and I've also hit some snags along the way. I'll be writing abouut the issues that I've faced during this particular build.

@@ -3,6 +3,7 @@ slug: "appcenter-caching-vendor-libraries"
 date: "2021-07-12"
 featuredImage: "../images/featured/appcenter-caching-vendor-libraries.png"
 title: "AppCenter caching for Vendor libraries"
+tags: ["appcenter", "mobile app", "android", "ios", "azure", "react-native", "node", "dev ops"]
 ---
 
 You are using AppCenter as your CI/CD tool for your mobile app, and it's great in terms of helping you to distribute the apps to users to test and submitting the application to the Play Store/App Store.

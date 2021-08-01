@@ -3,6 +3,7 @@ slug: "mini-ryzen-nas"
 date: "2021-02-17"
 featuredImage: "../images/featured/mini-ryzen-nas.png"
 title: "Mini Ryzen NAS"
+tags: ["homelab", "hardware", "ryzen"]
 ---
 
 I had some spare 10TB drives due to a previous server build failing and not panning out. I looked at the current available pre-built solutions on the market like Synology and QNAP but was unsatisfied with the pricing especially when you factored in 10Gb connectivity. The available solutions were lacking in other areas too, such as memory; expandability as compared to something I could build and would be more modular for future potential.

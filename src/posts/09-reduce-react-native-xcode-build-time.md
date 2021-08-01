@@ -3,6 +3,7 @@ slug: "reduce-react-native-xcode-build-time"
 date: "2021-07-19"
 featuredImage: "../images/featured/reduce-react-native-xcode-build-time.png"
 title: "Reduce React Native XCode build time"
+tags: ["xcode", "mobile app", "ios", "react-native", "dev ops"]
 ---
 
 This was a tough cookie to crack for me. I've been annoyed with how the iOS builds of the [KopiRun](https://kopirun.com) app take like 45minutes to build in AppCenter and was trying to figure out a way to cache the `DerivedData` that gets compiled when you build the app.

@@ -3,6 +3,7 @@ slug: "macos-windows-proxmox"
 date: "2020-08-31"
 featuredImage: "../images/featured/macos-windows-proxmox.png"
 title: "MacOS and Windows running on Proxmox"
+tags: ["homelab", "hardware", "virtualization", "macos", "windows", "proxmox"]
 ---
 
 I've been working on this tiny turned big sized project on running both MacOS and Windows on a single workstation at the same time. There were a lot of challenges with this build from various usability issues to issues that I faced with my personal set-up.
