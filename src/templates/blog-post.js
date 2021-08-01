@@ -7,11 +7,13 @@ import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image";
 import CommentSection from '../components/comment-section';
 import CommentForm from '../components/comment-form';
 import Helmet from 'react-helmet';
+import TagLink from '../components/tag-link';
 
 // the data prop will be injected by the GraphQL query below.
 const Template = ({ data, location }) => {
   const { site, posts, comments } = data // data.posts holds your post data
   const { frontmatter, excerpt, html } = posts;
+  const tags = frontmatter.tags;
 
   const featuredImg = getImage(frontmatter.featuredImage);
   const imageLink = getSrc(frontmatter.featuredImage);
@@ -51,6 +53,11 @@ const Template = ({ data, location }) => {
           <h1 className="text-2xl font-bold">
             {frontmatter.title}
           </h1>
+          <div className="my-1">
+            {tags !== null && tags.map(tag => (
+              <TagLink key={tag} tag={tag} />
+            ))}
+          </div>
           <h2 className="text-sm font-bold">
             {frontmatter.date}
           </h2>
@@ -84,6 +91,7 @@ export const pageQuery = graphql`
                 date(formatString: "DD MMMM, YYYY")
                 slug
                 title
+                tags
                 featuredImage {
                     childImageSharp {
                         gatsbyImageData
@@ -120,9 +128,10 @@ Template.propTypes = {
       html: PropTypes.string,
       excerpt: PropTypes.string,
       frontmatter: PropTypes.shape({
-        title: PropTypes.string,
-        date: PropTypes.string,
         slug: PropTypes.string,
+        title: PropTypes.string,
+        tags: PropTypes.arrayOf(PropTypes.string),
+        date: PropTypes.string,
         featuredImage: PropTypes.shape({
           childImageSharp: PropTypes.shape({
             gatsbyImageData: PropTypes.any

@@ -21,7 +21,7 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } }, location}) => {
       />
 
       <section className="flex-1">
-        <h2 className="inline-block mb-4 text-2xl font-bold">
+        <h2 className="text-2xl font-bold">
           Posts
         </h2>
 
@@ -30,18 +30,6 @@ const IndexPage = ({ data: { allMarkdownRemark: { edges } }, location}) => {
     </Layout>
   );
 }
-
-IndexPage.propTypes = {
-  location: PropTypes.object,
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
-};
-
-
-export default IndexPage;
 
 export const pageQuery = graphql`
     query {
@@ -57,6 +45,7 @@ export const pageQuery = graphql`
                         date(formatString: "DD MMMM, YYYY")
                         slug
                         title
+                        tags
                         featuredImage {
                             childImageSharp {
                                 gatsbyImageData
@@ -68,3 +57,14 @@ export const pageQuery = graphql`
         }
     }
 `
+
+IndexPage.propTypes = {
+  location: PropTypes.object,
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array
+    })
+  })
+};
+
+export default IndexPage;

@@ -27,5 +27,4 @@ AboutPage.propTypes = {
   location: PropTypes.object,
 };
 
-
 export default AboutPage;

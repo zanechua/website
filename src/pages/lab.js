@@ -137,5 +137,4 @@ LabPage.propTypes = {
   location: PropTypes.object,
 };
 
-
 export default LabPage;

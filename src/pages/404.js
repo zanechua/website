@@ -24,5 +24,4 @@ NotFoundPage.propTypes = {
   location: PropTypes.object,
 };
 
-
 export default NotFoundPage;
