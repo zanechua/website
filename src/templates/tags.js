@@ -7,7 +7,7 @@ import PostLink from '../components/post-link';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const Tags = ({ pageContext, data }) => {
+const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const posts = edges
@@ -18,7 +18,7 @@ const Tags = ({ pageContext, data }) => {
   <Layout>
     <SEO
       keywords={[`zanechua`, `homelab`, `zane j chua`, `tech geek`]}
-      title="Home"
+      title="Tags"
       path={location.pathname}
     />
 
@@ -74,6 +74,7 @@ Tags.propTypes = {
   pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired,
   }),
+  location: PropTypes.object,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,

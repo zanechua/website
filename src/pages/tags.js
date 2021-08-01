@@ -14,6 +14,7 @@ const TagsPage = ({
                         siteMetadata: { title },
                       },
                     },
+                    location
                   }) => {
 
   return (
@@ -57,6 +58,7 @@ export const pageQuery = graphql`
 `
 
 TagsPage.propTypes = {
+  location: PropTypes.object,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       group: PropTypes.arrayOf(
