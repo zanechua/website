@@ -1,5 +1,36 @@
 # Changelog
 
+## [3.1.0](https://github.com/zanechua/website/compare/v3.0.0...v3.1.0) (2021-08-08)
+
+
+### Features
+
+* add anchor links to headers in posts ([5fec9d0](https://github.com/zanechua/website/commit/5fec9d08b3031e2b5a632c3999d25318a3ff78a7))
+* Add improve gitlab pipelines for node ([718e906](https://github.com/zanechua/website/commit/718e90658919ad2cfdd534565f18953754f02aa1))
+* Add new post about appcenter vendor caching ([1512f8d](https://github.com/zanechua/website/commit/1512f8dbb4a00e896764722b8fc013f75d1711da))
+* Add reduce react native xcode build time ([6b4cb7b](https://github.com/zanechua/website/commit/6b4cb7bccdc6ded97adfa02807c2680cba62ad5e))
+* add sitemap ([7972a6d](https://github.com/zanechua/website/commit/7972a6d5ae0e0d180c493b28775879c764adf68d))
+* Add speed up react native appcenter builds ([10a5d4a](https://github.com/zanechua/website/commit/10a5d4a4871a6e891160a741e11ec727f3c619f2))
+* External links open in new windows ([050952b](https://github.com/zanechua/website/commit/050952ba8a9adfe3cf9ea65eb91258339b1e17f4))
+* implement tags ([2e8c39c](https://github.com/zanechua/website/commit/2e8c39c8dfd08b4b8d5cfc82ab271192ac82cd6a))
+
+
+### Bug Fixes
+
+* failing builds for github deploy ([d4a60c7](https://github.com/zanechua/website/commit/d4a60c778ec2b2eb7db76c642e1f0a7d8cd54cee))
+* Margin for codeblock filename ([ebcded3](https://github.com/zanechua/website/commit/ebcded309a03e56d6c252264086be292d3c2a142))
+* Missing environment variable for azure blob storage ([e3585b8](https://github.com/zanechua/website/commit/e3585b8c002f8e091e10271e26182c559fa5b4fe))
+* production build from invalid location ([21c6def](https://github.com/zanechua/website/commit/21c6def3dcf7791d8ffa4783cef01c17261cc7cc))
+* remove useless logging ([714cfc3](https://github.com/zanechua/website/commit/714cfc3f01064099aa55d10746b6d639f8c675fb))
+* Style of unordered list ([cb4dec3](https://github.com/zanechua/website/commit/cb4dec323950886324281e915c548fccce8d9918))
+* Update to gtag plugin ([d71eec9](https://github.com/zanechua/website/commit/d71eec965e4c48580e1f1c585c9c803659418622))
+
+
+### Maintenance
+
+* Update README ([5c99cb1](https://github.com/zanechua/website/commit/5c99cb1dc400e7bcd9daee33f643cccaff803ad3))
+* Upgrade packages, fix style ([082750e](https://github.com/zanechua/website/commit/082750e886fbf2afac97b797c55b9ebf77d62dbb))
+
 ## [3.0.0](https://github.com/zanechua/website/compare/v2.0.1...v3.0.0) (2021-05-16)
 
 

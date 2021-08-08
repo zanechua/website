@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/zanechua/website"
   },
-  "version": "3.0.0",
+  "version": "3.1.0",
   "author": "Zane J. Chua <hi@zanechua.com>",
   "dependencies": {
     "axios": "^0.21.1",
