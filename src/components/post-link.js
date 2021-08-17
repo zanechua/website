@@ -27,7 +27,7 @@ const PostLink = ({ post }) => {
             </div>
           </Link>
           <div className="flex flex-row">
-            <div className="flex-1 text-sm">
+            <div className="flex pr-2 text-sm">
               <p className="text-white">{post.frontmatter.date}</p>
             </div>
             <div className="flex-1 ml-auto text-right">
