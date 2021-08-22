@@ -1,9 +1,9 @@
 ---
-slug: "fastify-apollo-graphql-upload"
-date: "2021-08-09"
-featuredImage: "../images/featured/fastify-apollo-graphql-upload.png"
-title: "Fastify with Apollo Server and GraphQL Upload"
-tags: ["graphql", "node", "fastify", "apollo server", "file upload"]
+slug: 'fastify-apollo-graphql-upload'
+date: '2021-08-09'
+featuredImage: '../images/featured/fastify-apollo-graphql-upload.png'
+title: 'Fastify with Apollo Server and GraphQL Upload'
+tags: ['graphql', 'node', 'fastify', 'apollo server', 'file upload']
 ---
 
 Working with new frameworks and relatively "obscure" ones always have the trouble of needing to figure out everything yourself.
@@ -14,7 +14,7 @@ Recently I had to implement uploads via GraphQL on ApolloServer 3 with Fastify 3
 
 Initially I was wrapping my head wrongly around how content parsers work in Fastify and I thought that I needed a plugin so I installed `fastify-multipart` to handle it. Turns out I was wrong about that and if you do install the multi-part plugin, you'll have to uninstall it.
 
-You can only have 1 content parser per `Content-Type`, by registering the plugin you won't be able configure a content-type parser to process the request into the format that `graphql-upload` needs.  
+You can only have 1 content parser per `Content-Type`, by registering the plugin you won't be able configure a content-type parser to process the request into the format that `graphql-upload` needs.
 
 # Solve
 
@@ -43,4 +43,5 @@ fastify.addHook('preValidation', async function (request, reply) {
   });
 });
 ```
+
 If you need to view a full example, you can find one in this [pull request](https://github.com/apollographql/apollo-server/issues/4975) and it'll be available in the file upload section of [apollo docs](https://www.apollographql.com/docs/apollo-server/v3/data/file-uploads/) when it's merged.

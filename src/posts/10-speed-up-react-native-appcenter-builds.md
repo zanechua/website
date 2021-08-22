@@ -1,13 +1,12 @@
 ---
-slug: "speed-up-react-native-appcenter-builds"
-date: "2021-07-26"
-featuredImage: "../images/featured/speed-up-react-native-appcenter-builds.png"
-title: "Speed Up React Native builds in AppCenter"
-tags: ["appcenter", "mobile app", "ios", "android", "react-native", "dev ops"]
+slug: 'speed-up-react-native-appcenter-builds'
+date: '2021-07-26'
+featuredImage: '../images/featured/speed-up-react-native-appcenter-builds.png'
+title: 'Speed Up React Native builds in AppCenter'
+tags: ['appcenter', 'mobile app', 'ios', 'android', 'react-native', 'dev ops']
 ---
 
 This is more of a tip to speed up your builds in AppCenter. Have you noticed that your builds are a little slow? The build machines are basically Mac Pro's but we're only getting 3 cores worth of processing power. We can validate this by running the `system_profiler SPHardwareDataType` in a script for our builds and the output should be the following
-
 
 ```bash
 system_profiler SPHardwareDataType
@@ -30,7 +29,7 @@ Hardware:
       Hardware UUID: 4203018E-580F-C1B5-9525-B745CECA79EB
 ```
 
-Did you notice something odd here? We have only 3 measely cores but we have a ton of memory. 14 GB to be exact. That got me thinking about using a ram disk to store `node_modules`, `Pods`, `.gradle`,  and other various folders that are used for outputting the build.
+Did you notice something odd here? We have only 3 measely cores but we have a ton of memory. 14 GB to be exact. That got me thinking about using a ram disk to store `node_modules`, `Pods`, `.gradle`, and other various folders that are used for outputting the build.
 
 Since AppCenter uses the Mac Pro's for both Android and iOS builds, we can use the same commands to mount a ram disk. I am going to be showing you how to do it for `node_modules` and you can apply the same logic to the rest of the folders that you want to create a ram disk for.
 
@@ -46,6 +45,7 @@ The following code snippet is placed in my `appcenter-post-clone.sh` script.
 4. Mount the ramdisk at the node_modules folder
 
 ##### **`appcenter-post-clone.sh`**
+
 ```bash
 NODE_MODULE_RAMDISK=$(hdid -nomount ram://4194304) #2GB
 newfs_hfs -v NodeModules $NODE_MODULE_RAMDISK

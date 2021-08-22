@@ -1,9 +1,9 @@
 ---
-slug: "reduce-react-native-xcode-build-time"
-date: "2021-07-19"
-featuredImage: "../images/featured/reduce-react-native-xcode-build-time.png"
-title: "Reduce React Native XCode build time"
-tags: ["xcode", "mobile app", "ios", "react-native", "dev ops"]
+slug: 'reduce-react-native-xcode-build-time'
+date: '2021-07-19'
+featuredImage: '../images/featured/reduce-react-native-xcode-build-time.png'
+title: 'Reduce React Native XCode build time'
+tags: ['xcode', 'mobile app', 'ios', 'react-native', 'dev ops']
 ---
 
 This was a tough cookie to crack for me. I've been annoyed with how the iOS builds of the [KopiRun](https://kopirun.com) app take like 45minutes to build in AppCenter and was trying to figure out a way to cache the `DerivedData` that gets compiled when you build the app.
@@ -60,6 +60,7 @@ Third party components:
 So now that you've installed `buildcache`, it's really easy to setup. We'll need to make our `clang` and `clang++` commands appear before the original commands as we need to wrap these commands with the `buildcache` command.
 
 We can do so by checking the path variable that's configured on your system.
+
 ```bash
 echo $PATH
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -103,4 +104,3 @@ That's it! You can verify the the time it takes to build by appending the `time`
 ```bash
 time xcodebuild -workspace ios/kopirun.xcworkspace -scheme kopirun -sdk iphoneos -configuration Release archive -archivePath $PWD/ios/build/kopirun.xcarchive
 ```
-

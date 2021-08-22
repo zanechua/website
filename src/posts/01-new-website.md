@@ -1,8 +1,8 @@
 ---
-slug: "new-website"
-date: "2020-06-05"
-featuredImage: "../images/featured/new-website.png"
-title: "New website"
+slug: 'new-website'
+date: '2020-06-05'
+featuredImage: '../images/featured/new-website.png'
+title: 'New website'
 ---
 
 Figured it's time I built a new site considering I never really finished the last one due to life and what not.

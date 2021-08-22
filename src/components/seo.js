@@ -1,7 +1,7 @@
-import { useStaticQuery, graphql } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
-import { Helmet } from "react-helmet";
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { graphql, useStaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
 
 function SEO({ description, lang, meta, keywords, title, path }) {
   const { site } = useStaticQuery(graphql`
@@ -20,60 +20,61 @@ function SEO({ description, lang, meta, keywords, title, path }) {
   const siteUrl = site.siteMetadata.siteUrl;
   const metaDescription = description || site.siteMetadata.description;
 
-  const titleTemplate = (title === 'Home') ? site.siteMetadata.title : `%s | ${site.siteMetadata.title}`;
+  const titleTemplate =
+    title === 'Home' ? site.siteMetadata.title : `%s | ${site.siteMetadata.title}`;
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang
       }}
       meta={[
         {
-          name: `description`,
-          content: metaDescription,
+          name: 'description',
+          content: metaDescription
         },
         {
-          name: `url`,
-          content: `${siteUrl}${path}`,
+          name: 'url',
+          content: `${siteUrl}${path}`
         },
         {
-          property: `og:title`,
-          content: title,
+          property: 'og:title',
+          content: title
         },
         {
-          property: `og:description`,
-          content: metaDescription,
+          property: 'og:description',
+          content: metaDescription
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: 'og:type',
+          content: 'website'
         },
         {
-          property: `og:url`,
-          content: `${siteUrl}${path}`,
+          property: 'og:url',
+          content: `${siteUrl}${path}`
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          name: 'twitter:card',
+          content: 'summary'
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          name: 'twitter:creator',
+          content: site.siteMetadata.author
         },
         {
-          name: `twitter:title`,
-          content: title,
+          name: 'twitter:title',
+          content: title
         },
         {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
+          name: 'twitter:description',
+          content: metaDescription
+        }
       ]
         .concat(
           keywords.length > 0
             ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
+                name: 'keywords',
+                content: keywords.join(', ')
               }
             : []
         )
@@ -85,9 +86,9 @@ function SEO({ description, lang, meta, keywords, title, path }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: 'en',
   keywords: [],
-  meta: [],
+  meta: []
 };
 
 SEO.propTypes = {
@@ -96,7 +97,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   title: PropTypes.string.isRequired,
-  path: PropTypes.string,
+  path: PropTypes.string
 };
 
 export default SEO;

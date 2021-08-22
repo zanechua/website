@@ -1,9 +1,9 @@
 ---
-slug: "labs-page-populated"
-date: "2020-06-16"
-featuredImage: "../images/featured/labs-page-populated.png"
-title: "Labs Page Populated"
-tags: ["homelab", "hardware"]
+slug: 'labs-page-populated'
+date: '2020-06-16'
+featuredImage: '../images/featured/labs-page-populated.png'
+title: 'Labs Page Populated'
+tags: ['homelab', 'hardware']
 ---
 
 So I finally had some time and decided to quickly populate the lab page with the equipment that I currently have in my server rack. You'll notice that Lab 2 is still empty, and it will be so until I can head down to the location to record the equipment that's there. But ideally it'll get populated some time soon.

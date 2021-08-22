@@ -4,9 +4,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true
   },
-  purge: [
-    './src/**/*.js',
-  ],
+  purge: ['./src/**/*.js'],
   theme: {
     extend: {
       screens: {
@@ -17,5 +15,5 @@ module.exports = {
   },
   variants: {},
   // https://github.com/tailwindcss/custom-forms
-  plugins: [require("@tailwindcss/custom-forms")],
+  plugins: [require('@tailwindcss/custom-forms')]
 };

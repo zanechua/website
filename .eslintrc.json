@@ -5,11 +5,7 @@
     "plugin:import/recommended",
     "prettier"
   ],
-  "plugins": [
-    "import",
-    "simple-import-sort",
-    "eslint-plugin-prettier"
-  ],
+  "plugins": ["import", "simple-import-sort", "eslint-plugin-prettier"],
   "parser": "@babel/eslint-parser",
   "env": {
     "browser": true,
@@ -18,8 +14,8 @@
   "ignorePatterns": ["node_modules/"],
   "settings": {
     "react": {
-       "version": "detect"
-     }
+      "version": "detect"
+    }
   },
   "rules": {
     "strict": 0,
@@ -53,11 +49,7 @@
         ]
       }
     ],
-    "quotes": [
-      "error",
-      "single",
-      { "avoidEscape": true, "allowTemplateLiterals": false }
-    ],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": false }],
     "simple-import-sort/exports": "error",
     "sort-imports": "off",
     "no-unused-vars": ["warn"],
@@ -66,8 +58,6 @@
     "no-use-before-define": "off",
     "no-unused-vars": [0],
     "global-require": [0],
-    "prettier/prettier": [
-      "error"
-    ]
+    "prettier/prettier": ["error"]
   }
 }

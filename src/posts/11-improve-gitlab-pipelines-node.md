@@ -1,9 +1,9 @@
 ---
-slug: "improve-gitlab-pipelines-node"
-date: "2021-08-02"
-featuredImage: "../images/featured/improve-gitlab-pipelines-node.png"
-title: "Improving GitLab Pipeline Speeds for NodeJS"
-tags: ["gitlab", "node", "dev ops", "ci cd"]
+slug: 'improve-gitlab-pipelines-node'
+date: '2021-08-02'
+featuredImage: '../images/featured/improve-gitlab-pipelines-node.png'
+title: 'Improving GitLab Pipeline Speeds for NodeJS'
+tags: ['gitlab', 'node', 'dev ops', 'ci cd']
 ---
 
 Running test stages for `react-native` repos or NodeJS repos can be really painful if `yarn install` is taking too long to complete. Even though GitLab suggests you to use a cache configuration to cache the vendor folder so you won't have to wait for `yarn install` to complete everytime, there seems to be an [issue](https://gitlab.com/gitlab-org/gitlab-runner/-/issues/1797) with how long the caching actually takes to complete.
@@ -39,7 +39,7 @@ cache_stage:
       - yarn.lock.sha256sum
   script:
     - yarn install --frozen-lockfile --prefer-offline --cache-folder .yarn
-    - # do whatever
+    -  # do whatever
     - |
       YARN_LOCK_SHA256_HASH=$( sha256sum yarn.lock | awk '{ print $1 }')
       echo "Current sha256 hash is $YARN_LOCK_SHA256_HASH"

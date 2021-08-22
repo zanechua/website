@@ -1,8 +1,8 @@
-import PropTypes from "prop-types";
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Header from "./header";
 import Footer from './footer';
+import Header from './header';
 import { ServiceWorkerUpdate } from './service-worker-update';
 
 function Layout(props) {
@@ -21,7 +21,7 @@ function Layout(props) {
 
 Layout.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Layout;

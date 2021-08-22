@@ -2,95 +2,95 @@
 
 /* Global */
 .markdown {
-    @apply leading-relaxed;
+  @apply leading-relaxed;
 }
 
 /* Headers */
 .markdown h1 {
-    @apply text-2xl my-6 font-bold;
+  @apply text-2xl my-6 font-bold;
 }
 
 .markdown h2 {
-    @apply text-xl my-3 font-semibold;
+  @apply text-xl my-3 font-semibold;
 }
 
 .markdown h3 {
-    @apply text-lg my-3 font-semibold;
+  @apply text-lg my-3 font-semibold;
 }
 
 .markdown h4 {
-    @apply text-base my-3 font-semibold;
+  @apply text-base my-3 font-semibold;
 }
 
 .markdown h5 {
-    @apply text-sm mt-3 mb-0 font-semibold;
+  @apply text-sm mt-3 mb-0 font-semibold;
 }
 
 .markdown h6 {
-    @apply text-xs mt-3 font-semibold;
+  @apply text-xs mt-3 font-semibold;
 }
 
 /* Links */
 .markdown a {
-    @apply text-blue-500;
+  @apply text-blue-500;
 }
 .markdown a:hover {
-    @apply underline;
+  @apply underline;
 }
 
 /* Paragraph */
 .markdown p {
-    @apply mb-4;
+  @apply mb-4;
 }
 
 /* Lists */
 .markdown ul,
 .markdown ol {
-    @apply mb-4 ml-8 text-gray-800;
+  @apply mb-4 ml-8 text-gray-800;
 }
 .markdown li > p,
 .markdown li > ul,
 .markdown li > ol {
-    @apply mb-0;
+  @apply mb-0;
 }
 .markdown ol {
-    @apply list-decimal;
+  @apply list-decimal;
 }
 .markdown ul {
-    @apply list-disc;
+  @apply list-disc;
 }
 
 .markdown ul li {
-    @apply break-words;
+  @apply break-words;
 }
 
 /* Blockquotes */
 .markdown blockquote {
-    @apply p-0 p-2 bg-gray-100 mb-4 border-l-4 border-gray-400 italic;
+  @apply p-0 p-2 bg-gray-100 mb-4 border-l-4 border-gray-400 italic;
 }
 .markdown blockquote > p {
-    @apply mb-0;
+  @apply mb-0;
 }
 
 /* Tables */
 .markdown td,
 .markdown th {
-    @apply px-2 py-1 border border-gray-400;
+  @apply px-2 py-1 border border-gray-400;
 }
 .markdown tr:nth-child(odd) {
-    @apply bg-gray-100;
+  @apply bg-gray-100;
 }
 .markdown table {
-    @apply mb-6;
+  @apply mb-6;
 }
 
 .markdown a.remark-header-anchor {
-    @apply -mb-0.5;
+  @apply -mb-0.5;
 }
 
 .markdown a #header-anchor-icon {
-    @apply fill-current;
-    @apply text-blue-500;
+  @apply fill-current;
+  @apply text-blue-500;
 }
 
 /* Images */
@@ -99,27 +99,27 @@
 
 /* Code blocks */
 .gatsby-highlight {
-    @apply mb-6;
+  @apply mb-6;
 }
 
 @media (prefers-color-scheme: light) {
-    .markdown h1,
-    .markdown h2 {
-        @apply text-black;
-    }
+  .markdown h1,
+  .markdown h2 {
+    @apply text-black;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-    .markdown h1,
-    .markdown h2 {
-        @apply text-white;
-    }
+  .markdown h1,
+  .markdown h2 {
+    @apply text-white;
+  }
 
-    ol li {
-        color: #ffffff;
-    }
+  ol li {
+    color: #ffffff;
+  }
 
-    blockquote p {
-        color: #000000;
-    }
+  blockquote p {
+    color: #000000;
+  }
 }

@@ -1,9 +1,9 @@
 ---
-slug: "appcenter-caching-vendor-libraries"
-date: "2021-07-12"
-featuredImage: "../images/featured/appcenter-caching-vendor-libraries.png"
-title: "AppCenter caching for Vendor libraries"
-tags: ["appcenter", "mobile app", "android", "ios", "azure", "react-native", "node", "dev ops"]
+slug: 'appcenter-caching-vendor-libraries'
+date: '2021-07-12'
+featuredImage: '../images/featured/appcenter-caching-vendor-libraries.png'
+title: 'AppCenter caching for Vendor libraries'
+tags: ['appcenter', 'mobile app', 'android', 'ios', 'azure', 'react-native', 'node', 'dev ops']
 ---
 
 You are using AppCenter as your CI/CD tool for your mobile app, and it's great in terms of helping you to distribute the apps to users to test and submitting the application to the Play Store/App Store.
@@ -24,7 +24,8 @@ We know that AppCenter [only uses MacOS machines](https://docs.microsoft.com/en-
 
 So knowing that the CI runs predominantly in the US, I think it's safe to say that they run in Azure too (go figure). The best way to implement caching would be to use an Azure Blob Storage container located in the US.
 
-Now we need a way to 
+Now we need a way to
+
 1. Use cache if cache is present
 2. Upload Cache if no cache is present
 3. Update cache if `yarn.lock` or `Podfile.lock` has changed
@@ -37,10 +38,10 @@ Please create a storage container in the `US` region, I used `West US 2` and got
 
 Once you have created your storage container, you will need to define the following environment variables in AppCenter:
 
-* AZCOPY_SPA_CLIENT_SECRET
-* AZCOPY_APPLICATION_ID
-* AZCOPY_TENANT_ID
-* AZURE_STORAGE_ACCOUNT_NAME
+- AZCOPY_SPA_CLIENT_SECRET
+- AZCOPY_APPLICATION_ID
+- AZCOPY_TENANT_ID
+- AZURE_STORAGE_ACCOUNT_NAME
 
 I have tested that the fastest way to archive and extract is by using `pigz`, we'll also need `azcopy` to talk to our storage blob container but `azcopy` is already included in the build machines.
 
@@ -50,6 +51,7 @@ I have tested that the fastest way to archive and extract is by using `pigz`, we
 4. Check if a `node_modules` archive exist, if it does extract the archive to the source directory
 
 ##### **`appcenter-post-clone.sh`**
+
 ```bash
 # Install Azure CLI
 # AppCenter already has azcopy
@@ -77,6 +79,7 @@ fi
 5. Upload cache only if it's bigger than 1 MB
 
 ##### **`appcenter-post-build.sh`**
+
 ```bash
 # Check the hash of yarn.lock
 if ! shasum -a 256 -c yarn.lock.sha256sum; then
@@ -104,4 +107,4 @@ fi
 
 So now you know how to cache `node_modules` in AppCenter. I have seen `yarn install` go up to 5 minutes in AppCenter, compared to only about 5 to 7 seconds when you use the cache. It also takes only about 15-30seconds in total for the cache to extract/archive. So all in all, it's still faster than doing a `yarn install` each time.
 
-Don't forget that you can do this for your other vendor folders too. 
+Don't forget that you can do this for your other vendor folders too.

@@ -1,15 +1,15 @@
-import React from "react";
-
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import React from 'react';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import {Link} from 'gatsby';
+
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 function LabPage({ location }) {
   return (
     <Layout>
       <SEO
-        keywords={[`zanechua`, `homelab`, `zane j chua`, `tech geek`]}
+        keywords={['zanechua', 'homelab', 'zane j chua', 'tech geek']}
         title="Lab"
         path={location.pathname}
       />
@@ -21,37 +21,99 @@ function LabPage({ location }) {
               <span>0U - APC AP8959EU3</span>
             </div>
             <ul className="flex-1 text-center">
-              <li className="border-l-4 border-r-4 border-t-4 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Network Cable Management</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Brocade ICX7450-48P-STK-E</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Network Cable Management</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Linkway 24-Port Patch Panel</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Ruckus ZoneDirector 1200</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Network Cable Management</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Modem Chassis</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">2U - Xeon 8160 Server</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">2U - 3-Pin Type G (UK) PDU</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">2U - Slide-Out Tray</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Belkin F1DC100P 15&#34; LCD Console</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Aten CS-1758 KVM Switch</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">2U - APC 7922 PDU</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Tray</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Supermicro SYS-6018R-MT</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">2U - APC SUA3000RMI2U</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-3">3U - Supermicro SC836</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-4">4U - Supermicro SC846</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-4 border-dashed dark:border-white light:border-black p-2">2U - APC SUA3000RMI2U</li>
+              <li className="border-l-4 border-r-4 border-t-4 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Network Cable Management
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Brocade ICX7450-48P-STK-E
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Network Cable Management
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Linkway 24-Port Patch Panel
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Ruckus ZoneDirector 1200
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Network Cable Management
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Modem Chassis
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">
+                2U - Xeon 8160 Server
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">
+                2U - 3-Pin Type G (UK) PDU
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">
+                2U - Slide-Out Tray
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Belkin F1DC100P 15&#34; LCD Console
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Aten CS-1758 KVM Switch
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">
+                2U - APC 7922 PDU
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Tray
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Supermicro SYS-6018R-MT
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">
+                2U - APC SUA3000RMI2U
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-3">
+                3U - Supermicro SC836
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-4">
+                4U - Supermicro SC846
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-4 border-dashed dark:border-white light:border-black p-2">
+                2U - APC SUA3000RMI2U
+              </li>
             </ul>
             <div className="border-l-0 border-r-4 border-t-4 border-b-4 border-dashed dark:border-white light:border-black p-1 text-vertical text-center">
               <span>0U - APC AP8653</span>
@@ -65,37 +127,99 @@ function LabPage({ location }) {
               <span>0U - APC AP8653</span>
             </div>
             <ul className="flex-1 text-center">
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Network Cable Management</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Brocade ICX7450-48P-STK-E</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-0.5">0.5U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Modem Chassis</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-0.5">0.5U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank Panel</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">2U - Blank Panel</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank Panel</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank Panel</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank Panel</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank Panel</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank Panel</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">2U - Blank Panel</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank Panel</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">2U - Blank Panel</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Dell KVM Console</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-4">4U - Epyc 7502 Server</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">1U - Blank/Empty</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-4">4U - APC SMX2200HV</li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-4 border-dashed dark:border-white light:border-black p-4">4U - APC SMX120BP</li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Network Cable Management
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Brocade ICX7450-48P-STK-E
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-0.5">
+                0.5U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Modem Chassis
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-0.5">
+                0.5U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank Panel
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">
+                2U - Blank Panel
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank Panel
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank Panel
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank Panel
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank Panel
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank Panel
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">
+                2U - Blank Panel
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank Panel
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">
+                2U - Blank Panel
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Dell KVM Console
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-4">
+                4U - Epyc 7502 Server
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-4">
+                4U - APC SMX2200HV
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-4 border-dashed dark:border-white light:border-black p-4">
+                4U - APC SMX120BP
+              </li>
             </ul>
             <div className="border-l-0 border-r-4 border-t-4 border-b-4 border-dashed dark:border-white light:border-black p-1 text-vertical text-center">
               <span>0U - APC AP8653</span>
@@ -109,8 +233,7 @@ function LabPage({ location }) {
               <Link
                 className="block mt-4 no-underline md:inline-block md:mt-0 md:ml-6"
                 key="catalog"
-                to="/lab/catalog"
-              >
+                to="/lab/catalog">
                 Catalog
               </Link>
             </li>
@@ -122,7 +245,7 @@ function LabPage({ location }) {
 }
 
 LabPage.propTypes = {
-  location: PropTypes.object,
+  location: PropTypes.object
 };
 
 export default LabPage;

@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 const CatLoader = () => {
   return (
@@ -54,8 +54,7 @@ const CatLoader = () => {
               <div></div>
             </div>
           </div>
-          <div className="wrapper body">
-          </div>
+          <div className="wrapper body"></div>
           <div className="wrapper inner-leg">
             <div className="cat-leg">
               <div></div>
@@ -69,10 +68,9 @@ const CatLoader = () => {
         </div>
       </div>
     </div>
-  )
-}
-
-CatLoader.propTypes = {
+  );
 };
 
-export default CatLoader
+CatLoader.propTypes = {};
+
+export default CatLoader;

@@ -1,9 +1,9 @@
 ---
-slug: "javascript-method-chaining"
-date: "2021-08-16"
-featuredImage: "../images/featured/javascript-method-chaining.png"
-title: "Another way to do Javascript Method Chaining"
-tags: ["node", "javascript", "software engineering"]
+slug: 'javascript-method-chaining'
+date: '2021-08-16'
+featuredImage: '../images/featured/javascript-method-chaining.png'
+title: 'Another way to do Javascript Method Chaining'
+tags: ['node', 'javascript', 'software engineering']
 ---
 
 Most ways of how people demonstrate javascript method chaining, is by showing you a class with methods that return the object in itself `this`.
@@ -21,10 +21,11 @@ This way, it's easy to chain and make it really readable in the code for other e
 Below is a sample of a `GateKeeper` class that manages roles and permissions.
 
 ##### **`GateKeeper.js`**
+
 ```javascript
 class GateKeeper {
-  static allow (role) {
-    const to = async (ability) => {
+  static allow(role) {
+    const to = async ability => {
       // Insert Permission Object into database
     };
     return {
@@ -32,8 +33,8 @@ class GateKeeper {
     };
   }
 
-  static assign (role) {
-    const to = async (user) => {
+  static assign(role) {
+    const to = async user => {
       // Insert Record into database for which role is assigned to a user
     };
     return {
@@ -41,8 +42,8 @@ class GateKeeper {
     };
   }
 
-  static role () {
-    const create = async (roleData) => {
+  static role() {
+    const create = async roleData => {
       // Insert Record into database to create a role
     };
     return {
@@ -55,6 +56,7 @@ export default GateKeeper;
 ```
 
 ### Usage
+
 ```javascript
 const role = await GateKeeper.role().create(role);
 const permission = await GateKeeper.allow(role).to(ability);

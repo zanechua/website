@@ -1,14 +1,14 @@
-import React from "react";
-
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import React from 'react';
 import PropTypes from 'prop-types';
+
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 function AboutPage({ location }) {
   return (
     <Layout>
       <SEO
-        keywords={[`zanechua`, `homelab`, `zane j chua`, `tech geek`]}
+        keywords={['zanechua', 'homelab', 'zane j chua', 'tech geek']}
         title="About"
         path={location.pathname}
       />
@@ -24,7 +24,7 @@ function AboutPage({ location }) {
 }
 
 AboutPage.propTypes = {
-  location: PropTypes.object,
+  location: PropTypes.object
 };
 
 export default AboutPage;

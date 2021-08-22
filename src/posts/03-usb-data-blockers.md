@@ -1,12 +1,12 @@
 ---
-slug: "usb-data-blockers"
-date: "2020-07-04"
-featuredImage: "../images/featured/usb-data-blockers.png"
-title: "USB Data Blockers"
-tags: ["hardware"]
+slug: 'usb-data-blockers'
+date: '2020-07-04'
+featuredImage: '../images/featured/usb-data-blockers.png'
+title: 'USB Data Blockers'
+tags: ['hardware']
 ---
 
-I've been slowly upgrading my workstation with the relevant hardware and since this is a server board, we don't have modern things like USB3 or HDMI ports. We're left with a VGA port that's uses the onboard gpu to output. I would like to get this working in the event of debugging due to the host OS being proxmos and I have MacOS  + Windows guests.
+I've been slowly upgrading my workstation with the relevant hardware and since this is a server board, we don't have modern things like USB3 or HDMI ports. We're left with a VGA port that's uses the onboard gpu to output. I would like to get this working in the event of debugging due to the host OS being proxmos and I have MacOS + Windows guests.
 
 I got the UGreen VGA to HDMI adapter (SKU 40213), this is a pretty nice adapter that has a USB interface for Power + Audio. The adapter will not work if you do not supply power via the USB cable. However when you do plug in the USB cable, it comes with an audio device output.
 
@@ -14,7 +14,7 @@ I connect/disconnect USB devices a lot and sometimes this makes Windows change t
 
 Connecting the data blocker dongle with my device to the motherboard works fine. However when I connected it to my Dell U2715H monitor, the USB hub would reset. The data blocker dongle doesn't play nice with the monitor's USB hub so I decided to take one apart to find out why. In hindsight... I could have done this with my multimeter but hey. Destroying things I just bought is way more fun.
 
-Comparing the dongles in different stages 
+Comparing the dongles in different stages
 
 The top is the normal dongle
 The middle is a dongle with the metal plug removed

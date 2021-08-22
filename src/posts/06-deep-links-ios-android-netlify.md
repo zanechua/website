@@ -1,9 +1,9 @@
 ---
-slug: "deep-links-ios-android-netlify"
-date: "2020-10-09"
-featuredImage: "../images/featured/deep-links-ios-android-netlify.png"
-title: "Deep Links for iOS and Android on Netlify"
-tags: ["netlify", "mobile app", "android", "ios", "deep link"]
+slug: 'deep-links-ios-android-netlify'
+date: '2020-10-09'
+featuredImage: '../images/featured/deep-links-ios-android-netlify.png'
+title: 'Deep Links for iOS and Android on Netlify'
+tags: ['netlify', 'mobile app', 'android', 'ios', 'deep link']
 ---
 
 I was playing around with Netlify to see how it compared to GitHub pages or GitLab pages, and I must say that I'm geuninely impressed with their free offering. They provide a lot of value for hosting static websites. I might even decide to move this site over to Netlify to take advantage of the features that Netlify offers since this is on GitHub pages right now.
