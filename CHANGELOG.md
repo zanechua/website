@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.2.0](https://github.com/zanechua/website/compare/v3.1.0...v3.2.0) (2021-08-22)
+
+### Features
+
+- Add fastify with apollo server and graphql upload ([7820173](https://github.com/zanechua/website/commit/78201731c3b61ed182234d3f8507fe8b600c64d7))
+- Add javascript method chaining ([0faabf5](https://github.com/zanechua/website/commit/0faabf55b07bd5e2301cc8d82522876fec254391))
+- add service worker update button ([6458056](https://github.com/zanechua/website/commit/6458056304de0b53261c7b28c02ebf53195a7389))
+- Add stack traces for sentry with apolloserver ([99c4836](https://github.com/zanechua/website/commit/99c48361c4ee74230866bfb68029d202b0837c57))
+
+### Maintenance
+
+- relint and format ([5165737](https://github.com/zanechua/website/commit/516573732c04b6244a5eaa31eff6eb1869ce3ea5))
+- update packages ([5a4b14b](https://github.com/zanechua/website/commit/5a4b14b53e7832cebab30e6e1daef8e538468bda))
+
 ## [3.1.0](https://github.com/zanechua/website/compare/v3.0.0...v3.1.0) (2021-08-08)
 
 ### Features

@@ -1,6 +1,6 @@
 {
   "name": "zanechua-dot-com",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Website for zanechua.com",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop -H 0.0.0.0",
     "start": "yarn run develop",
-    "release": "standard-version",
+    "release": "standard-version -a",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
@@ -29,6 +29,11 @@
       "yarn lint --fix",
       "yarn format"
     ]
+  },
+  "standard-version": {
+    "scripts": {
+      "postchangelog": "yarn run format"
+    }
   },
   "keywords": [
     "zanechua"
