@@ -25,15 +25,12 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "./**/*.{ts,js,jsx,tsx}": [
-      "yarn lint --fix",
+    "./**/*.{ts,js,tsx,jsx}": [
+      "yarn lint --fix"
+    ],
+    "./**/*.{ts,js,tsx,jsx,css,json,md}": [
       "yarn format"
     ]
-  },
-  "standard-version": {
-    "scripts": {
-      "postchangelog": "yarn run format"
-    }
   },
   "keywords": [
     "zanechua"
@@ -101,10 +98,6 @@
   },
   "resolutionsComments": {
     "first": "The sharp resolution is required for M1 Macs as anything below 0.28 doesn't have the sharp binaries for arm64v8"
-  },
-  "resolutions": {
-    "sharp": "^0.28.2",
-    "postcss": "^8.0.0"
   },
   "bugs": {
     "url": "https://github.com/zanechua/website/issues"
