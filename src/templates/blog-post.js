@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image";
 import CommentSection from '../components/comment-section';
 import CommentForm from '../components/comment-form';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import TagLink from '../components/tag-link';
 
 // the data prop will be injected by the GraphQL query below.
