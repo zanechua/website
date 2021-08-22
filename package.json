@@ -1,12 +1,40 @@
 {
   "name": "zanechua-dot-com",
+  "version": "3.1.0",
   "description": "Website for zanechua.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/zanechua/website"
   },
-  "version": "3.1.0",
+  "scripts": {
+    "analyze:lint": "eslint --ext .jsx --ext .js .",
+    "analyze:prettier": "prettier --list-different \"**/*.{css,js,jsx,json,md}\"",
+    "analyze": "yarn run analyze:lint && yarn run analyze:prettier",
+    "lint": "eslint --ignore-path .gitignore . --ext .jsx --ext .js",
+    "format": "prettier --ignore-path .gitignore \"./**/*.+(ts|js|tsx|jsx|css|json|md)\" --write",
+    "fix": "yarn run lint --fix && yarn run format",
+    "build": "gatsby build",
+    "dev": "gatsby develop -H 0.0.0.0",
+    "start": "yarn run develop",
+    "release": "standard-version",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby build && gh-pages -d public",
+    "commit": "cz",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "./**/*.{ts,js,jsx,tsx}": [
+      "yarn lint --fix",
+      "yarn format"
+    ]
+  },
+  "keywords": [
+    "zanechua"
+  ],
   "author": "Zane J. Chua <hi@zanechua.com>",
+  "license": "UNLICENSED",
   "dependencies": {
     "@headlessui/react": "^1.4.0",
     "axios": "^0.21.1",
@@ -31,48 +59,36 @@
     "gatsby-transformer-yaml": "^3.12.0",
     "gh-pages": "^3.2.3",
     "lodash": "^4.17.21",
-    "postcss": "^8.3.6",
+    "postcss": "^8.0.0",
     "prismjs": "^1.24.1",
     "prop-types": "15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-helmet": "6.1.0",
+    "sharp": "^0.28.2",
     "zustand": "^3.5.9"
-  },
-  "keywords": [
-    "zanechua"
-  ],
-  "license": "UNLICENSED",
-  "scripts": {
-    "analyze:lint": "eslint --ext .jsx --ext .js .",
-    "analyze:prettier": "prettier --list-different \"**/*.{css,js,jsx,json,md}\"",
-    "analyze": "yarn run analyze:lint && yarn run analyze:prettier",
-    "lint": "eslint --ignore-path .gitignore . --ext .jsx --ext .js",
-    "format": "prettier --ignore-path .gitignore \"./**/*.+(ts|js|tsx|jsx|css|json|md)\" --write",
-    "fix": "yarn run lint --fix && yarn run format",
-    "build": "gatsby build",
-    "dev": "gatsby develop -H 0.0.0.0",
-    "start": "yarn run develop",
-    "release": "standard-version",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/eslint-parser": "^7.15.0",
     "@babel/plugin-proposal-decorators": "^7.14.5",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@tailwindcss/custom-forms": "0.2.1",
     "autoprefixer": "10.3.2",
     "babel-preset-gatsby": "^1.12.0",
     "cssnano": "^5.0.8",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
-    "eslint-loader": "^4.0.2",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-webpack-plugin": "^3.0.1",
     "gatsby-plugin-eslint": "^4.0.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "standard-version": "^9.3.1",
     "tailwindcss": "^2.2.7",
@@ -87,5 +103,10 @@
   },
   "bugs": {
     "url": "https://github.com/zanechua/website/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
