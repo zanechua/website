@@ -61,7 +61,7 @@
     "gatsby-transformer-yaml": "^3.12.0",
     "gh-pages": "^3.2.3",
     "lodash": "^4.17.21",
-    "postcss": "^8.0.0",
+    "postcss": "^8.3.6",
     "prismjs": "^1.24.1",
     "prop-types": "15.7.2",
     "react": "17.0.2",
@@ -98,6 +98,10 @@
   },
   "resolutionsComments": {
     "first": "The sharp resolution is required for M1 Macs as anything below 0.28 doesn't have the sharp binaries for arm64v8"
+  },
+  "resolutions": {
+    "sharp": "^0.28.2",
+    "postcss": "^8.0.0"
   },
   "bugs": {
     "url": "https://github.com/zanechua/website/issues"

@@ -104,14 +104,22 @@
 
 @media (prefers-color-scheme: light) {
   .markdown h1,
-  .markdown h2 {
+  .markdown h2,
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6 {
     @apply text-black;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   .markdown h1,
-  .markdown h2 {
+  .markdown h2,
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6 {
     @apply text-white;
   }
 
