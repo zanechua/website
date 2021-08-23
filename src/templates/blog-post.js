@@ -13,7 +13,7 @@ import TagLink from '../components/tag-link';
 // the data prop will be injected by the GraphQL query below.
 const Template = ({ data, location }) => {
   const { site, posts, comments } = data; // data.posts holds your post data
-  const { frontmatter, excerpt, html } = posts;
+  const { fields, frontmatter, excerpt, html } = posts;
   const tags = frontmatter.tags;
 
   const featuredImg = getImage(frontmatter.featuredImage);
@@ -57,7 +57,7 @@ const Template = ({ data, location }) => {
           <div className="my-1">
             {tags !== null && tags.map(tag => <TagLink key={tag} tag={tag} />)}
           </div>
-          <h2 className="text-sm font-bold">{frontmatter.date}</h2>
+          <h2 className="text-sm font-bold">{`${frontmatter.date} • ${fields.readingTime.text}`}</h2>
         </div>
         <div className="blog-post-featured-image pb-4">
           <GatsbyImage image={featuredImg} alt={frontmatter.title} />
@@ -83,6 +83,11 @@ export const pageQuery = graphql`
     posts: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       excerpt(pruneLength: 250)
+      fields {
+        readingTime {
+          text
+        }
+      }
       frontmatter {
         date(formatString: "DD MMMM, YYYY")
         slug
@@ -123,6 +128,11 @@ Template.propTypes = {
     posts: PropTypes.shape({
       html: PropTypes.string,
       excerpt: PropTypes.string,
+      fields: PropTypes.shape({
+        readingTime: PropTypes.shape({
+          text: PropTypes.string
+        })
+      }),
       frontmatter: PropTypes.shape({
         slug: PropTypes.string,
         title: PropTypes.string,
