@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.3.0](https://github.com/zanechua/website/compare/v3.2.0...v3.3.0) (2021-08-23)
+
+### Features
+
+- add reading time to posts ([1bd617f](https://github.com/zanechua/website/commit/1bd617f80bda368b71a764a664fc6b9aa370700b))
+
+### Maintenance
+
+- update packages and style ([45f6763](https://github.com/zanechua/website/commit/45f67632c5e5e20e6de07ac7930b56bb9d60fe84))
+- update scripts ([1e31d8b](https://github.com/zanechua/website/commit/1e31d8b7f9836ee2ad72b6076bfe0797741bf2af))
+
 ## [3.2.0](https://github.com/zanechua/website/compare/v3.1.0...v3.2.0) (2021-08-22)
 
 ### Features
