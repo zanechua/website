@@ -83,6 +83,16 @@ module.exports = {
     },
     'gatsby-plugin-eslint',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        // Setting a color is optional.
+        color: '#3b82f6',
+        // Disable the loading spinner.
+        showSpinner: false
+      }
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

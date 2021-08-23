@@ -28,7 +28,9 @@ function Footer() {
             <a
               className="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6"
               key={link.title}
-              href={link.route}>
+              href={link.route}
+              target="_blank"
+              rel="nofollow noopener noreferrer">
               {link.title}
             </a>
           ))}
