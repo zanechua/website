@@ -54,7 +54,7 @@ Here's what I run on the server itself:
 
 ## Build Process
 
-This build was planned because at that point of time, the 4U server that I was using as my daily driver was really heating up the room it was in and honestly I didn't need that many hard drives to be running all the time. The 4U Server was an old server with dual Xeon E5-2670 v1's. So it does really produce a decent amount of heat and in my climate, it's already hot enough. I sit in the same room as my server rack does, and the room itself doesn't have air conditioning. The ambient temperatures here in Singapore is 28-ish Celsius (82F for the old people), and I ain't a big fan of heat.
+This build was planned because at that point of time, the 4U server that I was using as my daily driver was really heating up the room it was in and honestly I didn't need that many hard drives to be running all the time. The 4U Server was an old server with dual Xeon E5-2670 v1's. So it does really produce a decent amount of heat and in my climate, it's already hot enough. I sit in the same room as my server rack does, and the room itself doesn't have air conditioning. The ambient temperatures here in Singapore is 28-ish Celsius (82F for the non-metric peeps), and I ain't a big fan of heat.
 
 ### OS
 
@@ -78,7 +78,7 @@ Certain fans don't play well with Supermicro's fan curve, some fans made a ton o
 
 ### CPU
 
-I have no problems with the ES CPU except the ES CPU does prevent you from upgrading the bios on the motherboard to anything about v2.1 if I'm not mistaken. But hey, if it works, it works. You don't really need to upgrade the bios if nothing is broken. Who needs security patches that decrease performance in a homelab environment. 🤔
+I have no problems with the ES CPU except the ES CPU does prevent you from upgrading the bios on the motherboard to anything above v2.1 if I'm not mistaken. But hey, if it works, it works. You don't really need to upgrade the bios if nothing is broken. Who needs security patches that decrease performance in a homelab environment. 🤔
 
 ### Memory
 
