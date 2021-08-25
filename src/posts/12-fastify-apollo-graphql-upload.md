@@ -44,4 +44,4 @@ fastify.addHook('preValidation', async function (request, reply) {
 });
 ```
 
-If you need to view a full example, you can find one in this [pull request](https://github.com/apollographql/apollo-server/issues/4975) and it'll be available in the file upload section of [apollo docs](https://www.apollographql.com/docs/apollo-server/v3/data/file-uploads/) when it's merged.
+If you need to view a full example, you can find one in this [pull request](https://github.com/apollographql/apollo-server/issues/4975) and it'll be available in the file upload section of [apollo docs](https://www.apollographql.com/docs/apollo-server/data/file-uploads/) when it's merged.
