@@ -56,7 +56,6 @@
     "no-useless-escape": ["warn"],
     "camelcase": "off",
     "no-use-before-define": "off",
-    "no-unused-vars": [0],
     "global-require": [0],
     "prettier/prettier": ["error"]
   }
