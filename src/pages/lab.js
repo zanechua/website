@@ -21,26 +21,26 @@ function LabPage({ location }) {
               <span>0U - APC AP8959EU3</span>
             </div>
             <ul className="flex-1 text-center">
-              <li className="border-l-4 border-r-4 border-t-4 border-b-2 border-dashed dark:border-white light:border-black p-1">
-                1U - Blank/Empty
-              </li>
               <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-                1U - Network Cable Management
+                1U - Linkway 24-Port Patch Panel
               </li>
               <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
                 1U - Brocade ICX7450-48P-STK-E
               </li>
               <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-                1U - Network Cable Management
-              </li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-                1U - Linkway 24-Port Patch Panel
-              </li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
                 1U - Ruckus ZoneDirector 1200
               </li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-                1U - Network Cable Management
+              <li className="border-l-4 border-r-4 border-t-4 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-4 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-4 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
+              </li>
+              <li className="border-l-4 border-r-4 border-t-4 border-b-2 border-dashed dark:border-white light:border-black p-1">
+                1U - Blank/Empty
               </li>
               <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
                 1U - Modem Chassis
@@ -96,20 +96,17 @@ function LabPage({ location }) {
               <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
                 1U - Tray
               </li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-                1U - Supermicro SYS-6018R-MT
-              </li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-                1U - Blank/Empty
-              </li>
-              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">
-                2U - APC SUA3000RMI2U
-              </li>
               <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-3">
                 3U - Supermicro SC836
               </li>
               <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-4">
                 4U - Supermicro SC846
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">
+                2U - APC SMT3000RMI2U
+              </li>
+              <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">
+                2U - APC SUA3000RMI2U
               </li>
               <li className="border-l-4 border-r-4 border-t-2 border-b-4 border-dashed dark:border-white light:border-black p-2">
                 2U - APC SUA3000RMI2U
@@ -128,7 +125,7 @@ function LabPage({ location }) {
             </div>
             <ul className="flex-1 text-center">
               <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-                1U - Network Cable Management
+                1U - Linkway 24-Port Patch Panel
               </li>
               <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
                 1U - Brocade ICX7450-48P-STK-E
