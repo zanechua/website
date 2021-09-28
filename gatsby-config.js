@@ -126,7 +126,10 @@ module.exports = {
           'node_modules/prismjs/',
           'node_modules/prism-themes/',
           'src/css/markdown.css',
-          'src/css/prism.css'
+          'src/css/prism.css',
+          'src/css/prism-vsc-dark-plus.css',
+          'prismjs/plugins/line-numbers/prism-line-numbers.css',
+          'prismjs/plugins/command-line/prism-command-line.css'
         ] // Ignore files/folders
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       }
@@ -184,6 +187,12 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: 'gatsby-remark-code-titles',
+            options: {
+              className: 'gatsby-remark-code-title'
+            }
+          }, // IMPORTANT: this must be ahead of other plugins that use code blocks
           'gatsby-remark-reading-time',
           {
             resolve: 'gatsby-remark-autolink-headers',
