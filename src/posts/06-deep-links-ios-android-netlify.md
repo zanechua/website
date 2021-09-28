@@ -14,7 +14,7 @@ You can actually configure the verification files directly in your website's rep
 
 Add the following snippet to your `netlify.toml` configuration and, you should be golden.
 
-```toml
+```toml:title=netlify.toml
 [[headers]]
   for = "/apple-app-site-association"
   [headers.values]

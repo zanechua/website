@@ -44,9 +44,7 @@ The following code snippet is placed in my `appcenter-post-clone.sh` script.
 3. Make all directories recursively for the provided path
 4. Mount the ramdisk at the node_modules folder
 
-##### **`appcenter-post-clone.sh`**
-
-```bash
+```bash:title=appcenter-post-clone.sh
 NODE_MODULE_RAMDISK=$(hdid -nomount ram://4194304) #2GB
 newfs_hfs -v NodeModules $NODE_MODULE_RAMDISK
 mkdir -p $APPCENTER_SOURCE_DIRECTORY/node_modules || true

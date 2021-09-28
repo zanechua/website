@@ -20,9 +20,7 @@ This way, it's easy to chain and make it really readable in the code for other e
 
 Below is a sample of a `GateKeeper` class that manages roles and permissions.
 
-##### **`GateKeeper.js`**
-
-```javascript
+```javascript:title=GateKeeper.js
 class GateKeeper {
   static allow(role) {
     const to = async ability => {

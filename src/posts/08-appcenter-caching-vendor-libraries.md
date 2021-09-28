@@ -50,9 +50,7 @@ I have tested that the fastest way to archive and extract is by using `pigz`, we
 3. Run commands to copy the `node_modules` archive and the hash of `yarn.lock`
 4. Check if a `node_modules` archive exist, if it does extract the archive to the source directory
 
-##### **`appcenter-post-clone.sh`**
-
-```bash
+```bash:title=appcenter-post-clone.sh
 # Install Azure CLI
 # AppCenter already has azcopy
 brew install pigz
@@ -78,9 +76,7 @@ fi
 4. Create an archive of the `node_modules` folder
 5. Upload cache only if it's bigger than 1 MB
 
-##### **`appcenter-post-build.sh`**
-
-```bash
+```bash:title=appcenter-post-build.sh
 # Check the hash of yarn.lock
 if ! shasum -a 256 -c yarn.lock.sha256sum; then
   echo "Removing old node cache"

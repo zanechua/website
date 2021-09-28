@@ -116,26 +116,20 @@ For the host, I have the following four files in `/etc/modprobe.d/` that will pr
 
 Ignoring certain errors for a clean `dmesg` output
 
-kvm.conf
-
-```bash
+```bash:title=kvm.conf
 options kvm ignore_msrs=1 report_ignored_msrs=0
 ```
 
 This was made to allow for nested virtualization support, e.g. support for Hyper-V/Docker
 
-kvm-intel.conf
-
-```bash
+```bash:title=kvm-intel.conf
 # Nested VM support (not used by macOS)
 options kvm-intel nested=Y
 ```
 
 Blacklisting the Nvidia and AMD modules resolve issues when the host has issues releasing the cards and passing them through to the VMs
 
-pve-blacklist.conf
-
-```bash
+```bash:title=pve-blacklist.conf
 # This file contains a list of modules which are not supported by Proxmox VE
 # nvidiafb see bugreport https://bugzilla.proxmox.com/show_bug.cgi?id=701
 blacklist nouveau
@@ -151,9 +145,7 @@ blacklist amdgpu
 
 Targeting PCI device IDs for binding
 
-vfio-pci.conf
-
-```bash
+```bash:title=vfio-pci.conf
 options vfio-pci ids=1002:67df,1002:aaf0,1002:731f,1002:ab38,10de:1c03,
 10de:10f1,8086:2700,8086:1d26,8086:1d2d,8086:1d6b disable_vga=1
 ```

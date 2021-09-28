@@ -32,9 +32,7 @@ Create a file called `Cachefile` in the `ios` folder of your project.
 
 Here's a sample that uses a Notification Service Extension with XCode Schemes.
 
-##### **`Cachefile`**
-
-```ruby
+```ruby:title=Cachefile
 workspace "kopirun" do
   configuration "release" do
     build_configuration "Release"
@@ -58,9 +56,7 @@ end
 
 Create a file called `Gemfile` in the `ios` folder of your project.
 
-##### **`Gemfile`**
-
-```ruby
+```ruby:title=Gemfile
 # Gemfile
 source "https://rubygems.org"
 

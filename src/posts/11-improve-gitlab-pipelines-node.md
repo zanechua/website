@@ -20,7 +20,7 @@ Someone found out that if you remove the folders to be cached, the runners won't
 
 The following configuration has helped us save about 5 to 15 minutes depending on the project due to how it was previously configured.
 
-```yaml
+```yaml:title=gitlab-ci.yml
 stages:
   - cache
   - test
