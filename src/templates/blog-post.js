@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { useWindowSize } from '@react-hook/window-size';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
@@ -13,6 +14,7 @@ import { resizeElements } from '../lib/prism-multiline-numbers';
 
 // the data prop will be injected by the GraphQL query below.
 const Template = ({ data, location }) => {
+  const [width, height] = useWindowSize();
   const { site, posts, comments } = data; // data.posts holds your post data
   const { fields, frontmatter, excerpt, html } = posts;
   const tags = frontmatter.tags;
@@ -25,7 +27,7 @@ const Template = ({ data, location }) => {
 
   useEffect(() => {
     resizeElements(Array.prototype.slice.call(document.querySelectorAll('pre.line-numbers')));
-  }, []);
+  }, [width, height]);
 
   return (
     <Layout className="blog-post-container">

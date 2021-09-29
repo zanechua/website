@@ -39,6 +39,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@headlessui/react": "^1.4.1",
+    "@react-hook/window-size": "^3.0.7",
     "axios": "^0.21.4",
     "gatsby": "^3.14.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
