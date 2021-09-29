@@ -192,6 +192,15 @@ module.exports = {
               className: 'gatsby-remark-code-title'
             }
           }, // IMPORTANT: this must be ahead of other plugins that use code blocks
+          {
+            resolve: 'gatsby-remark-code-buttons',
+            options: {
+              // Optional button text. Defaults to ''.
+              buttonText: 'Copy',
+              toasterText: 'Copied',
+              toasterDuration: 1500
+            }
+          },
           'gatsby-remark-reading-time',
           {
             resolve: 'gatsby-remark-autolink-headers',

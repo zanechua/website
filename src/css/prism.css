@@ -24,7 +24,12 @@ code[class*='language-'] {
 .gatsby-highlight {
   max-width: 90vw;
   overflow: auto;
-  @apply py-2;
+  background: #1e1e1e;
+  @apply shadow-md;
+  @apply drop-shadow-md;
+  @apply p-3;
+  @apply pt-10;
+  @apply rounded-md;
 }
 
 /**
@@ -48,24 +53,14 @@ code[class*='language-'] {
   padding-left: 2.6em;
 }
 
-.gatsby-remark-code-title {
-  margin-bottom: -0.6rem;
-  padding: 0.2em 0.5em;
-  --tw-bg-opacity: 1;
-  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
-  color: #ff5074;
-}
-
 .markdown :not(pre) > code[class*='language-text'] {
-  --tw-bg-opacity: 1;
-  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+  background: #1e1e1e;
   color: #ff5074;
   border: none;
   box-shadow: none;
   border-radius: 0;
   margin-top: 0.2em;
   text-shadow: none;
-  padding: 0.15em 0.3em 0.25em 0.3em;
 }
 
 .command-line-prompt > span:before {
@@ -87,4 +82,123 @@ code[class*='language-'] {
 
 .command-line-prompt > span[data-prompt]:before {
   content: attr(data-prompt);
+}
+
+/** Code Title **/
+
+.gatsby-remark-code-title {
+  @apply z-10;
+  max-width: 90vw;
+  position: absolute;
+  background: #1e1e1e;
+  margin-bottom: -0.6rem;
+  color: #ff5074;
+  @apply py-1;
+  @apply px-3;
+  @apply rounded-md;
+}
+
+.gatsby-remark-code-title + .gatsby-highlight {
+}
+
+.gatsby-remark-code-title + .gatsby-highlight::before {
+}
+
+/** Copy Code Button **/
+
+.gatsby-code-button-container {
+  position: relative;
+  background: #1e1e1e;
+  touch-action: none;
+  pointer-events: none;
+  text-align: right;
+  z-index: 100;
+  max-width: 90vw;
+}
+.gatsby-code-button {
+  position: absolute;
+  top: 2.25em;
+  right: 0.75em;
+  font-size: 0.75em;
+  cursor: pointer;
+  pointer-events: initial;
+  @apply bg-blue-500;
+  opacity: 0.2;
+  color: white;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  text-align: right;
+  text-transform: uppercase;
+  @apply rounded-md;
+}
+.gatsby-code-button:hover {
+  opacity: 1;
+}
+.gatsby-code-button:after {
+  visibility: hidden;
+  position: absolute;
+  display: none;
+  padding: 5px;
+  content: attr(data-tooltip);
+  color: #fff;
+  font-size: 16px;
+  background-color: #000;
+  white-space: nowrap;
+}
+.gatsby-code-button[data-tooltip]:after {
+  top: 26px;
+  right: 0;
+}
+.gatsby-code-button[data-tooltip]:hover:after,
+.gatsby-code-button[data-tooltip]:focus:after {
+  /*visibility: visible;*/
+  /*display: block;*/
+  /*z-index: 200;*/
+}
+.gatsby-code-button .gatsby-code-button-icon {
+  display: none;
+}
+.gatsby-code-button-toaster {
+  z-index: 500;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+}
+.gatsby-code-button-toaster-text {
+  width: 100%;
+  margin: 0 15px;
+  max-width: 850px;
+  padding: 20px;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: monospace;
+  color: #fff;
+  @apply bg-gray-800;
+  border-radius: 2px;
+  text-align: center;
+  opacity: 0;
+  animation: animation 3s cubic-bezier(0.98, 0.01, 0.53, 0.47);
+}
+.gatsby-code-button-buffer {
+  position: fixed;
+  top: -9999px;
+  opacity: 0;
+}
+@keyframes animation {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
