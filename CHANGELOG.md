@@ -1,5 +1,11 @@
 # Changelog
 
+### [3.4.1](https://github.com/zanechua/website/compare/v3.4.0...v3.4.1) (2021-09-29)
+
+### Bug Fixes
+
+- failing builds ([2a7640f](https://github.com/zanechua/website/commit/2a7640fe816f7c817f6544d1136827db372dbea6))
+
 ## [3.4.0](https://github.com/zanechua/website/compare/v3.3.0...v3.4.0) (2021-09-29)
 
 ### Features
