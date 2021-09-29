@@ -1,5 +1,28 @@
 # Changelog
 
+## [3.4.0](https://github.com/zanechua/website/compare/v3.3.0...v3.4.0) (2021-09-29)
+
+### Features
+
+- add new code block title ([6e5fb9f](https://github.com/zanechua/website/commit/6e5fb9f929fd4b808e148165c977834c5ed6d51d))
+- add new post on react-native-xcode-archive ([4a0580e](https://github.com/zanechua/website/commit/4a0580ef230a51fd07308e013258eabb19feefdc))
+- add progress bar and netlify security headers ([7ddfb3e](https://github.com/zanechua/website/commit/7ddfb3ef198fec11426c5c3e61e8ed9b378cd076))
+- add update post for macos and windows on proxmox ([36ff448](https://github.com/zanechua/website/commit/36ff448d4e90a594f9e5fc92ca1e77af8d7e2be4))
+
+### Bug Fixes
+
+- broken link in graphql upload post ([83a2274](https://github.com/zanechua/website/commit/83a2274876bcf3daea1d08e110fff6a7088ea2b5))
+- line number heights for code blocks ([9eae3df](https://github.com/zanechua/website/commit/9eae3df3d07bae54ce1e1ccfcc18dd61f26b734b))
+
+### Maintenance
+
+- add babel runtime ([1a815d8](https://github.com/zanechua/website/commit/1a815d8be91f94747cff1f825f8fbefaf7af3c22))
+- grammar ([272d111](https://github.com/zanechua/website/commit/272d11133788e1c6b0b653ab1dae38bfc313c9cd))
+- update lab page ([fdad217](https://github.com/zanechua/website/commit/fdad21790ee078a21e615f5a6680d145190e940c))
+- update offline config ([8ab1093](https://github.com/zanechua/website/commit/8ab109343c9944154d52aede50b95de9e7d6950c))
+- update packages ([b078927](https://github.com/zanechua/website/commit/b078927f0d261a96ea85c183c0dc84a123bc3402))
+- update repo config ([5129430](https://github.com/zanechua/website/commit/512943012b228fc467938cd5c04ea4ea59f65499))
+
 ## [3.3.0](https://github.com/zanechua/website/compare/v3.2.0...v3.3.0) (2021-08-23)
 
 ### Features
