@@ -128,8 +128,7 @@ module.exports = {
           'src/css/markdown.css',
           'src/css/prism.css',
           'src/css/prism-vsc-dark-plus.css',
-          'prismjs/plugins/line-numbers/prism-line-numbers.css',
-          'prismjs/plugins/command-line/prism-command-line.css'
+          'src/css/prism-language-tabs.css'
         ] // Ignore files/folders
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       }
