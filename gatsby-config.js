@@ -198,7 +198,7 @@ module.exports = {
               // Optional button text. Defaults to ''.
               buttonText: 'Copy',
               toasterText: 'Copied',
-              toasterDuration: 1500
+              toasterDuration: 3000
             }
           },
           'gatsby-remark-reading-time',

@@ -187,10 +187,10 @@ code[class*='language-'] {
 }
 @keyframes animation {
   0%,
-  50% {
+  25% {
     opacity: 1;
   }
-  50%,
+  25%,
   100% {
     opacity: 0;
   }
