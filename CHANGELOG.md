@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.5.0](https://github.com/zanechua/website/compare/v3.4.1...v3.5.0) (2021-09-29)
+
+### Features
+
+- add copy button, styling updates for code blocks ([4be425f](https://github.com/zanechua/website/commit/4be425f5cf3f94b27bde1494ef22a58c17351463))
+- add language tabs for code blocks ([a38cdea](https://github.com/zanechua/website/commit/a38cdeae26f72ab51653d587398298d637158c01))
+- dynamic resizing for line numbers ([f51b78f](https://github.com/zanechua/website/commit/f51b78f1f55636bc5c61e00503bf68fc24e2018e))
+
 ### [3.4.1](https://github.com/zanechua/website/compare/v3.4.0...v3.4.1) (2021-09-29)
 
 ### Bug Fixes
