@@ -29,6 +29,19 @@ const Template = ({ data, location }) => {
     resizeElements(Array.prototype.slice.call(document.querySelectorAll('pre.line-numbers')));
   }, [width, height]);
 
+  useEffect(() => {
+    // create an Observer instance
+    const resizeObserver = new ResizeObserver(() => {
+      console.log('resizing elements');
+      resizeElements(Array.prototype.slice.call(document.querySelectorAll('pre.line-numbers')));
+    });
+
+    resizeObserver.disconnect();
+    const contentElement = document.getElementById('post-content');
+    // start observing a DOM node
+    resizeObserver.observe(contentElement);
+  }, []);
+
   return (
     <Layout className="blog-post-container">
       <SEO
@@ -69,7 +82,11 @@ const Template = ({ data, location }) => {
         <div className="blog-post-featured-image pb-4">
           <GatsbyImage image={featuredImg} alt={frontmatter.title} />
         </div>
-        <div className="blog-post-content markdown" dangerouslySetInnerHTML={{ __html: html }} />
+        <div
+          id="post-content"
+          className="blog-post-content markdown"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </section>
 
       {comments.edges.length >= 1 && (

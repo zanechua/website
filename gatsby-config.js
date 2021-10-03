@@ -125,6 +125,7 @@ module.exports = {
         ignore: [
           'node_modules/prismjs/',
           'node_modules/prism-themes/',
+          'src/css/style.css',
           'src/css/markdown.css',
           'src/css/prism.css',
           'src/css/prism-vsc-dark-plus.css',
