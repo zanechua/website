@@ -15,10 +15,15 @@ const PostLink = ({ post }) => {
 
   return (
     <div className="w-full lg:flex py-4">
-      <div
-        className="h-56 lg:h-auto lg:w-64 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
-        style={{ backgroundImage: `url(${featuredSrc})`, backgroundPosition: 'center center' }}
-        title={post.frontmatter.title}></div>
+      <Link
+        to={post.fields.urlPath}
+        className="block h-56 lg:w-64 lg:h-auto flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+        style={{
+          backgroundImage: `url(${featuredSrc})`,
+          backgroundPosition: 'center center'
+        }}
+        title={post.frontmatter.title}
+      />
       <div className="flex-1 border-r border-b border-l border-gray-800 lg:border-l-0 lg:border-t lg:border-gray-700 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal bg-gray-800">
         <Link to={post.fields.urlPath}>
           <div className="mb-8">
