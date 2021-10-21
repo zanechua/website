@@ -125,4 +125,4 @@ cat /mnt/k3s-store/server/node-token
 curl -sfL https://get.k3s.io | K3S_URL=https://k3s.example.com:6443 K3S_TOKEN=TOKEN INSTALL_K3S_EXEC="--data-dir=/mnt/k3s-store" sh -
 ```
 
-Now that the cluster is set up, follow part 2 [here](/) to complete the runner setup.
+Now that the cluster is set up, follow part 2 [here](/blog/setup-gitlab-runners-in-kubernetes-k3s-part-2) to complete the runner setup.
