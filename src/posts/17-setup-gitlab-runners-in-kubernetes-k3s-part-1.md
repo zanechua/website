@@ -63,6 +63,7 @@ Edit your `/etc/hosts` file with the hostnames + FQDN of the other nodes.
 ```bash:title=main/worker
 # Use all available disk space
 lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 # Enable IP Forwarding
 sudo sed -i 's~#net.ipv4.ip_forward=1~net.ipv4.ip_forward=1~g' /etc/sysctl.conf
 sudo reboot
