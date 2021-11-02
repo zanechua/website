@@ -37,7 +37,7 @@ fastify.addHook('preValidation', async function (request, reply) {
     return;
   }
 
-  request.body = await processRequest(request.raw, reply.res, {
+  request.body = await processRequest(request.raw, reply.raw, {
     maxFileSize: 10000000, // 10 MB
     maxFiles: 20
   });
