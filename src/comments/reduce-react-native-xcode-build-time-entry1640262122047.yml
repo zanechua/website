@@ -1,0 +1,16 @@
+_id: ee9545e0-63ea-11ec-bb88-5ba4b9498365
+slug: reduce-react-native-xcode-build-time
+name: Matt
+email: 1aa6c4f940a7feebe09c4ba4ebf67cec
+message: >-
+  Cheers for this - very interesting. I'm a little confused though - the
+  instructions are all about setting up buildcache on a mac, so I could install
+  it locally and have faster builds locally. But how does this help on
+  AppCenter, is there a way to get buildcache on there too so that AppCenter
+  build agents can use it?
+
+
+  Does it involve something like taking the bash script you posted, and running
+  that as part of the build (I see you can add custom build scripts in AppCenter
+  for example)
+date: '2021-12-23T12:22:02.045Z'
