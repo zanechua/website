@@ -1,0 +1,19 @@
+_id: 9812df70-63ef-11ec-bb88-5ba4b9498365
+slug: reduce-react-native-xcode-build-time
+name: Zane
+email: 72dec835f59a6ccb870d1e3b0c853689
+message: >-
+  Hey Matt,
+
+
+  Yes you're absolutely right. That's the way that you can do it. You can take
+  the commands and put them in the AppCenter scripts to use buildcache on their
+  build machines too. I am no longer using buildcache as xcode-archive-cache
+  works a bit faster. Though I could probably check my git history for the
+  version that I implemented in the AppCenter scripts when I was using
+  buildcache.
+
+
+  I think I should write up a post about an end to end implementation on putting
+  together all the parts to improve build times in AppCenter.
+date: '2021-12-23T12:55:24.228Z'
