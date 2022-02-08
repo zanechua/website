@@ -1,0 +1,11 @@
+_id: 49b2bbd0-88d3-11ec-a6a8-4db3f9f84ef1
+slug: reduce-react-native-xcode-build-time
+name: Zane
+email: cbf2d527741e953af70168f5cc73e7a3
+message: >-
+  Hi Alaa,
+
+
+  buildcache handles all of that automatically and the above is all that you
+  need to get the cache working.
+date: '2022-02-08T11:35:59.924Z'
