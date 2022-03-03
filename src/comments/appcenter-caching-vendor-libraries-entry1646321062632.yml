@@ -1,0 +1,9 @@
+_id: 009b4e90-9b06-11ec-85e1-f3e69e6be351
+slug: appcenter-caching-vendor-libraries
+name: Max Metral
+email: b3996f37627af96bee8c840aaf98b0ad
+message: >-
+  What is the file/set of files that should be hashed for gradle dependencies?
+  We haven't gotten this all working yet, but we're trying, so it's much
+  appreciated!
+date: '2022-03-03T15:24:22.629Z'
