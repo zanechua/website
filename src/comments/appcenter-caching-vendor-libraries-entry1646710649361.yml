@@ -1,0 +1,12 @@
+_id: 145a46f0-9e91-11ec-81ee-c77df3d2d33b
+slug: appcenter-caching-vendor-libraries
+name: Zane
+email: 72dec835f59a6ccb870d1e3b0c853689
+message: >-
+  Hey Max,
+
+
+  Sorry for the slow response. I believe the correct directory for gradle
+  dependencies is simply ~/.gradle. That's what I have archived on my app at
+  least.
+date: '2022-03-08T03:37:29.357Z'
