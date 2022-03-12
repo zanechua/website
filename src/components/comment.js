@@ -5,14 +5,18 @@ const Comment = ({ comment }) => {
   console.log(comment);
   const renderMessage = commentMessage => {
     const messages = commentMessage.split('\n');
-    return messages.map(item => <p key={item}>{item}</p>);
+    return messages.map(item => (
+      <p key={item} className="whitespace-pre-wrap">
+        {item}
+      </p>
+    ));
   };
 
   return (
     <div className="comment py-3">
       <h3 className="font-bold pb-2">{comment.name}</h3>
       <h4 className="font-bold pb-6">{comment.date}</h4>
-      {renderMessage(comment.message)}
+      <div className="pb-2">{renderMessage(comment.message)}</div>
       <hr />
     </div>
   );
