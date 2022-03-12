@@ -1,0 +1,10 @@
+_id: d1bbd760-a1af-11ec-9319-7d7565410df5
+slug: reduce-react-native-xcode-build-time-encore
+name: Zane
+email: 72dec835f59a6ccb870d1e3b0c853689
+message: >-
+  That's a mighty good question Dox. Honestly I never tried both. I think it
+  might work but I would caution the use of multiple level of caches as you
+  might end up with some unwanted behaviour. I think using just
+  xcode-archive-cache is good enough for me.
+date: '2022-03-12T02:55:05.364Z'
