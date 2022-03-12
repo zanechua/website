@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Comment = ({ comment }) => {
-  console.log(comment);
   const renderMessage = commentMessage => {
     const messages = commentMessage.split('\n');
     return messages.map(item => (
