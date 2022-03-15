@@ -1,0 +1,31 @@
+_id: bbe564d0-a473-11ec-a9c5-bb43f03ef439
+slug: reduce-react-native-xcode-build-time-encore
+name: Dox
+email: b97ba7617c0745621e2fa44b48c3192d
+message: >-
+  Thanks Zane! Allright, so, for removing the other implementation I just have
+  to remove the post_install script, right?
+
+
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings["CC"] = "clang"
+      config.build_settings["LD"] = "clang"
+      config.build_settings["CXX"] = "clang++"
+      config.build_settings["LDPLUSPLUS"] = "clang++"
+    end
+  end
+
+
+  And, another one; Im having this error on xcode with the xcode-archive-cache
+  implementation:
+
+
+  Library not found for -lPods-exampleapp
+
+
+  How can I reset the cache for this implementation?
+
+
+  Thanks
+date: '2022-03-15T15:22:32.432Z'
