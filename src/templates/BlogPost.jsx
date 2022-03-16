@@ -124,7 +124,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    comments: allCommentsYaml(filter: { slug: { eq: $slug } }) {
+    comments: allCommentsYaml(
+      filter: { slug: { eq: $slug } }
+      sort: { order: ASC, fields: [date] }
+    ) {
       edges {
         node {
           id
