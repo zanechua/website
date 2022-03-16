@@ -1,0 +1,12 @@
+_id: 029775d0-a550-11ec-86cb-5572bff08d41
+slug: reduce-react-native-xcode-build-time-encore
+name: Zane
+email: 72dec835f59a6ccb870d1e3b0c853689
+message: >-
+  If you can share a sample project that replicates that error via GitHub, I can
+  take a look.
+
+
+  No. Those files you'll have to commit. I meant the `project.pbxproj` that gets
+  modified by the xcode-archive-cache command
+date: '2022-03-16T17:39:20.311Z'
