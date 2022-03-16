@@ -54,47 +54,32 @@ function resizeElements(elementToResize) {
     })
     .filter(Boolean);
 
-  infos.forEach(info => {
+  for (let a = 0, l = infos.length; a < l; a += 1) {
+    const info = infos[a];
     const lineNumberSizer = info.sizer;
     const { lines } = info;
     const { lineHeights } = info;
     const { oneLinerHeight } = info;
+    const wrapper = info.element.querySelector('.line-numbers-rows');
 
     lineHeights[lines.length - 1] = undefined;
-    lines.forEach((line, index) => {
+
+    for (let i = 0, ll = lines.length; i < ll; i += 1) {
+      const line = lines[i];
       if (line && line.length > 1) {
         const e = lineNumberSizer.appendChild(document.createElement('span'));
         e.style.display = 'block';
         e.textContent = line;
+        const { height } = e.getBoundingClientRect();
+        wrapper.children[i].style.height = `${height}px`;
       } else {
-        lineHeights[index] = oneLinerHeight;
-      }
-    });
-  });
-
-  infos.forEach(info => {
-    const lineNumberSizer = info.sizer;
-    const { lineHeights } = info;
-
-    const childIndex = 0;
-    for (let i = 0; i < lineHeights.length; i + 1) {
-      if (lineHeights[i] === undefined) {
-        lineHeights[i] = lineNumberSizer.children[childIndex + 1].getBoundingClientRect().height;
+        lineHeights[i] = oneLinerHeight;
       }
     }
-  });
-
-  infos.forEach(info => {
-    const lineNumberSizer = info.sizer;
-    const wrapper = info.element.querySelector('.line-numbers-rows');
 
     lineNumberSizer.style.display = 'none';
     lineNumberSizer.innerHTML = '';
-
-    info.lineHeights.forEach((height, lineNumber) => {
-      wrapper.children[lineNumber].style.height = `${height}px`;
-    });
-  });
+  }
 }
 
 export { resizeElements };
