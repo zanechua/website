@@ -1,7 +1,6 @@
 import React from 'react';
 import { Transition } from '@headlessui/react';
-
-import useStore from '../lib/zustand';
+import useStore from 'lib/zustand';
 
 const ExclamationIcon = () => (
   <svg
@@ -22,6 +21,7 @@ const ExclamationIcon = () => (
 const ServiceWorkerUpdate = () => {
   const hasUpdateReady = useStore(state => state.hasSwUpdateReady);
   const show = hasUpdateReady;
+
   return (
     <Transition
       show={show ?? false}
@@ -47,11 +47,11 @@ const ServiceWorkerUpdate = () => {
               </p>
             </div>
           </div>
-          <div className="px-4 py-3 object-right justify-self-end sm:(px-6 flex flex-row-reverse)">
+          <div className="px-4 py-3 items-center justify-center sm:(px-6 flex flex-row-reverse)">
             <button
               onClick={() => window.location.reload(true)}
               type="button"
-              className="w-full rounded-md border border-transparent shadow-sm px-4 py-2 text-base text-white bg-gray-800 hover:bg-gray-900 sm:(ml-3 w-auto text-sm)">
+              className="flex-1 rounded-md border border-transparent shadow-sm px-4 py-2 text-base text-white bg-gray-800 hover:bg-gray-900 sm:(ml-3 max-w-2xl text-sm)">
               Load
             </button>
           </div>
