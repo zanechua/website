@@ -1,0 +1,19 @@
+_id: 62a32930-a4c7-11ec-a9c5-bb43f03ef439
+slug: reduce-react-native-xcode-build-time-encore
+name: Zane
+email: 72dec835f59a6ccb870d1e3b0c853689
+message: >-
+  Yes, please remove the changes you made for the ccache implementation.
+
+
+  I actually linked the xcode-archive-cache issue ticket that has instructions
+  on how to get you setup for a bare react native project, did you try that yet?
+
+
+  The cache for this implementation is only meant to be used to build and you
+  discard all the changes it makes to your xcode projects afterwards. Do not
+  commit the changes to those files into the git repo.
+
+
+  At which point do you get that error message?
+date: '2022-03-16T01:21:20.389Z'
