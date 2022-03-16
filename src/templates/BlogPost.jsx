@@ -32,7 +32,6 @@ const Template = ({ data, location }) => {
   useEffect(() => {
     // create an Observer instance
     const resizeObserver = new ResizeObserver(() => {
-      console.log('resizing elements');
       resizeElements(Array.prototype.slice.call(document.querySelectorAll('pre.line-numbers')));
     });
 
@@ -85,6 +84,7 @@ const Template = ({ data, location }) => {
         <div
           id="post-content"
           className="blog-post-content markdown"
+          /* eslint-disable-next-line react/no-danger */
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </section>

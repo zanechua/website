@@ -1,11 +1,14 @@
 import React from 'react';
+import fnv1a from '@sindresorhus/fnv1a';
 import PropTypes from 'prop-types';
 
 const Comment = ({ comment }) => {
   const renderMessage = commentMessage => {
     const messages = commentMessage.split('\n');
     return messages.map((item, index) => (
-      <p key={`${comment.id}`} className="whitespace-pre-wrap">
+      <p
+        key={`${fnv1a(`comment-content-${comment.id}-${index}`, { size: 32 })}`}
+        className="whitespace-pre-wrap">
         {item}
       </p>
     ));
