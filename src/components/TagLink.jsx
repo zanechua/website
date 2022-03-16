@@ -13,8 +13,13 @@ const TagLink = ({ tag, showCount, count }) => (
 
 TagLink.propTypes = {
   tag: PropTypes.string.isRequired,
-  showCount: PropTypes.bool.isRequired,
-  count: PropTypes.number.isRequired
+  showCount: PropTypes.bool,
+  count: PropTypes.number
+};
+
+TagLink.defaultProps = {
+  showCount: false,
+  count: 0
 };
 
 export default TagLink;
