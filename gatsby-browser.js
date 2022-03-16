@@ -1,11 +1,11 @@
-import useStore from './src/lib/zustand';
+import useStore from 'lib/zustand';
 
-import './src/css/style.css';
-import './src/css/markdown.css';
-import './src/css/prism.css';
-import './src/css/prism-vsc-dark-plus.css';
-import './src/css/prism-language-tabs.css';
-import './src/css/cat.css';
+import 'styles/style.css';
+import 'styles/markdown.css';
+import 'styles/prism.css';
+import 'styles/prism-vsc-dark-plus.css';
+import 'styles/prism-language-tabs.css';
+import 'styles/cat.css';
 
 require('prismjs/plugins/line-numbers/prism-line-numbers.css');
 require('prismjs/plugins/command-line/prism-command-line.css');

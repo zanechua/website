@@ -5,7 +5,7 @@ module.exports = {
     title: 'Zane Chua',
     description: 'Website where Zane Chua writes about tech, homelab and more',
     author: '@zanejchua',
-    siteUrl: siteUrl
+    siteUrl
   },
   plugins: [
     {
@@ -61,9 +61,7 @@ module.exports = {
             return acc;
           }, {});
 
-          return allPages.map(page => {
-            return { ...page, ...remarkEdgeMap[page.path] };
-          });
+          return allPages.map(page => ({ ...page, ...remarkEdgeMap[page.path] }));
         },
         serialize: pageData => {
           const { path } = pageData;
@@ -118,10 +116,10 @@ module.exports = {
         tailwind: true, // Enable tailwindcss support
         ignore: [
           'node_modules/prismjs/',
-          'src/css/markdown.css',
-          'src/css/prism.css',
-          'src/css/prism-vsc-dark-plus.css',
-          'src/css/prism-language-tabs.css'
+          'src/styles/markdown.css',
+          'src/styles/prism.css',
+          'src/styles/prism-vsc-dark-plus.css',
+          'src/styles/prism-language-tabs.css'
         ] // Ignore files/folders
       }
     },
@@ -142,14 +140,14 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'markdown-featured-images',
-        path: `${__dirname}/src/images/featured`
+        path: `${__dirname}/src/assets/featured`
       }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'markdown-posts-images',
-        path: `${__dirname}/src/images/posts`
+        path: `${__dirname}/src/assets/posts`
       }
     },
     'gatsby-transformer-yaml',

@@ -1,7 +1,7 @@
 ---
 slug: 'usb-data-blockers'
 date: '2020-07-04'
-featuredImage: '../images/featured/usb-data-blockers.png'
+featuredImage: '..//assets/featured/usb-data-blockers.png'
 title: 'USB Data Blockers'
 tags: ['hardware']
 ---
@@ -20,12 +20,12 @@ The top is the normal dongle
 The middle is a dongle with the metal plug removed
 The bottom is obviously the dismantled dongle.
 
-![Dismantled Dongle](../images/posts/usb-data-blockers/01.jpg)
+![Dismantled Dongle](..//assets/posts/usb-data-blockers/01.jpg)
 
 Here's a close-up of the dismantled dongle and we can see that the data lines are shorted. Doing a bit of research and found that the Chinese standard of marking a usb connection `charge only` is by shorting the data lines. The European standard consists of typically putting a 200 ohm resistor between the data lines. However, shorting the data lines should still fit the European standards.
 
-![Close up of dismantled Dongle](../images/posts/usb-data-blockers/02.jpg)
+![Close up of dismantled Dongle](..//assets/posts/usb-data-blockers/02.jpg)
 
 Since the Dell monitor doesn't appreciate the data lines being shorted, I simply just snipped off the data lines for the rest of the dongles I have and all is good. The top dongle is what you get out of box, the bottom dongle you can see the two data lines in the middle snipped.
 
-![Fixed Dongle](../images/posts/usb-data-blockers/03.jpg)
+![Fixed Dongle](..//assets/posts/usb-data-blockers/03.jpg)

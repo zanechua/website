@@ -1,7 +1,7 @@
 ---
 slug: 'appcenter-caching-vendor-libraries'
 date: '2021-07-12'
-featuredImage: '../images/featured/appcenter-caching-vendor-libraries.png'
+featuredImage: '..//assets/featured/appcenter-caching-vendor-libraries.png'
 title: 'AppCenter caching for Vendor libraries'
 tags: ['appcenter', 'mobile app', 'android', 'ios', 'azure', 'react-native', 'node', 'dev ops']
 ---

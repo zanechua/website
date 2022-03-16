@@ -1,7 +1,7 @@
 ---
 slug: 'reduce-react-native-xcode-build-time-encore'
 date: '2021-09-06'
-featuredImage: '../images/featured/reduce-react-native-xcode-build-time.png'
+featuredImage: '..//assets/featured/reduce-react-native-xcode-build-time.png'
 title: 'Reduce React Native XCode build time Encore'
 tags: ['xcode', 'mobile app', 'ios', 'react-native', 'dev ops']
 ---

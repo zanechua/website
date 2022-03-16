@@ -3,9 +3,9 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import Layout from '../components/layout';
-import PostLink from '../components/post-link';
-import SEO from '../components/seo';
+import Layout from 'components/Layout';
+import PostLink from 'components/PostLink';
+import SEO from 'components/SEO';
 
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext;
@@ -79,8 +79,8 @@ export const pageQuery = graphql`
 Tags.propTypes = {
   pageContext: PropTypes.shape({
     tag: PropTypes.string.isRequired
-  }),
-  location: PropTypes.object,
+  }).isRequired,
+  location: PropTypes.object.isRequired,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
@@ -95,7 +95,7 @@ Tags.propTypes = {
         }).isRequired
       )
     })
-  })
+  }).isRequired
 };
 
 export default Tags;

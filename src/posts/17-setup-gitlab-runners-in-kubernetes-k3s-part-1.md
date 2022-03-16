@@ -1,7 +1,7 @@
 ---
 slug: 'setup-gitlab-runners-in-kubernetes-k3s-part-1'
 date: '2021-10-03'
-featuredImage: '../images/featured/setup-gitlab-runners-in-kubernetes-k3s.png'
+featuredImage: '..//assets/featured/setup-gitlab-runners-in-kubernetes-k3s.png'
 title: 'Setting up GitLab Runners in Kubernetes (K3S) - Part 1'
 tags: ['homelab', 'infrastructure', 'kubernetes', 'dev ops', 'gitlab', 'ci cd', 'esxi']
 ---

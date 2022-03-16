@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Footer from './footer';
-import Header from './header';
-import { ServiceWorkerUpdate } from './service-worker-update';
+import Footer from 'components/Footer';
+import Header from 'components/Header';
+import ServiceWorkerUpdate from 'components/ServiceWorkerUpdate';
 
-function Layout(props) {
+const Layout = props => {
   const { children, className } = props;
   return (
     <div className={`flex flex-col min-h-screen font-firacode ${className || ''}`}>
@@ -17,11 +17,15 @@ function Layout(props) {
       <Footer />
     </div>
   );
-}
+};
 
 Layout.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired
+};
+
+Layout.defaultProps = {
+  className: ''
 };
 
 export default Layout;

@@ -8,19 +8,19 @@ function getStyles(element) {
   return window.getComputedStyle ? getComputedStyle(element) : element.currentStyle || null;
 }
 
-function resizeElements(elements) {
-  elements = elements.filter(function (e) {
+function resizeElements(elementToResize) {
+  const elements = elementToResize.filter(e => {
     const codeStyles = getStyles(e);
     const whiteSpace = codeStyles['white-space'];
     return whiteSpace === 'pre-wrap' || whiteSpace === 'pre-line';
   });
 
-  if (elements.length == 0) {
+  if (elements.length === 0) {
     return;
   }
 
   const infos = elements
-    .map(function (element) {
+    .map(element => {
       const codeElement = element.querySelector('code');
       const lineNumbersWrapper = element.querySelector('.line-numbers-rows');
       if (!codeElement || !lineNumbersWrapper) {
@@ -45,23 +45,23 @@ function resizeElements(elements) {
       lineNumberSizer.innerHTML = '';
 
       return {
-        element: element,
+        element,
         lines: codeLines,
         lineHeights: [],
-        oneLinerHeight: oneLinerHeight,
+        oneLinerHeight,
         sizer: lineNumberSizer
       };
     })
     .filter(Boolean);
 
-  infos.forEach(function (info) {
+  infos.forEach(info => {
     const lineNumberSizer = info.sizer;
-    const lines = info.lines;
-    const lineHeights = info.lineHeights;
-    const oneLinerHeight = info.oneLinerHeight;
+    const { lines } = info;
+    const { lineHeights } = info;
+    const { oneLinerHeight } = info;
 
     lineHeights[lines.length - 1] = undefined;
-    lines.forEach(function (line, index) {
+    lines.forEach((line, index) => {
       if (line && line.length > 1) {
         const e = lineNumberSizer.appendChild(document.createElement('span'));
         e.style.display = 'block';
@@ -72,27 +72,27 @@ function resizeElements(elements) {
     });
   });
 
-  infos.forEach(function (info) {
+  infos.forEach(info => {
     const lineNumberSizer = info.sizer;
-    const lineHeights = info.lineHeights;
+    const { lineHeights } = info;
 
-    let childIndex = 0;
-    for (let i = 0; i < lineHeights.length; i++) {
+    const childIndex = 0;
+    for (let i = 0; i < lineHeights.length; i + 1) {
       if (lineHeights[i] === undefined) {
-        lineHeights[i] = lineNumberSizer.children[childIndex++].getBoundingClientRect().height;
+        lineHeights[i] = lineNumberSizer.children[childIndex + 1].getBoundingClientRect().height;
       }
     }
   });
 
-  infos.forEach(function (info) {
-    let lineNumberSizer = info.sizer;
+  infos.forEach(info => {
+    const lineNumberSizer = info.sizer;
     const wrapper = info.element.querySelector('.line-numbers-rows');
 
     lineNumberSizer.style.display = 'none';
     lineNumberSizer.innerHTML = '';
 
-    info.lineHeights.forEach(function (height, lineNumber) {
-      wrapper.children[lineNumber].style.height = height + 'px';
+    info.lineHeights.forEach((height, lineNumber) => {
+      wrapper.children[lineNumber].style.height = `${height}px`;
     });
   });
 }

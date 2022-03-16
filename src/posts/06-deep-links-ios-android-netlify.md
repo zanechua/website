@@ -1,7 +1,7 @@
 ---
 slug: 'deep-links-ios-android-netlify'
 date: '2020-10-09'
-featuredImage: '../images/featured/deep-links-ios-android-netlify.png'
+featuredImage: '..//assets/featured/deep-links-ios-android-netlify.png'
 title: 'Deep Links for iOS and Android on Netlify'
 tags: ['netlify', 'mobile app', 'android', 'ios', 'deep link']
 ---

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 
-function SEO({ description, lang, meta, keywords, title, path }) {
+const SEO = ({ description, lang, meta, keywords, title, path }) => {
   const { site } = useStaticQuery(graphql`
     query DefaultSEOQuery {
       site {
@@ -17,7 +17,7 @@ function SEO({ description, lang, meta, keywords, title, path }) {
     }
   `);
 
-  const siteUrl = site.siteMetadata.siteUrl;
+  const { siteUrl } = site.siteMetadata;
   const metaDescription = description || site.siteMetadata.description;
 
   const titleTemplate =
@@ -83,12 +83,14 @@ function SEO({ description, lang, meta, keywords, title, path }) {
       titleTemplate={titleTemplate}
     />
   );
-}
+};
 
 SEO.defaultProps = {
+  description: 'zanechua.com',
   lang: 'en',
   keywords: [],
-  meta: []
+  meta: [],
+  path: '/'
 };
 
 SEO.propTypes = {

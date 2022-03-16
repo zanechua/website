@@ -1,7 +1,7 @@
 ---
 slug: 'macos-windows-proxmox-update'
 date: '2021-08-31'
-featuredImage: '../images/featured/macos-windows-proxmox.png'
+featuredImage: '..//assets/featured/macos-windows-proxmox.png'
 title: 'MacOS and Windows running on Proxmox Update'
 tags: ['homelab', 'hardware', 'virtualization', 'macos', 'windows', 'proxmox']
 ---

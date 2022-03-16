@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import * as axios from 'axios';
 import PropTypes from 'prop-types';
 
-import CatLoader from './cat-loader';
+import CatLoader from 'components/CatLoader';
 
 const CommentForm = ({ slug, className }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +20,7 @@ const CommentForm = ({ slug, className }) => {
   const handleSubmission = async () => {
     setIsLoading(true);
     setConfirmationMessage('');
-    let formData = new URLSearchParams();
+    const formData = new URLSearchParams();
     formData.append('fields[slug]', slug);
     formData.append('fields[name]', name);
     formData.append('fields[email]', email);
@@ -36,14 +36,14 @@ const CommentForm = ({ slug, className }) => {
         data: formData,
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       })
-        .then(function () {
+        .then(() => {
           setIsLoading(false);
           resetInputData();
           setConfirmationMessage(
             'Thanks! Your comment will be published after it has been reviewed.'
           );
         })
-        .catch(function () {
+        .catch(() => {
           setIsLoading(false);
           setConfirmationMessage('An error occurred when posting your comment');
         });
@@ -133,7 +133,11 @@ const CommentForm = ({ slug, className }) => {
 
 CommentForm.propTypes = {
   className: PropTypes.string,
-  slug: PropTypes.string
+  slug: PropTypes.string.isRequired
+};
+
+CommentForm.defaultProps = {
+  className: ''
 };
 
 export default CommentForm;

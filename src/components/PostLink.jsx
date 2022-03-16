@@ -4,14 +4,14 @@ import { getSrc } from 'gatsby-plugin-image';
 import { kebabCase } from 'lodash';
 import PropTypes from 'prop-types';
 
-import TagLink from './tag-link';
+import TagLink from 'components/TagLink';
 
 const PostLink = ({ post }) => {
   const featuredSrc = getSrc(post.frontmatter.featuredImage);
   // const featuredSrcSet = featuredImgFluid.srcSet;
   // const imageLink = featuredSrcSet.substring(0, featuredSrcSet.indexOf(' 200w'));
 
-  const tags = post.frontmatter.tags;
+  const { tags } = post.frontmatter;
 
   return (
     <div className="w-full lg:flex py-4">
@@ -39,11 +39,9 @@ const PostLink = ({ post }) => {
           </div>
           <div className="flex-1 ml-auto text-right">
             {tags !== null &&
-              tags.map(tag => {
-                return (
-                  <TagLink key={`${kebabCase(tag)}-post-${post.frontmatter.slug}`} tag={tag} />
-                );
-              })}
+              tags.map(tag => (
+                <TagLink key={`${kebabCase(tag)}-post-${post.frontmatter.slug}`} tag={tag} />
+              ))}
           </div>
         </div>
       </div>
@@ -68,7 +66,7 @@ PostLink.propTypes = {
         })
       })
     })
-  })
+  }).isRequired
 };
 
 export default PostLink;

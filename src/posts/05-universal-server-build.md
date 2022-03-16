@@ -1,7 +1,7 @@
 ---
 slug: 'universal-server-build'
 date: '2020-09-17'
-featuredImage: '../images/featured/universal-server-build.png'
+featuredImage: '..//assets/featured/universal-server-build.png'
 title: 'Universal Server Build'
 tags: ['homelab', 'hardware', 'xeon']
 ---
@@ -60,7 +60,7 @@ This build was planned because at that point of time, the 4U server that I was u
 
 After completing the build, I decided to migrate the VMs over during the first run. I ended up hitting an issue where the ESXi Datastore would just randomly drop out. Turns out other people were experiencing the same issue, and the summary of it was basically the NVVMe drive was getting too hot, just saying `nope` and dropping out of the OS. Only a reboot would re-initialize the drive and it'll eventually drop out again. Putting a heat sink with fans on the NVMe drive did resolve this issue. Haven't had it drop out since.
 
-![NVMe heatsink](../images/posts/universal-server-build/01.jpg)
+![NVMe heatsink](..//assets/posts/universal-server-build/01.jpg)
 
 ### Case
 
@@ -72,7 +72,7 @@ I had to... crimp my own USB header cable because all the header cables that are
 
 The motherboard itself runs pretty well. Except that the PCH temperature affects how the fan spins up and down. Before adding a 40mm fan on top of the PCH heatsink, the temps were hovering around 70C. Now they are closer to 55C.
 
-![Fan on PCH and NVMe drive](../images/posts/universal-server-build/02.jpg)
+![Fan on PCH and NVMe drive](..//assets/posts/universal-server-build/02.jpg)
 
 Certain fans don't play well with Supermicro's fan curve, some fans made a ton of whining noise especially at low pwm speeds, and it annoys the heck out of me. I think there is a study somewhere that shows that we humans perceive low-pitched hums to be softer than they really are. Well at least to me it does. Certain fans would cause the board to kick into a `failed fan` mode which would spin up all fans connected to the board as the fan couldn't support the pwm voltage that was being supplied to it.
 
@@ -98,11 +98,11 @@ I am using a few molex to sata power extensions for the SSDs as there weren't en
 
 For the first build, I used a Mellanox ConnectX-2 10Gb network card, and it served as the WAN port. However, I did recent upgrades to the switches in my lab and while WAN is still limited to 1Gbps, LAN is supported with a 40Gbps backbone now.
 
-![Mellanox ConnectX-3 + QSFP+ transceiver](../images/posts/universal-server-build/03.jpg)
+![Mellanox ConnectX-3 + QSFP+ transceiver](..//assets/posts/universal-server-build/03.jpg)
 
 There was still a need to use a QSFP+ to SFP+ adapter, and thankfully Mellanox makes the MAM1Q00A-QSA-SP QSFP+ to SFP+ adapters that allow you to use your SFP+ adapters in QSFP+ slots.
 
-![Mellanox QSFP+ to SFP+ adapter](../images/posts/universal-server-build/04.jpg)
+![Mellanox QSFP+ to SFP+ adapter](..//assets/posts/universal-server-build/04.jpg)
 
 ### Fans
 
@@ -114,7 +114,7 @@ I had configured the fans to exhaust heat out the front as that was the way the 
 
 The fans were all mounted with anti-vibration mounts, and it was a pain trying to find thin anti-vibration mounts for the 40mm fans as they were so thick with mounting holes that were not the through hole variant. Eventually I did find some but even then, the mounts would break after a while. Possibly due to the stress and just the low quality of them. I switched to using long 35mm screws + washers + nuts and that's definitely not going to "break".
 
-![Fan Collection](../images/posts/universal-server-build/05.jpg)
+![Fan Collection](..//assets/posts/universal-server-build/05.jpg)
 
 ## Summary
 
@@ -122,8 +122,8 @@ For the most part, I didn't work out all the issues at once. It was more of an i
 
 I definitely went over-budget with this server and don't plan to do another build like this anytime soon. The one thing I would do better is to probably try to spec out for NVMe drives the next time as NVMe drives have recently came down in price. That way I'll definitely be able to saturate with 10Gb speeds. I will talk more about the services that I listed in another post as there's quite a ton to explain for the services themselves. Perhaps I'll also go into network setup and/or physical setup.
 
-![Top View of the Server](../images/posts/universal-server-build/06.jpg)
+![Top View of the Server](..//assets/posts/universal-server-build/06.jpg)
 
 I pretty much just stuffed the SSDs in that corner. 😂 Hey it's HomeLab.
 
-![Back View of the Server](../images/posts/universal-server-build/07.jpg)
+![Back View of the Server](..//assets/posts/universal-server-build/07.jpg)

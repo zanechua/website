@@ -3,9 +3,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import TagLink from '../components/tag-link';
+import Layout from 'components/Layout';
+import SEO from 'components/SEO';
+import TagLink from 'components/TagLink';
 
 const TagsPage = ({
   data: {
@@ -15,35 +15,31 @@ const TagsPage = ({
     }
   },
   location
-}) => {
-  return (
-    <Layout>
-      <SEO
-        keywords={['zanechua', 'homelab', 'zane j chua', 'tech geek']}
-        title={title}
-        path={location.pathname}
-      />
+}) => (
+  <Layout>
+    <SEO
+      keywords={['zanechua', 'homelab', 'zane j chua', 'tech geek']}
+      title={title}
+      path={location.pathname}
+    />
 
-      <section className="flex-1">
-        <h1 className="mb-4 text-2xl font-bold">Tags</h1>
-        <div className="flex flex-row">
-          <div className="flex-1">
-            {group.map(tag => {
-              return (
-                <TagLink
-                  key={`${tag.fieldValue}-tags-page`}
-                  tag={tag.fieldValue}
-                  count={tag.totalCount}
-                  showCount={true}
-                />
-              );
-            })}
-          </div>
+    <section className="flex-1">
+      <h1 className="mb-4 text-2xl font-bold">Tags</h1>
+      <div className="flex flex-row">
+        <div className="flex-1">
+          {group.map(tag => (
+            <TagLink
+              key={`${tag.fieldValue}-tags-page`}
+              tag={tag.fieldValue}
+              count={tag.totalCount}
+              showCount
+            />
+          ))}
         </div>
-      </section>
-    </Layout>
-  );
-};
+      </div>
+    </section>
+  </Layout>
+);
 
 export const pageQuery = graphql`
   query {
@@ -62,7 +58,7 @@ export const pageQuery = graphql`
 `;
 
 TagsPage.propTypes = {
-  location: PropTypes.object,
+  location: PropTypes.object.isRequired,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       group: PropTypes.arrayOf(
@@ -71,13 +67,13 @@ TagsPage.propTypes = {
           totalCount: PropTypes.number.isRequired
         }).isRequired
       )
-    }),
+    }).isRequired,
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
         title: PropTypes.string.isRequired
       })
     })
-  })
+  }).isRequired
 };
 
 export default TagsPage;

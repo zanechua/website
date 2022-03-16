@@ -1,7 +1,7 @@
 ---
 slug: 'improve-gitlab-pipelines-node'
 date: '2021-08-02'
-featuredImage: '../images/featured/improve-gitlab-pipelines-node.png'
+featuredImage: '..//assets/featured/improve-gitlab-pipelines-node.png'
 title: 'Improving GitLab Pipeline Speeds for NodeJS'
 tags: ['gitlab', 'node', 'dev ops', 'ci cd']
 ---

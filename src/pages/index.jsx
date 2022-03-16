@@ -2,9 +2,9 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import Layout from '../components/layout';
-import PostLink from '../components/post-link';
-import SEO from '../components/seo';
+import Layout from 'components/Layout';
+import PostLink from 'components/PostLink';
+import SEO from 'components/SEO';
 
 const IndexPage = ({
   data: {
@@ -61,12 +61,12 @@ export const pageQuery = graphql`
 `;
 
 IndexPage.propTypes = {
-  location: PropTypes.object,
+  location: PropTypes.object.isRequired,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array
     })
-  })
+  }).isRequired
 };
 
 export default IndexPage;

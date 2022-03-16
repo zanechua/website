@@ -1,7 +1,7 @@
 ---
 slug: 'stack-traces-sentry-apollo-graphql'
 date: '2021-08-23'
-featuredImage: '../images/featured/stack-traces-sentry-apollo-graphql.png'
+featuredImage: '..//assets/featured/stack-traces-sentry-apollo-graphql.png'
 title: 'Stacktraces in Sentry for GraphQL on ApolloServer'
 tags: ['node', 'javascript', 'dev ops', 'monitoring', 'sentry']
 ---

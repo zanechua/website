@@ -5,7 +5,7 @@ const Comment = ({ comment }) => {
   const renderMessage = commentMessage => {
     const messages = commentMessage.split('\n');
     return messages.map((item, index) => (
-      <p key={`${comment.id}-${index}`} className="whitespace-pre-wrap">
+      <p key={`${comment.id}`} className="whitespace-pre-wrap">
         {item}
       </p>
     ));
@@ -28,7 +28,7 @@ Comment.propTypes = {
     name: PropTypes.string,
     date: PropTypes.string,
     message: PropTypes.string
-  })
+  }).isRequired
 };
 
 export default Comment;

@@ -1,7 +1,7 @@
 ---
 slug: 'dependency-between-services-gitlab-pipelines'
 date: '2021-11-07'
-featuredImage: '../images/featured/dependency-between-services-gitlab-pipelines.png'
+featuredImage: '..//assets/featured/dependency-between-services-gitlab-pipelines.png'
 title: 'Dependency between Services in GitLab Pipelines'
 tags: ['gitlab', 'dev ops', 'ci cd', 'testing']
 ---

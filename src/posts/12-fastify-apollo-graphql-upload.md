@@ -1,7 +1,7 @@
 ---
 slug: 'fastify-apollo-graphql-upload'
 date: '2021-08-09'
-featuredImage: '../images/featured/fastify-apollo-graphql-upload.png'
+featuredImage: '..//assets/featured/fastify-apollo-graphql-upload.png'
 title: 'Fastify with Apollo Server and GraphQL Upload'
 tags: ['graphql', 'node', 'fastify', 'apollo server', 'file upload']
 ---

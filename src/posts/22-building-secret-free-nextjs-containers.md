@@ -1,7 +1,7 @@
 ---
 slug: 'building-secret-free-nextjs-containers'
 date: '2021-11-18'
-featuredImage: '../images/featured/building-secret-free-nextjs-containers.png'
+featuredImage: '..//assets/featured/building-secret-free-nextjs-containers.png'
 title: 'Building secret free NextJS containers'
 tags: ['containers', 'dev ops', 'nextjs', 'javascript', 'react']
 ---

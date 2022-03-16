@@ -1,7 +1,7 @@
 ---
 slug: 'generate-wireguard-vpn-qrcode'
 date: '2021-10-30'
-featuredImage: '../images/featured/generate-wireguard-vpn-qrcode.png'
+featuredImage: '..//assets/featured/generate-wireguard-vpn-qrcode.png'
 title: 'Generate a WireGuard QR code deployment package for easy onboarding'
 tags: ['homelab', 'infrastructure', 'vpn', 'wireguard', 'sys ops']
 ---

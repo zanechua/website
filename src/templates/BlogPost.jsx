@@ -3,21 +3,21 @@ import { Helmet } from 'react-helmet';
 import { useWindowSize } from '@react-hook/window-size';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image';
+import { resizeElements } from 'lib/prism-multiline-numbers';
 import PropTypes from 'prop-types';
 
-import CommentForm from '../components/comment-form';
-import CommentSection from '../components/comment-section';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import TagLink from '../components/tag-link';
-import { resizeElements } from '../lib/prism-multiline-numbers';
+import CommentForm from 'components/CommentForm';
+import CommentSection from 'components/CommentSection';
+import Layout from 'components/Layout';
+import SEO from 'components/SEO';
+import TagLink from 'components/TagLink';
 
 // the data prop will be injected by the GraphQL query below.
 const Template = ({ data, location }) => {
   const [width, height] = useWindowSize();
   const { site, posts, comments } = data; // data.posts holds your post data
   const { fields, frontmatter, excerpt, html } = posts;
-  const tags = frontmatter.tags;
+  const { tags } = frontmatter;
 
   const featuredImg = getImage(frontmatter.featuredImage);
   const imageLink = getSrc(frontmatter.featuredImage);
@@ -139,7 +139,7 @@ export const pageQuery = graphql`
 `;
 
 Template.propTypes = {
-  location: PropTypes.object,
+  location: PropTypes.object.isRequired,
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.PropTypes.shape({
@@ -169,7 +169,7 @@ Template.propTypes = {
         })
       })
     })
-  })
+  }).isRequired
 };
 
 export default Template;

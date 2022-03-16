@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 
-function Header() {
+const Header = () => {
   const [isExpanded, toggleExpansion] = useState(false);
   const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -23,6 +23,7 @@ function Header() {
         </Link>
 
         <button
+          type="button"
           className="flex items-center block px-3 py-2 text-white border border-white rounded md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}>
           <svg
@@ -59,6 +60,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export default Header;

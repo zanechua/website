@@ -19,7 +19,7 @@ const ExclamationIcon = () => (
   </svg>
 );
 
-export const ServiceWorkerUpdate = () => {
+const ServiceWorkerUpdate = () => {
   const hasUpdateReady = useStore(state => state.hasSwUpdateReady);
   const show = hasUpdateReady;
   return (
@@ -60,3 +60,5 @@ export const ServiceWorkerUpdate = () => {
     </Transition>
   );
 };
+
+export default ServiceWorkerUpdate;

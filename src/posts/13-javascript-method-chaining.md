@@ -1,7 +1,7 @@
 ---
 slug: 'javascript-method-chaining'
 date: '2021-08-16'
-featuredImage: '../images/featured/javascript-method-chaining.png'
+featuredImage: '..//assets/featured/javascript-method-chaining.png'
 title: 'Another way to do Javascript Method Chaining'
 tags: ['node', 'javascript', 'software engineering']
 ---

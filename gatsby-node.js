@@ -3,8 +3,8 @@ const _ = require('lodash');
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
-  const blogPostTemplate = require.resolve('./src/templates/blog-post.js');
-  const tagTemplate = require.resolve('./src/templates/tags.js');
+  const blogPostTemplate = require.resolve('./src/templates/BlogPost.jsx');
+  const tagTemplate = require.resolve('./src/templates/Tags.jsx');
 
   const result = await graphql(`
     {
@@ -65,7 +65,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'MarkdownRemark' && node.fileAbsolutePath.includes('posts')) {
-    const slug = node.frontmatter.slug;
+    const { slug } = node.frontmatter;
 
     createNodeField({
       node,
