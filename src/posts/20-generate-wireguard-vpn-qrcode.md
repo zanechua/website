@@ -14,7 +14,7 @@ I was finding it a chore to have to generate credentials for each user so I wrot
 
 # Solve
 
-```bash
+```bash:title=terminal
 sudo apt install wireguard qrencode #assuming debian/ubuntu
 ```
 
@@ -53,7 +53,7 @@ Endpoint = wireguard.example.com:51820
 
 Place both files into the same directory, update the public key, ip configuration and endpoint if you would like. Leave the private key field alone. Once done, you can run:
 
-```bash
+```bash:title=terminal
 ./genclient.sh *usernamehere*
 ```
 

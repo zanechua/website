@@ -8,7 +8,7 @@ tags: ['appcenter', 'mobile app', 'ios', 'android', 'react-native', 'dev ops']
 
 This is more of a tip to speed up your builds in AppCenter. Have you noticed that your builds are a little slow? The build machines are basically Mac Pro's but we're only getting 3 cores worth of processing power. We can validate this by running the `system_profiler SPHardwareDataType` in a script for our builds and the output should be the following
 
-```bash
+```bash:title=terminal
 system_profiler SPHardwareDataType
 Hardware:
 

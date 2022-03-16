@@ -16,13 +16,13 @@ That got me thinking about how do I build the container without said `.env` valu
 
 Add the package to your NextJS project
 
-```bash
+```bash:title=terminal
 yarn add @beam-australia/react-env
 ```
 
 Prepare the following files:
 
-```sh:title=entrypoint.sh
+```bash:title=entrypoint.sh
 #!/bin/sh
 set -e
 
@@ -64,7 +64,7 @@ import env from '@beam-australia/react-env';
 
 ### Build
 
-```sh
+```bash:title=terminal
 docker build -t next-app -f Dockerfile .
 ```
 
@@ -78,7 +78,7 @@ Assuming we're deploying for the staging environment, running the following will
 - Define `APP_ENV` environment variable to be `staging` for the container
 - Bind the volume `.env.staging` from the host to the container
 
-```sh
+```bash:title=terminal
 docker run -p 8080:3000 --env APP_ENV=staging -v $(pwd)/.env.staging:/app/.env.staging next-app
 ```
 

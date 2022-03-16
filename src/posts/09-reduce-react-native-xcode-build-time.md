@@ -30,7 +30,7 @@ The instructions below are for MacOS:
 4. Make `buildcache` executable
 5. Verify the `buildcache` command works by invoking the version argument.
 
-```bash
+```bash:title=terminal
 curl -L -O https://github.com/mbitsnbites/buildcache/releases/download/v0.27.1/buildcache-macos.zip
 unzip buildcache-macos.zip
 mv buildcache/bin/buildcache /usr/local/bin/buildcache
@@ -61,7 +61,7 @@ So now that you've installed `buildcache`, it's really easy to setup. We'll need
 
 We can do so by checking the path variable that's configured on your system.
 
-```bash
+```bash:title=terminal
 echo $PATH
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 ```
@@ -73,7 +73,7 @@ You can either add a path e.g.`~/bin` to your `$PATH` variable and do the symlin
 1. Create symlinks for both `clang` and `clang++`
 2. Use the `which` command to determine the location of the command we're invoking
 
-```bash
+```bash:title=terminal
 ln -s /usr/local/bin/buildcache /usr/local/bin/clang
 ln -s /usr/local/bin/buildcache /usr/local/bin/clang++
 which clang
@@ -101,6 +101,6 @@ end
 
 That's it! You can verify the the time it takes to build by appending the `time` command infront of the `xcodebuild` command. Run it twice and compare the difference!
 
-```bash
+```bash:title=terminal
 time xcodebuild -workspace ios/kopirun.xcworkspace -scheme kopirun -sdk iphoneos -configuration Release archive -archivePath $PWD/ios/build/kopirun.xcarchive
 ```

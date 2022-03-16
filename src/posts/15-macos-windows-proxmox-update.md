@@ -37,7 +37,7 @@ In the previous post, I mentioned that there was audio stuttering issues caused 
 
 When the audio drops out you'll get sound assertion errors in the kernel logs such as:
 
-```bash
+```bash:title=terminal
 HALS_IOA1Engine::EndWriting: got an error from the kernel trap, Error: 0xE00002D7
 ```
 

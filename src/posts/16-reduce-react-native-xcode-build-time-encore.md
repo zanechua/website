@@ -70,7 +70,7 @@ Run the following commands to set it up in your project.
 2. Install `cocoapods` and `xcode-archive-cache` based on the `Gemfile`
 3. Install Pods for the iOS project
 
-```bash
+```bash:title=terminal
 cd ios
 bundle install
 bundle exec pod install
@@ -80,7 +80,7 @@ That's it for the configuration. Commit the modifications into your source contr
 
 Before you build and archive the app, you can run the following to build the Pods and inject the built artifacts before you archive the app.
 
-```bash
+```bash:title=terminal
 bundle exec xcode-archive-cache inject --configuration=release --storage="$HOME/build_cache"
 ```
 
@@ -89,7 +89,7 @@ bundle exec xcode-archive-cache inject --configuration=release --storage="$HOME/
 
 You can verify the the time it takes to build by appending the `time` command infront of the `xcodebuild` command.
 
-```bash
+```bash:title=terminal
 time xcodebuild -workspace ios/kopirun.xcworkspace -scheme kopirun -sdk iphoneos -configuration Release archive -archivePath $PWD/ios/build/kopirun.xcarchive
 ```
 
