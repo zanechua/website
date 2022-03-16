@@ -101,15 +101,20 @@ const CommentForm = ({ slug, className }) => {
             <label className="block text-sm font-bold mb-2" htmlFor="fields[message]">
               Message *
             </label>
-            <textarea
-              className="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
-              id="fields[message]"
-              placeholder="Message"
-              onChange={({ target: { value } }) => {
-                setMessage(value);
-              }}
-              value={message}
-            />
+            <div
+              data-replicated-value={message}
+              className="grid after:whitespace-pre-wrap after:invisible after:content-[attr(data-replicated-value)] after:[grid-area:1/1/2/2]">
+              <textarea
+                className="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight resize-none overflow-hidden [grid-area:1/1/2/2] focus:outline-none focus:shadow-outline"
+                id="fields[message]"
+                placeholder="Message"
+                rows={6}
+                onInput={({ target: { value } }) => {
+                  setMessage(value);
+                }}
+                value={message}
+              />
+            </div>
           </div>
           <div className="flex items-center justify-between">
             <button

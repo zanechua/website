@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const Comment = ({ comment }) => {
   const renderMessage = commentMessage => {
     const messages = commentMessage.split('\n');
-    return messages.map(item => (
-      <p key={item} className="whitespace-pre-wrap">
+    return messages.map((item, index) => (
+      <p key={`${comment.id}-${index}`} className="whitespace-pre-wrap">
         {item}
       </p>
     ));
