@@ -12,7 +12,25 @@ module.exports = function (api) {
     ]
   ];
 
-  const plugins = [['@babel/plugin-proposal-decorators', { legacy: true }]];
+  const plugins = [
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    [
+      'module-resolver',
+      {
+        root: ['./src'],
+        extensions: ['.jsx', '.js', '.json'],
+        alias: {
+          root: './',
+          assets: './src/assets/',
+          components: './src/components/',
+          lib: './src/lib/',
+          styles: './src/styles/',
+          templates: './src/templates/',
+          utils: './src/utils/'
+        }
+      }
+    ]
+  ];
 
   return {
     presets,

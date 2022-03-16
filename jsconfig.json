@@ -1,0 +1,16 @@
+
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "paths": {
+      "root/*": ["./*"],
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"],
+      "lib/*": ["./src/lib/*"],
+      "styles/*": ["./src/styles/*"],
+      "templates/*": ["./src/templates/*"],
+      "utils/*": ["./src/utils/*"]
+    }
+  }
+}
