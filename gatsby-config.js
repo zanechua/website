@@ -1,8 +1,3 @@
-const resolveConfig = require('tailwindcss/resolveConfig');
-const tailwindConfig = require('./tailwind.config.js');
-
-const fullConfig = resolveConfig(tailwindConfig);
-
 const siteUrl = 'https://zanechua.com';
 
 module.exports = {
@@ -99,8 +94,8 @@ module.exports = {
         name: 'zanechua.com',
         short_name: 'ZaneChua',
         start_url: '/',
-        background_color: fullConfig.theme.colors.white,
-        theme_color: fullConfig.theme.colors.teal,
+        background_color: '#FFFFFF',
+        theme_color: '#14B8A6',
         display: 'minimal-ui',
         icon: 'static/icon.png'
       }
@@ -109,7 +104,7 @@ module.exports = {
       resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [
-          require('tailwindcss')(tailwindConfig),
+          require('tailwindcss'),
           require('autoprefixer'),
           ...(process.env.NODE_ENV === 'production' ? [require('cssnano')] : [])
         ]

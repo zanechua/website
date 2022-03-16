@@ -1,15 +1,21 @@
 // See https://tailwindcss.com/docs/configuration for details
 module.exports = {
+  mode: 'jit',
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true
   },
-  purge: ['./src/**/*.js'],
+  content: [
+    './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/templates/**/*.{js,ts,jsx,tsx}',
+    './src/html.js'
+  ],
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
-      screens: {
-        dark: { raw: '(prefers-color-scheme: dark)' },
-        light: { raw: '(prefers-color-scheme: light)' }
+      fontFamily: {
+        firacode: ['Fira Code', 'monospace']
       }
     }
   },
