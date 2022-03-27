@@ -12,6 +12,10 @@ const Footer = () => (
       <nav>
         {[
           {
+            route: 'https://gitlab.com/zanechua',
+            title: 'GitLab'
+          },
+          {
             route: 'https://github.com/zanechua',
             title: 'GitHub'
           },
