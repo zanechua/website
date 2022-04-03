@@ -1,7 +1,7 @@
 ---
 slug: 'services-in-homelab'
 date: '2021-10-10'
-featuredImage: '..//assets/featured/services-in-homelab.png'
+featuredImage: '../assets/featured/services-in-homelab.png'
 title: 'Services in my HomeLab'
 tags: ['homelab', 'infrastructure', 'virtualization', 'esxi', 'applications']
 ---

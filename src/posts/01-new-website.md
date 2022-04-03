@@ -1,7 +1,7 @@
 ---
 slug: 'new-website'
 date: '2020-06-05'
-featuredImage: '..//assets/featured/new-website.png'
+featuredImage: '../assets/featured/new-website.png'
 title: 'New website'
 ---
 

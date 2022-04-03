@@ -1,7 +1,7 @@
 ---
 slug: 'macos-windows-proxmox'
 date: '2020-08-31'
-featuredImage: '..//assets/featured/macos-windows-proxmox.png'
+featuredImage: '../assets/featured/macos-windows-proxmox.png'
 title: 'MacOS and Windows running on Proxmox'
 tags: ['homelab', 'hardware', 'virtualization', 'macos', 'windows', 'proxmox']
 ---
@@ -79,27 +79,27 @@ There are some issues mounting the Orico MHP4U to the bottom of the monitor as t
 
 ### Audio
 
-![Audio Setup](..//assets/posts/macos-windows-proxmox/01.jpg)
+![Audio Setup](../assets/posts/macos-windows-proxmox/01.jpg)
 
 The audio setup was basically modelled after the post of [audio hardware for vfio setups][7] by the guys over at The Passthrough Post. The only difference here was that I decided to get the more expensive Behringer UMC202HDs for both VMs as that gave me the benefits of stacking the audio interfaces and have more inputs/outputs. The first interface is used as an input for the microphone which is an Audio-Technica AT2035. I bought an XLR Splitter because the way this interface works is that it splits the first input to the left channel and, the second input to the right channel when using direct monitor. I wanted the audio on both channels and that's where the splitter comes in.
 
 The Rolls MX51s mixer takes the output from the second and third interface that is connected to both the MacOS and Windows VMs respectively and outputs to the S.M.S.L AD18 via AUX which then outputs the audio from both OSes at the same time.
 
-![Microphone Mount](..//assets/posts/macos-windows-proxmox/02.jpg)
+![Microphone Mount](../assets/posts/macos-windows-proxmox/02.jpg)
 
 The microphone set-up involves mounting the microphone to the Ulanzi MT-11 tripod and hanging it upside down from my monitor mount, so it's basically hanging at the bottom. Placed a simple fur cover that takes care of wind (from my fan) and a pop filter hovering on top of it.
 
 ### Webcam/Video
 
-![Camera Setup](..//assets/posts/macos-windows-proxmox/03.jpg)
+![Camera Setup](../assets/posts/macos-windows-proxmox/03.jpg)
 
 The Webcam/Video setup was inspired by the audio setup and when coupled with the use of these cheap [usb hdmi capture devices][8] that have been popping up with "raving" reviews, enables us to accomplish this pretty cheaply sans the GoPro. A USB hdmi capture dongle is each connected to the MacOS and Windows VMs.
 
-![Camera Power](..//assets/posts/macos-windows-proxmox/04.jpg)
+![Camera Power](../assets/posts/macos-windows-proxmox/04.jpg)
 
 The GoPro is configured to output the live view through HDMI and is powered via the Orico 7-Port USB Hub. This hub has no other use than to provide power for the components. The output of the GoPro goes to the HDMI splitter and, the splitter is connected to each of the USB hdmi capture dongles. This allows us to have real time video input for both MacOS and Windows.
 
-![Camera Mount](..//assets/posts/macos-windows-proxmox/05.jpg)
+![Camera Mount](../assets/posts/macos-windows-proxmox/05.jpg)
 
 The GoPro itself is mounted on a Ulanzi MT-11 tripod with the Eyegear Case. I like this case particularly because it gives you the sliding door to ensure your GoPro stays in and allows you to open the side door for the hdmi and power cables. It has two hotshoe mounts which I used to mount a 6" LED USB Light after noticing my video input was a little dark. This case also gives you the ability to screw on any 55mm filter but I haven't had a good experience trying filters that "zoom" in so that the view isn't so wide. I've just resorted to using OBS to do it.
 
@@ -152,7 +152,7 @@ options vfio-pci ids=1002:67df,1002:aaf0,1002:731f,1002:ab38,10de:1c03,
 
 ## MacOS VM
 
-![MacOS](..//assets/posts/macos-windows-proxmox/06.png)
+![MacOS](../assets/posts/macos-windows-proxmox/06.png)
 
 MacOS installation is pretty straight forward as long as you have access to a Mac. I followed Nick Sherlock's guide which you can find [here][3]. The installation process for MacOS is mainly the same as the guide, they should only differ in the modprobe configuration for the host. As for MacOS itself, the only thing I added was `agdpmod=pikera` to the boot options of OpenCore as I'm using an RX 5700.
 
@@ -182,7 +182,7 @@ Here's a list of issues that I faced with MacOS:
 
 ## Windows VM
 
-![Windows](..//assets/posts/macos-windows-proxmox/07.png)
+![Windows](../assets/posts/macos-windows-proxmox/07.png)
 
 Installation for Windows is pretty standard, upload the ISO to proxmox and just finish the installation to the NVMe drive. I had some issues with setting the NVMe drive as the default boot order, but you can use the following workaround that I have detailed [here][4].
 
@@ -211,13 +211,13 @@ Since we have both virtual machines up and running, we want to use a single keyb
 
 ### Accessible Ports
 
-![Front IO](..//assets/posts/macos-windows-proxmox/08.jpg)
+![Front IO](../assets/posts/macos-windows-proxmox/08.jpg)
 
 I think for most of us, we have the front IO on our case for easy usb access and what not. In this instance, that's where the Orico MHP4U that I mentioned above comes in. This allows you to plug devices into either OS at any point of time and the fact that they are sitting below the screen of the OS should be an easy indicator of which one to plug to in the event you manage to forget which OS is which.
 
 ## Conclusion
 
-![Full Setup](..//assets/posts/macos-windows-proxmox/09.jpg)
+![Full Setup](../assets/posts/macos-windows-proxmox/09.jpg)
 
 All in all, this was a fun side project to work on and make usable. I am sure I'll still be making small improvements here and there but the gist of the information is here. I was wrecking my brains out at how to get all of this working at the start but this should serve as a good summary/build log for my future self when I revisit this topic again. If you've made it this far, thanks for reading! If you've any questions, ping me on twitter [@zanejchua][10] as I still haven't gotten comments set-up on my site.
 

@@ -1,7 +1,7 @@
 ---
 slug: 'speed-up-react-native-appcenter-builds'
 date: '2021-07-26'
-featuredImage: '..//assets/featured/speed-up-react-native-appcenter-builds.png'
+featuredImage: '../assets/featured/speed-up-react-native-appcenter-builds.png'
 title: 'Speed Up React Native builds in AppCenter'
 tags: ['appcenter', 'mobile app', 'ios', 'android', 'react-native', 'dev ops']
 ---

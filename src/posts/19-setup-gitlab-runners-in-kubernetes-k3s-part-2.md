@@ -1,7 +1,7 @@
 ---
 slug: 'setup-gitlab-runners-in-kubernetes-k3s-part-2'
 date: '2021-10-22'
-featuredImage: '..//assets/featured/setup-gitlab-runners-in-kubernetes-k3s.png'
+featuredImage: '../assets/featured/setup-gitlab-runners-in-kubernetes-k3s.png'
 title: 'Setting up GitLab Runners in Kubernetes (K3S) - Part 2'
 tags: ['homelab', 'infrastructure', 'kubernetes', 'dev ops', 'gitlab', 'ci cd', 'esxi']
 ---
@@ -102,13 +102,13 @@ The `pre_clone_script` was obtained from [here](https://gitlab.com/gitlab-org/gi
 ## Note: it does not apply to job containers launched by this executor.
 ## Use `pull_policy` in [runners.kubernetes] to change it.
 ##
-## ref: https://kubernetes.io/docs/concepts/containers//assets/#pre-pulled-images
+## ref: https://kubernetes.io/docs/concepts/containers/assets/#pre-pulled-images
 ##
 imagePullPolicy: IfNotPresent
 
 ## Specifying ImagePullSecrets on a Pod
 ## Kubernetes supports specifying container image registry keys on a Pod.
-## ref: https://kubernetes.io/docs/concepts/containers//assets/#specifying-imagepullsecrets-on-a-pod
+## ref: https://kubernetes.io/docs/concepts/containers/assets/#specifying-imagepullsecrets-on-a-pod
 ##
 # imagePullSecrets:
 #   - name: "image-pull-secret"
