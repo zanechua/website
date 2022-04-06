@@ -1,0 +1,20 @@
+_id: bb1d4fb0-b5d3-11ec-a0bd-0157bcf907b3
+slug: diy-tpm-module
+name: Zane
+email: 72dec835f59a6ccb870d1e3b0c853689
+message: >-
+  @Dominic
+
+
+  I didn't include this this tidbit in the post because I figured it wasn't
+  relevant, but when the module wasn't initially working, I did end up bridging
+  the 3VSB+ to the 3V assuming that I did actually need to hook up 3VSB+. It
+  turns out that when I did that and had slotted the module correctly (the
+  second time), the motherboard refused to power on (Pressing the power button
+  and nothing happens). Only when I removed the bridge, I was able to get the
+  board to boot.
+
+
+  As for the SLB9665TT20 modules, I bought them off AliExpress. You should be
+  able to find them quite easily. I paid about $2 per chip.
+date: '2022-04-06T18:02:32.485Z'
