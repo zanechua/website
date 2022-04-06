@@ -1,0 +1,32 @@
+_id: 04837750-b5b7-11ec-a0bd-0157bcf907b3
+slug: diy-tpm-module
+name: Dominic M. Luciano
+email: 56c84de5fd8e280828ea9787d5bfda19
+message: >-
+  Thanks for this article; it was very helpful! I'm a professional engineering
+  scientist and I've been eying the SLB9665 for a few weeks now as it may kill
+  two birds with one stone for me regarding a project I'm working on. But I have
+  some other questions about the TPM module slot on the motherboard in general
+  that I haven't been able to find the info on, such as how much current can the
+  +3VSB pin source, and the +3V3 pins source? I've been working on an
+  aftermarket module with expanded features that would require a standby supply
+  while the PC is off, and I don't want to run something like a DC barrel jack
+  into the PC case from the outside to get constant power, so I've been
+  considering using the +3VSB power in the TPM slot to power my module instead.
+  But I'm looking for some more info on it.
+
+
+  Also, buying SLB9665 chips at the moment is damn near impossible. And samples
+  are out of the question as I just get shuffled around trying to obtain a
+  couple. Any chance you might know where to get a few SLB9665 in TSSOP?
+
+
+  I'd really love to chat more with you regarding TPM modules. I don't get on
+  social media very much, but I'm on GitHub as @domiluci, and I can be found on
+  Facebook under my full name. I'm also available by email. Hopefully we can
+  find a way to get in touch! :)
+
+
+  Thank you very much for the article, and thanks in advance for any help you
+  may be able to provide!
+date: '2022-04-06T14:37:00.342Z'
