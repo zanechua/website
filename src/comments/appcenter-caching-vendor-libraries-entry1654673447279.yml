@@ -1,0 +1,16 @@
+_id: e9cee440-e6fc-11ec-b7da-9df916ecb799
+slug: appcenter-caching-vendor-libraries
+name: Sumesh Agarwal
+email: bc790a517e4f419dba94bec23c6e42fb
+message: >-
+  Hi Zane,
+
+  Thank you for the wonderful article, but I am getting the below error while
+  running the post-clone script
+
+  Can you help me ?
+
+
+  failed to perform copy command due to error: cannot use directory as source
+  without --recursive or a trailing wildcard (/*)
+date: '2022-06-08T07:30:47.275Z'
