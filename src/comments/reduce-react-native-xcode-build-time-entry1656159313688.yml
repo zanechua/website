@@ -1,0 +1,16 @@
+_id: 773de8e0-f480-11ec-a455-b5d2a38107db
+slug: reduce-react-native-xcode-build-time
+name: Zane
+email: 72dec835f59a6ccb870d1e3b0c853689
+message: >-
+  Per the usage docs, the default directory where the cache is stored is
+  `$HOME/.buildcache`.
+
+
+  You can set the `BUILDCACHE_DIR` environment variable to any other directory
+  that you would like the cache to be stored in.
+
+
+  See
+  https://github.com/mbitsnbites/buildcache/blob/master/doc/usage.md#using-with-visual-studio--msbuild
+date: '2022-06-25T12:15:13.686Z'
