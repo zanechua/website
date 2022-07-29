@@ -1,0 +1,17 @@
+_id: 024eb050-0f38-11ed-b85d-a5b2efbd8eaf
+slug: macos-windows-proxmox-update
+name: Mike
+email: 3ba25bf79e8e4ba1c828aa77c14af080
+message: >-
+  Hi there, thanks for sharing. Was there any additional configuration necessary
+  to get the MOTU audio interface working on the host from a Windows guest? 
+
+  I saw in your original post you added a few lines to the blacklist.conf, but
+  that doesn't seem to do the trick for me. 
+
+  Currently I have the device passed through and am able to see it from the
+  guest-OS, but no sound...
+
+
+  Thanks, Mike
+date: '2022-07-29T12:14:35.122Z'
