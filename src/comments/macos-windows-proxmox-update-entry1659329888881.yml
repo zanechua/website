@@ -1,0 +1,11 @@
+_id: 895879d0-1156-11ed-9bba-21e53c11b554
+slug: macos-windows-proxmox-update
+name: Zane
+email: 72dec835f59a6ccb870d1e3b0c853689
+message: >-
+  Hey Mike,
+
+
+  I believe the only thing I did for the Windows guest was to install the MOTU
+  drivers. I don't believe any other configuration is required.
+date: '2022-08-01T04:58:08.879Z'
