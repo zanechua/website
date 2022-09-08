@@ -42,6 +42,7 @@
     "@react-hook/window-size": "^3.0.7",
     "@sindresorhus/fnv1a": "^3.0.0",
     "axios": "^0.26.1",
+    "date-fns": "^2.29.2",
     "gatsby": "4.7.2",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-google-tagmanager": "^4.9.0",

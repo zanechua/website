@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useWindowSize } from '@react-hook/window-size';
+import { format } from 'date-fns';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image';
 import { resizeElements } from 'lib/prism-multiline-numbers';
+import { last } from 'lodash';
 import PropTypes from 'prop-types';
 
 import CommentForm from 'components/CommentForm';
@@ -18,6 +20,10 @@ const Template = ({ data, location }) => {
   const { site, posts, comments } = data; // data.posts holds your post data
   const { fields, frontmatter, excerpt, html } = posts;
   const { tags } = frontmatter;
+  const updatedAtArray = frontmatter?.updatedAt;
+  const lastUpdatedAt = Array.isArray(updatedAtArray)
+    ? format(new Date(last(updatedAtArray)), 'dd MMMM, yyyy')
+    : null;
 
   const featuredImg = getImage(frontmatter.featuredImage);
   const imageLink = getSrc(frontmatter.featuredImage);
@@ -76,7 +82,9 @@ const Template = ({ data, location }) => {
           <div className="my-1">
             {tags !== null && tags.map(tag => <TagLink key={tag} tag={tag} />)}
           </div>
-          <h2 className="text-sm font-bold">{`${frontmatter.date} • ${fields.readingTime.text}`}</h2>
+          <h2 className="text-sm font-bold">{`${frontmatter.date} ${
+            lastUpdatedAt ? `• Last Updated at ${lastUpdatedAt}` : ''
+          } • ${fields.readingTime.text}`}</h2>
         </div>
         <div className="blog-post-featured-image pb-4">
           <GatsbyImage image={featuredImg} alt={frontmatter.title} />
@@ -114,6 +122,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         date(formatString: "DD MMMM, YYYY")
+        updatedAt
         slug
         title
         tags
