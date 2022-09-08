@@ -128,6 +128,10 @@ details .summary-content {
   padding: 1em;
   font-weight: 300;
   line-height: 1.5;
+  color: #ffffff;
+}
+details .summary-content blockquote > p {
+  @apply text-black;
 }
 details summary {
   list-style: none;
@@ -149,6 +153,7 @@ details .summary-chevron-down {
   top: 1em;
   right: 1em;
   background: #1e1e1e;
+  color: #ffffff;
 }
 details .summary-chevron-up svg,
 details .summary-chevron-down svg {
@@ -183,7 +188,11 @@ details summary::-webkit-details-marker {
     color: #ffffff;
   }
 
-  blockquote p {
-    color: #000000;
+  .markdown blockquote > p {
+    @apply text-black;
+  }
+
+  details .summary-chevron-down {
+    background: #1e1e1e;
   }
 }

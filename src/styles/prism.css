@@ -25,8 +25,9 @@ code[class*='language-'] {
   max-width: 90vw;
   overflow: auto;
   background: #1e1e1e;
-  @apply shadow-md;
-  @apply drop-shadow-md;
+  @apply shadow-sm;
+  @apply drop-shadow-sm;
+  @apply shadow-white;
   @apply p-3;
   @apply pt-10;
   @apply rounded-md;
