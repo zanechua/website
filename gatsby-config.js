@@ -1,3 +1,6 @@
+const { format } = require('date-fns');
+const { last } = require('lodash');
+
 const siteUrl = 'https://zanechua.com';
 
 module.exports = {
@@ -43,6 +46,7 @@ module.exports = {
                   }
                   frontmatter {
                     date
+                    updatedAt
                   }
                 }
               }
@@ -67,9 +71,16 @@ module.exports = {
           const { path } = pageData;
           const modifiedGmt = pageData?.node?.frontmatter?.date;
           // Not all pages have dates
+
+          const updatedAtArray = pageData?.node?.frontmatter?.updatedAt;
+          const lastUpdatedAt = Array.isArray(updatedAtArray)
+            ? new Date(last(updatedAtArray)).toISOString()
+            : null;
+          // Not all pages have updated at
+
           return {
             url: path,
-            lastmod: modifiedGmt
+            lastmod: lastUpdatedAt || modifiedGmt
           };
         }
       }
