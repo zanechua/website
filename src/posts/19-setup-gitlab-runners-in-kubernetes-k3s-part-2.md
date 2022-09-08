@@ -1,6 +1,7 @@
 ---
 slug: 'setup-gitlab-runners-in-kubernetes-k3s-part-2'
 date: '2021-10-22'
+updatedAt: ['2022-09-08']
 featuredImage: '../assets/featured/setup-gitlab-runners-in-kubernetes-k3s.png'
 title: 'Setting up GitLab Runners in Kubernetes (K3S) - Part 2'
 tags: ['homelab', 'infrastructure', 'kubernetes', 'dev ops', 'gitlab', 'ci cd', 'esxi']
@@ -19,6 +20,20 @@ curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 ```
 
 ### Prepare the cluster to connect
+
+> The following cluster certificate connection type is deprecated and disabled by default in GitLab 15.0.
+> Connecting the cluster to GitLab is not necessary for connecting the runners, so you can skip this section
+> if you do not need to monitor the instance or using it for e.g. review apps.
+> I'm leaving this section here but hidden as it's not really required.
+
+<details>
+<summary>
+  <span class="summary-title">Show/Hide</span>
+  <div class="summary-chevron-up">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+  </div>
+</summary>
+<div class="summary-content">
 
 Applying the following manifest:
 
@@ -65,7 +80,13 @@ Once you have the above, use the `Connect cluster with certificate` option in Gi
 
 > Remember to add an allow rule to your firewall (NAT Port Forwarding) for the cluster. I'm assuming that you know how to do this, if there is any clarification needed around this, leave a comment.
 
-### Preparing the Manifest
+</div>
+<div class="summary-chevron-down">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
+</div>
+</details>
+
+### Preparing the Runner Manifest
 
 Go to `Settings -> CI/CD -> Runners` and note down the runner registration token
 
@@ -510,7 +531,7 @@ runners:
 ## Configure securitycontext
 ## ref: http://kubernetes.io/docs/user-guide/security-context/
 ##
-securityContext:
+podSecurityContext:
   runAsUser: 100
   # runAsGroup: 65533
   fsGroup: 65533
@@ -649,3 +670,7 @@ If you want to uninstall the chart you can run:
 ```bash:title=main
 helm uninstall --namespace gitlab-runner gitlab-runner
 ```
+
+## Change Log
+
+- `2022-09-08` - Updated runner manifest to use the new `podSecurityContext` instead of `securityContext` and hide cluster certificate connection
