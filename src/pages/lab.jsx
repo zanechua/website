@@ -44,8 +44,11 @@ const LabPage = ({ location }) => (
             <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
               1U - Modem Chassis
             </li>
-            <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">
-              2U - Xeon 8160 Server
+            <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+              1U - Blank/Empty
+            </li>
+            <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
+              1U - Blank/Empty
             </li>
             <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-2">
               2U - 3-Pin Type G (UK) PDU
@@ -83,17 +86,8 @@ const LabPage = ({ location }) => (
             <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
               1U - Blank/Empty
             </li>
-            <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-              1U - Blank/Empty
-            </li>
-            <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-              1U - Blank/Empty
-            </li>
-            <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-              1U - Blank/Empty
-            </li>
-            <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-              1U - Tray
+            <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-4">
+              4U - Epyc 7502 server
             </li>
             <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-3">
               3U - Supermicro SC836
@@ -192,17 +186,8 @@ const LabPage = ({ location }) => (
             <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-4">
               4U - Epyc 7502 Server
             </li>
-            <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-              1U - Blank/Empty
-            </li>
-            <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-              1U - Blank/Empty
-            </li>
-            <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-              1U - Blank/Empty
-            </li>
-            <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
-              1U - Blank/Empty
+            <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-4">
+              4U - Supermicro SC846
             </li>
             <li className="border-l-4 border-r-4 border-t-2 border-b-2 border-dashed dark:border-white light:border-black p-1">
               1U - Blank/Empty
