@@ -44,13 +44,8 @@
 }
 
 /* Lists */
-.markdown ul,
-.markdown ol {
-  @apply mb-4 text-gray-800;
-}
-
 .markdown ul {
-  @apply ml-8;
+  @apply mb-4 text-gray-800 ml-8;
 }
 
 .markdown li > p,
@@ -59,6 +54,7 @@
   @apply mb-0;
 }
 .markdown ol {
+  @apply mb-4 text-gray-800 ml-10;
   @apply list-decimal;
 }
 .markdown ul {
