@@ -1,6 +1,7 @@
 ---
 slug: 'improve-gitlab-pipelines-node'
 date: '2021-08-02'
+updatedAt: ['2022-09-10']
 featuredImage: '../assets/featured/improve-gitlab-pipelines-node.png'
 title: 'Improving GitLab Pipeline Speeds for NodeJS'
 tags: ['gitlab', 'node', 'dev ops', 'ci cd']
@@ -37,7 +38,10 @@ cache_stage:
       - node_modules/
       - .yarn/
       - yarn.lock.sha256sum
+    policy: pull-push
+    when: on_failure
   script:
+    - CI_JOB_SKIP_EXIT_CODE=0
     - yarn install --frozen-lockfile --prefer-offline --cache-folder .yarn
     -  # do whatever
     - |
@@ -48,12 +52,13 @@ cache_stage:
       if ! sha256sum -c yarn.lock.sha256sum; then
         echo "yarn.lock checksum does not match cache"
         sha256sum yarn.lock > yarn.lock.sha256sum
+        CI_JOB_SKIP_EXIT_CODE=218
       else
-        echo "Cache is the same as before, removing cache files to prevent cache from updating"
-        rm -rf node_modules
-        rm -rf .yarn
-        rm -rf yarn.lock.sha256sum
+        echo "Cache is the same as before, won't update cache"
       fi
+    - exit $CI_JOB_SKIP_EXIT_CODE
+  allow_failure:
+    exit_codes: 218
 
 test_stage:
   stage: test
@@ -70,3 +75,7 @@ test_stage:
   script:
     - echo "Test Stage"
 ```
+
+## Change Log
+
+- `2022-09-10` - Updated example to support both SaaS and Self-Managed instances
