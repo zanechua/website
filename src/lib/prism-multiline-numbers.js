@@ -1,3 +1,4 @@
+// Adapted from https://github.com/PrismJS/prism/blob/master/plugins/line-numbers/prism-line-numbers.js#L82-L172
 const NEW_LINE_EXP = /\n(?!$)/g;
 
 function getStyles(element) {
