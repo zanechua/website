@@ -17,7 +17,7 @@ import TagLink from 'components/TagLink';
 const BlogPostTemplate = ({ data }) => {
   const [width, height] = useWindowSize();
   const { posts, comments } = data; // data.posts holds your post data
-  const { fields, frontmatter, html } = posts;
+  const { timeToRead, frontmatter, html } = posts;
   const { tags } = frontmatter;
   const updatedAtArray = frontmatter?.updatedAt;
   const lastUpdatedAt = Array.isArray(updatedAtArray)
@@ -52,7 +52,7 @@ const BlogPostTemplate = ({ data }) => {
           </div>
           <h2 className="text-sm font-bold">{`${frontmatter.date} ${
             lastUpdatedAt ? `• Last Updated at ${lastUpdatedAt}` : ''
-          } • ${fields.readingTime.text}`}</h2>
+          } • ${timeToRead} min read`}</h2>
         </div>
         <div className="blog-post-featured-image pb-4">
           <GatsbyImage image={featuredImg} alt={frontmatter.title} />
@@ -102,11 +102,7 @@ export const pageQuery = graphql`
     posts: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       excerpt(pruneLength: 250)
-      fields {
-        readingTime {
-          text
-        }
-      }
+      timeToRead
       frontmatter {
         date(formatString: "DD MMMM, YYYY")
         updatedAt
@@ -147,11 +143,7 @@ BlogPostTemplate.propTypes = {
     posts: PropTypes.shape({
       html: PropTypes.string,
       excerpt: PropTypes.string,
-      fields: PropTypes.shape({
-        readingTime: PropTypes.shape({
-          text: PropTypes.string
-        })
-      }),
+      timeToRead: PropTypes.string,
       frontmatter: PropTypes.shape({
         slug: PropTypes.string,
         title: PropTypes.string,

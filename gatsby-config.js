@@ -201,7 +201,6 @@ module.exports = {
               toasterDuration: 3000
             }
           },
-          'gatsby-remark-reading-time',
           {
             resolve: 'gatsby-remark-autolink-headers',
             options: {
