@@ -1,9 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 
-const SEO = ({ description, lang, meta, keywords, title, path }) => {
+const SEO = ({ description, children, keywords, title, path }) => {
   const { site } = useStaticQuery(graphql`
     query DefaultSEOQuery {
       site {
@@ -18,86 +17,49 @@ const SEO = ({ description, lang, meta, keywords, title, path }) => {
   `);
 
   const { siteUrl } = site.siteMetadata;
-  const metaDescription = description || site.siteMetadata.description;
 
-  const titleTemplate =
-    title === 'Home' ? site.siteMetadata.title : `%s | ${site.siteMetadata.title}`;
+  const seo = {
+    title: title === 'Home' ? site.siteMetadata.title : `${title} | ${site.siteMetadata.title}`,
+    description: description || site.siteMetadata.description,
+    url: `${siteUrl}${path || ''}`,
+    keywords: keywords || []
+  };
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang
-      }}
-      meta={[
-        {
-          name: 'description',
-          content: metaDescription
-        },
-        {
-          name: 'url',
-          content: `${siteUrl}${path}`
-        },
-        {
-          property: 'og:title',
-          content: title
-        },
-        {
-          property: 'og:description',
-          content: metaDescription
-        },
-        {
-          property: 'og:type',
-          content: 'website'
-        },
-        {
-          property: 'og:url',
-          content: `${siteUrl}${path}`
-        },
-        {
-          name: 'twitter:card',
-          content: 'summary'
-        },
-        {
-          name: 'twitter:creator',
-          content: site.siteMetadata.author
-        },
-        {
-          name: 'twitter:title',
-          content: title
-        },
-        {
-          name: 'twitter:description',
-          content: metaDescription
+    <>
+      <html lang="en" />
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="url" content={seo.url} />
+      <meta name="og:title" content={seo.title} />
+      <meta name="og:description" content={seo.description} />
+      <meta name="og:type" content="website" />
+      <meta name="og:url" content={seo.url} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content={site.siteMetadata.author} />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:url" content={seo.url} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta
+        name="keywords"
+        content={
+          ['zanechua', 'homelab', 'zane j chua', 'tech geek'].join(', ') + seo.keywords.join(', ')
         }
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: 'keywords',
-                content: keywords.join(', ')
-              }
-            : []
-        )
-        .concat(meta)}
-      title={title}
-      titleTemplate={titleTemplate}
-    />
+      />
+      {children}
+    </>
   );
 };
 
 SEO.defaultProps = {
   description: 'zanechua.com',
-  lang: 'en',
   keywords: [],
-  meta: [],
   path: '/'
 };
 
 SEO.propTypes = {
   description: PropTypes.string,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  lang: PropTypes.string,
-  meta: PropTypes.array,
   title: PropTypes.string.isRequired,
   path: PropTypes.string
 };

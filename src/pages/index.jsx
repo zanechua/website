@@ -9,8 +9,7 @@ import SEO from 'components/SEO';
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges }
-  },
-  location
+  }
 }) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
@@ -18,12 +17,6 @@ const IndexPage = ({
 
   return (
     <Layout>
-      <SEO
-        keywords={['zanechua', 'homelab', 'zane j chua', 'tech geek']}
-        title="Home"
-        path={location.pathname}
-      />
-
       <section className="flex-1">
         <h2 className="text-2xl font-bold">Posts</h2>
 
@@ -32,6 +25,8 @@ const IndexPage = ({
     </Layout>
   );
 };
+
+export const Head = ({ location }) => <SEO title="Home" path={location.pathname} />;
 
 export const pageQuery = graphql`
   query {
@@ -61,7 +56,6 @@ export const pageQuery = graphql`
 `;
 
 IndexPage.propTypes = {
-  location: PropTypes.object.isRequired,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array

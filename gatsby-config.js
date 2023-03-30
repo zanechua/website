@@ -86,7 +86,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-eslint',
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-plugin-nprogress',

@@ -1,16 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
 
-const LabCatalogPage = ({ location }) => (
+const LabCatalogPage = () => (
   <Layout>
-    <SEO
-      keywords={['zanechua', 'homelab', 'zane j chua', 'tech geek']}
-      title="Lab"
-      path={location.pathname}
-    />
     <div className="flex-col">
       <section className="flex-1">
         <h2 className="font-bold text-teal-400 pb-4">Workstations</h2>
@@ -111,8 +105,6 @@ const LabCatalogPage = ({ location }) => (
   </Layout>
 );
 
-LabCatalogPage.propTypes = {
-  location: PropTypes.object.isRequired
-};
+export const Head = ({ location }) => <SEO title="Lab Catalog" path={location.pathname} />;
 
 export default LabCatalogPage;

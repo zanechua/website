@@ -9,20 +9,10 @@ import TagLink from 'components/TagLink';
 
 const TagsPage = ({
   data: {
-    allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title }
-    }
-  },
-  location
+    allMarkdownRemark: { group }
+  }
 }) => (
   <Layout>
-    <SEO
-      keywords={['zanechua', 'homelab', 'zane j chua', 'tech geek']}
-      title={title}
-      path={location.pathname}
-    />
-
     <section className="flex-1">
       <h1 className="mb-4 text-2xl font-bold">Tags</h1>
       <div className="flex flex-row">
@@ -41,6 +31,15 @@ const TagsPage = ({
   </Layout>
 );
 
+export const Head = ({ location, data }) => {
+  const { site } = data; // data.posts holds your post data
+  const {
+    siteMetadata: { title }
+  } = site;
+
+  return <SEO title={title} path={location.pathname} />;
+};
+
 export const pageQuery = graphql`
   query {
     site {
@@ -58,7 +57,6 @@ export const pageQuery = graphql`
 `;
 
 TagsPage.propTypes = {
-  location: PropTypes.object.isRequired,
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       group: PropTypes.arrayOf(
