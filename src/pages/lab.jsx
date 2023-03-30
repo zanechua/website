@@ -1,17 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 
 import Layout from 'components/Layout';
 import SEO from 'components/SEO';
 
-const LabPage = ({ location }) => (
+const LabPage = () => (
   <Layout>
-    <SEO
-      keywords={['zanechua', 'homelab', 'zane j chua', 'tech geek']}
-      title="Lab"
-      path={location.pathname}
-    />
     <div className="flex-col w-full">
       <section className="flex-1">
         <h1 className="pb-4">Lab 1 (West)</h1>
@@ -224,8 +218,6 @@ const LabPage = ({ location }) => (
   </Layout>
 );
 
-LabPage.propTypes = {
-  location: PropTypes.object.isRequired
-};
+export const Head = ({ location }) => <SEO title="Lab" path={location.pathname} />;
 
 export default LabPage;

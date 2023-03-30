@@ -53,7 +53,6 @@
     "gatsby-plugin-offline": "^6.8.0",
     "gatsby-plugin-postcss": "^6.8.0",
     "gatsby-plugin-purgecss": "^6.2.1",
-    "gatsby-plugin-react-helmet": "^6.8.0",
     "gatsby-plugin-sharp": "^5.8.0",
     "gatsby-plugin-sitemap": "^6.8.0",
     "gatsby-remark-autolink-headers": "^6.8.0",
@@ -74,7 +73,6 @@
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-helmet": "6.1.0",
     "sharp": "^0.32.0",
     "zustand": "^4.3.6"
   },

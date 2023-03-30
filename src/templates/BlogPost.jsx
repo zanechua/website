@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import { useWindowSize } from '@react-hook/window-size';
 import { format } from 'date-fns';
 import { graphql } from 'gatsby';
@@ -15,10 +14,10 @@ import SEO from 'components/SEO';
 import TagLink from 'components/TagLink';
 
 // the data prop will be injected by the GraphQL query below.
-const Template = ({ data, location }) => {
+const BlogPostTemplate = ({ data }) => {
   const [width, height] = useWindowSize();
-  const { site, posts, comments } = data; // data.posts holds your post data
-  const { fields, frontmatter, excerpt, html } = posts;
+  const { posts, comments } = data; // data.posts holds your post data
+  const { fields, frontmatter, html } = posts;
   const { tags } = frontmatter;
   const updatedAtArray = frontmatter?.updatedAt;
   const lastUpdatedAt = Array.isArray(updatedAtArray)
@@ -26,10 +25,6 @@ const Template = ({ data, location }) => {
     : null;
 
   const featuredImg = getImage(frontmatter.featuredImage);
-  const imageLink = getSrc(frontmatter.featuredImage);
-  const {
-    siteMetadata: { siteUrl }
-  } = site;
 
   useEffect(() => {
     resizeElements(Array.prototype.slice.call(document.querySelectorAll('pre.line-numbers')));
@@ -49,33 +44,6 @@ const Template = ({ data, location }) => {
 
   return (
     <Layout className="blog-post-container">
-      <SEO
-        keywords={['zanechua', 'homelab', 'zane j chua', 'tech geek'].concat(tags)}
-        title={frontmatter.title}
-        description={excerpt}
-        path={location.pathname}
-      />
-      <Helmet
-        meta={[
-          {
-            name: 'image',
-            content: `${siteUrl}${imageLink}`
-          },
-          {
-            name: 'og:image',
-            content: `${siteUrl}${imageLink}`
-          },
-          {
-            name: 'og:image:alt',
-            content: frontmatter.title
-          },
-          {
-            name: 'twitter:image',
-            content: `${siteUrl}${imageLink}`
-          }
-        ]}
-      />
-
       <section className="blog-post flex-1">
         <div className="blog-post-meta mb-4">
           <h1 className="text-2xl font-bold">{frontmatter.title}</h1>
@@ -102,6 +70,25 @@ const Template = ({ data, location }) => {
       )}
       <CommentForm className="comment-form-section flex-1 pt-8" slug={frontmatter.slug} />
     </Layout>
+  );
+};
+
+export const Head = ({ location, data }) => {
+  const { site, posts } = data; // data.posts holds your post data
+  const { frontmatter, excerpt } = posts;
+  const { tags } = frontmatter;
+  const imageLink = getSrc(frontmatter.featuredImage);
+  const {
+    siteMetadata: { siteUrl }
+  } = site;
+
+  return (
+    <SEO keywords={tags} title={frontmatter.title} description={excerpt} path={location.pathname}>
+      <meta name="image" content={`${siteUrl}${imageLink}`} />
+      <meta name="og:image" content={`${siteUrl}${imageLink}`} />
+      <meta name="og:image:alt" content={frontmatter.title} />
+      <meta name="twitter:image" content={`${siteUrl}${imageLink}`} />
+    </SEO>
   );
 };
 
@@ -147,11 +134,10 @@ export const pageQuery = graphql`
   }
 `;
 
-Template.propTypes = {
-  location: PropTypes.object.isRequired,
+BlogPostTemplate.propTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
-      siteMetadata: PropTypes.PropTypes.shape({
+      siteMetadata: PropTypes.shape({
         siteUrl: PropTypes.string
       })
     }),
@@ -181,4 +167,4 @@ Template.propTypes = {
   }).isRequired
 };
 
-export default Template;
+export default BlogPostTemplate;
