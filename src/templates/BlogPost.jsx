@@ -133,10 +133,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    comments: allCommentsYaml(
-      filter: { slug: { eq: $slug } }
-      sort: { order: ASC, fields: [date] }
-    ) {
+    comments: allCommentsYaml(filter: { slug: { eq: $slug } }, sort: { date: ASC }) {
       edges {
         node {
           id
