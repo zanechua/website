@@ -1,5 +1,86 @@
 # Changelog
 
+## [4.0.0](https://github.com/zanechua/website/compare/v3.5.0...v4.0.0) (2023-03-30)
+
+### ⚠ BREAKING CHANGES
+
+- upgrade to gatsby 5
+- upgrade to tailwind css v3
+
+### Features
+
+- add gitlab to footer ([552f08b](https://github.com/zanechua/website/commit/552f08b5a9cfef75c658a13b4327fbdac8244ed4))
+- add homelab services post ([402b3b3](https://github.com/zanechua/website/commit/402b3b3a0b1a01e0d8ef148130a5da61787e80cd))
+- add lint and format code for nodejs in gitlab pipelines post ([37ea2c4](https://github.com/zanechua/website/commit/37ea2c4e8661dede42442fa2e17287c80379af16))
+- add part2 post about gitlab runners in kubernetes ([1ddf6ac](https://github.com/zanechua/website/commit/1ddf6ac06788c83a5d83f510716594ac1743af24))
+- add post about gitlab pipeline dependencies ([f61ea47](https://github.com/zanechua/website/commit/f61ea4734186086d528aa52dfdc7c93065f087e2))
+- add post about gitlab runners in kubernetes ([697c511](https://github.com/zanechua/website/commit/697c5110a30686258dfd0b66d94eb36634f08cb4))
+- add post about secret free nextjs containers ([4c07ac1](https://github.com/zanechua/website/commit/4c07ac11fc04bada9440a45e039a125217fbe55e))
+- add post about wireguard ([53c8b4a](https://github.com/zanechua/website/commit/53c8b4ad1f62d5c15d8e9c2cf3d22259dc6180b9))
+- add proper line number height for prismjs in gatsby ([02e0315](https://github.com/zanechua/website/commit/02e0315b912ce374d41f5f73b9c7e23adf8555d0))
+- add style for details;summary html element ([b48ccd6](https://github.com/zanechua/website/commit/b48ccd6295248deed39f8a525c244a3c2258b869))
+- add updatedAt value for blog posts ([9b1ea1e](https://github.com/zanechua/website/commit/9b1ea1e5d8ac4f8840398ba88aa8e4a857c40178))
+- post about diy tpm module ([08329aa](https://github.com/zanechua/website/commit/08329aa51a841a7528814fdffa1a5cd6aea06ab1))
+- resize comment message box to content ([2374dc4](https://github.com/zanechua/website/commit/2374dc4be5ffa77fe39b15693b501182d2d474fb))
+- upgrade to gatsby 5 ([35e40c4](https://github.com/zanechua/website/commit/35e40c451747693da25c9ca1d3f8bf4bed5405aa))
+- upgrade to gatsby v4 ([6e28e65](https://github.com/zanechua/website/commit/6e28e653e6a5dfc69f31f623c4052a0d262af71b))
+- upgrade to tailwind css v3 ([ba6039d](https://github.com/zanechua/website/commit/ba6039df7556c322d7a45531d710f97b048fc1d8))
+
+### Bug Fixes
+
+- additional slash for asset paths ([9855e94](https://github.com/zanechua/website/commit/9855e94a96c9b7bcd595f5d39be30ddb0a5b83d6))
+- broken TagLink component ([82b439b](https://github.com/zanechua/website/commit/82b439bdc4379736d63ed1a1ad3de0d542b3f301))
+- duplicate react key ([b560e44](https://github.com/zanechua/website/commit/b560e44c8358aa55f37ca8d0e75f6b20d04dc503))
+- failing netlify deploys ([2299528](https://github.com/zanechua/website/commit/2299528732c753acc58fea9ad24e8b30731c4722))
+- missing command in k3s part 1 post ([6b97897](https://github.com/zanechua/website/commit/6b97897803da2ebe456d0d11f1e96b91690ead33))
+- multiline-numbers and optimize implementation ([d9414dd](https://github.com/zanechua/website/commit/d9414dde94eb40e73827458b4b3b016bb0964d1a))
+- paragraphs in comments ([347ee93](https://github.com/zanechua/website/commit/347ee937dedf48211250d08c4502781c9077ace2))
+- permissions for images ([a6e8562](https://github.com/zanechua/website/commit/a6e8562c5f068ac2e0ce1107d210dd28a493bec7))
+- respect spacing between words ([7890454](https://github.com/zanechua/website/commit/7890454ea47c23322fdf6bb8f79ac8b49c0e7b97))
+- service worker update button width ([7db65fc](https://github.com/zanechua/website/commit/7db65fc67ef4b0a0aec4dc5a2df6711b88b723c3))
+- sitemap to cater for updated at ([6624e25](https://github.com/zanechua/website/commit/6624e25b4bb386749b5f8a08cd74be0dfa30b923))
+- sorting of comments by date ([4fa6e23](https://github.com/zanechua/website/commit/4fa6e23d1c15dd5e45ec39c9aa7bbbae413aa869))
+- styling and deprecated fastify code usage ([1323290](https://github.com/zanechua/website/commit/1323290e580cde1dab06b5fd139cbbae6e3226f4))
+
+### Maintenance
+
+- add reference to source for prism multiline fix ([6574e04](https://github.com/zanechua/website/commit/6574e046ebdd3ee2b7fa11465e63d823b8398044))
+- New comment on appcenter-caching-vendor-libraries ([1678160](https://github.com/zanechua/website/commit/16781608c1696c9b971796be54a98a4bdf1249f2))
+- New comment on appcenter-caching-vendor-libraries ([24a33c0](https://github.com/zanechua/website/commit/24a33c0e778cd073750220afa2c5bd3775441fa9))
+- New comment on appcenter-caching-vendor-libraries ([f688ef1](https://github.com/zanechua/website/commit/f688ef1eb56cdf2ce41466f9ffb706ddbd6053fb))
+- New comment on appcenter-caching-vendor-libraries ([14d2909](https://github.com/zanechua/website/commit/14d2909f591f54a77c5decd032cc63611c08b9dc))
+- New comment on appcenter-caching-vendor-libraries ([d59c58c](https://github.com/zanechua/website/commit/d59c58ca3ef2055af12234f6940243e23f99d903))
+- New comment on diy-tpm-module ([d98b307](https://github.com/zanechua/website/commit/d98b307c9f3fa4c4b2989d65f5ce52af8cd40502))
+- New comment on diy-tpm-module ([1e27fe5](https://github.com/zanechua/website/commit/1e27fe5cf3a28069966cfba031aeccf4c6871fb6))
+- New comment on diy-tpm-module ([98a892d](https://github.com/zanechua/website/commit/98a892d521672e73ec16795f751172a04e26bf4f))
+- New comment on diy-tpm-module ([302d8bf](https://github.com/zanechua/website/commit/302d8bfe28e909f47ca0427250d9ff7c2ae99fbc))
+- New comment on diy-tpm-module ([65ebd41](https://github.com/zanechua/website/commit/65ebd41790c0584d297a19c926b9d2f27662cf83))
+- New comment on diy-tpm-module ([c2d025a](https://github.com/zanechua/website/commit/c2d025a2fa9cf79f1a9afee1953b67c19a90c331))
+- New comment on diy-tpm-module ([2dbbea2](https://github.com/zanechua/website/commit/2dbbea23a7e928d90eb5c042a5d0d3c1edf67864))
+- New comment on macos-windows-proxmox-update ([faffa95](https://github.com/zanechua/website/commit/faffa959d4632abd02f17b8f4342cdf41407897f))
+- New comment on macos-windows-proxmox-update ([b95289f](https://github.com/zanechua/website/commit/b95289fdfabbf7481973b02a882a9c56918026e6))
+- New comment on mini-ryzen-nas ([1135aaf](https://github.com/zanechua/website/commit/1135aaff416b95ae9a84c663552b259f6db4af8d))
+- New comment on reduce-react-native-xcode-build-time ([9764b25](https://github.com/zanechua/website/commit/9764b25e00ec4e38f6489a8f470eec915b5df1b6))
+- New comment on reduce-react-native-xcode-build-time ([4ffe402](https://github.com/zanechua/website/commit/4ffe4027a98fe374aed1a85f48e06b3ad53b6fe8))
+- New comment on reduce-react-native-xcode-build-time ([8f8a2af](https://github.com/zanechua/website/commit/8f8a2af6eb0b5daea576d83693695e8f66b0ddd5))
+- New comment on reduce-react-native-xcode-build-time ([e126af3](https://github.com/zanechua/website/commit/e126af30e3ebd2dd969333af94357cf17eef799f))
+- New comment on reduce-react-native-xcode-build-time ([35d14c2](https://github.com/zanechua/website/commit/35d14c26be139f9e7908efd1e54feb0db151d255))
+- New comment on reduce-react-native-xcode-build-time ([f42eada](https://github.com/zanechua/website/commit/f42eadaffc926929e273cfa4ba2976d40e8a3b01))
+- New comment on reduce-react-native-xcode-build-time-encore ([765d55a](https://github.com/zanechua/website/commit/765d55a97b729c50c2ffe275e9490c3f6d4aa625))
+- New comment on reduce-react-native-xcode-build-time-encore ([5e56d2c](https://github.com/zanechua/website/commit/5e56d2c0e7285c0a4ed91c41500861c26d52ac20))
+- New comment on reduce-react-native-xcode-build-time-encore ([0359236](https://github.com/zanechua/website/commit/035923659c073f8e1fcde1e280eab96717633f92))
+- New comment on reduce-react-native-xcode-build-time-encore ([fc813a2](https://github.com/zanechua/website/commit/fc813a2cee86f12e3abf83d9bcfd2f9b8f5d6691))
+- New comment on reduce-react-native-xcode-build-time-encore ([fc08560](https://github.com/zanechua/website/commit/fc0856002704024f26d52e53ecdc1a694393aa83))
+- New comment on reduce-react-native-xcode-build-time-encore ([9cb0183](https://github.com/zanechua/website/commit/9cb0183988b88536e74bd365263ebdc415438415))
+- remove console statement ([53a4367](https://github.com/zanechua/website/commit/53a436730b1709b8c526d8be5f32c505ad5bbfd6))
+- update dev packages ([4792d4f](https://github.com/zanechua/website/commit/4792d4ff02b58fbb7578ea69f194f6d701dbe262))
+- update dev packages ([dcaa139](https://github.com/zanechua/website/commit/dcaa139f1379f84190c7d6444b65513cb47a6284))
+- update dev packages ([e837ae7](https://github.com/zanechua/website/commit/e837ae74408e267743e33c1133a9b4c7548559ea))
+- update gitattributes ([017afa8](https://github.com/zanechua/website/commit/017afa8c81a88f8dddf3baeca04e67fd0e3d184f))
+- update packages ([6abee0f](https://github.com/zanechua/website/commit/6abee0f7623efc2eea67403f4be491c0490be4f6))
+- update packages ([7924ffa](https://github.com/zanechua/website/commit/7924ffa8c59566c59e8ef82295e803ada51914f9))
+- upgrade packages ([c6c1e41](https://github.com/zanechua/website/commit/c6c1e41665783aad6373b20e4e971946dc962462))
+
 ## [3.5.0](https://github.com/zanechua/website/compare/v3.4.1...v3.5.0) (2021-09-29)
 
 ### Features
