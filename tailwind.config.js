@@ -14,6 +14,9 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
+      fontSize: {
+        sxl: '1.375rem'
+      },
       fontFamily: {
         firacode: ['Fira Code', 'monospace']
       }
