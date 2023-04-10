@@ -47,6 +47,7 @@ module.exports = {
                   frontmatter {
                     date
                     updatedAt
+                    title
                   }
                 }
               }
@@ -58,14 +59,21 @@ module.exports = {
           allSitePage: { nodes: allPages },
           allMarkdownRemark: { edges: allRemarkEdges }
         }) => {
+          // console.log(allRemarkEdges);
+
           const remarkEdgeMap = allRemarkEdges.reduce((acc, edge) => {
             const { urlPath: uri } = edge.node.fields;
-            acc[uri] = edge;
+            acc[`${uri}/`] = edge;
 
             return acc;
           }, {});
 
-          return allPages.map(page => ({ ...page, ...remarkEdgeMap[page.path] }));
+          const map = allPages.map(page => ({ ...page, ...remarkEdgeMap[page.path] }));
+
+          // console.log(map);
+          // console.log(allPages);
+
+          return map;
         },
         serialize: pageData => {
           const { path } = pageData;
@@ -77,6 +85,9 @@ module.exports = {
             ? new Date(last(updatedAtArray)).toISOString()
             : null;
           // Not all pages have updated at
+
+          // console.log(lastUpdatedAt);
+          // console.log(modifiedGmt);
 
           return {
             url: path,
