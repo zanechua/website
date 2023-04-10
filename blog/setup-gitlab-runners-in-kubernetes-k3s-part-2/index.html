@@ -58,12 +58,12 @@ Connecting the cluster to GitLab is not…" data-gatsby-head="true"/><meta name=
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="72346915066130450000"
+              data-toaster-id="33545371265798107000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`, `72346915066130450000`)"
+              onClick="copyToClipboard(`curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`, `33545371265798107000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -92,7 +92,7 @@ I'm leaving this section here but hidden as it's not really required.</p>
 <div class="gatsby-code-title gatsby-remark-code-title">gitlab-admin-service-account.yaml</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="55097456358932865000"
+              data-toaster-id="80356700246229090000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -114,7 +114,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: gitlab
-    namespace: kube-system`, `55097456358932865000`)"
+    namespace: kube-system`, `80356700246229090000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -144,12 +144,12 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="62636525387744070000"
+              data-toaster-id="13235339229776687000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`kubectl apply -f gitlab-admin-service-account.yaml`, `62636525387744070000`)"
+              onClick="copyToClipboard(`kubectl apply -f gitlab-admin-service-account.yaml`, `13235339229776687000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -163,14 +163,14 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="27855663472058880000"
+              data-toaster-id="93798257237482290000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`kubectl config view --raw \
 -o=jsonpath='{.clusters[0].cluster.certificate-authority-data}' \
-| base64 --decode`, `27855663472058880000`)"
+| base64 --decode`, `93798257237482290000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -186,12 +186,12 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="95543230488192600000"
+              data-toaster-id="71946566263937475000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`kubectl -n kube-system describe secret \$(kubectl -n kube-system get secret | grep gitlab | awk '{print \$1}')`, `95543230488192600000`)"
+              onClick="copyToClipboard(`kubectl -n kube-system describe secret \$(kubectl -n kube-system get secret | grep gitlab | awk '{print \$1}')`, `71946566263937475000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -225,7 +225,7 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">gitlab-runner.yaml</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="24064285227147920000"
+              data-toaster-id="46469309869145990000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -766,7 +766,7 @@ secrets: []
 ## Please note that a number of keys are reserved by the runner.
 ## See https://gitlab.com/gitlab-org/charts/gitlab-runner/-/blob/main/templates/configmap.yaml
 ## for a current list.
-configMaps: {}`, `24064285227147920000`)"
+configMaps: {}`, `46469309869145990000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1327,14 +1327,14 @@ configMaps: {}`, `24064285227147920000`)"
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="23181855042254760000"
+              data-toaster-id="13687275993781610000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`kubectl create ns gitlab-runner
 helm repo add gitlab https://charts.gitlab.io
-helm install --namespace gitlab-runner gitlab-runner -f gitlab-runner.yaml gitlab/gitlab-runner`, `23181855042254760000`)"
+helm install --namespace gitlab-runner gitlab-runner -f gitlab-runner.yaml gitlab/gitlab-runner`, `13687275993781610000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1351,12 +1351,12 @@ helm <span class="token function">install</span> <span class="token parameter va
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="32569770032272925000"
+              data-toaster-id="80854792660263100000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`helm uninstall --namespace gitlab-runner gitlab-runner`, `32569770032272925000`)"
+              onClick="copyToClipboard(`helm uninstall --namespace gitlab-runner gitlab-runner`, `80854792660263100000`)"
             >
               <div
                 class="gatsby-code-button"
