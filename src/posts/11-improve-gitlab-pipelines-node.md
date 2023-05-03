@@ -26,7 +26,7 @@ stages:
   - cache
   - test
 
-cache_stage:
+cache_job:
   stage: cache
   tags:
     - docker
@@ -78,4 +78,5 @@ test_stage:
 
 ## Change Log
 
+- `2023-05-03` - Renamed the job to `cache_job`
 - `2022-09-10` - Updated example to support both SaaS and Self-Managed instances
