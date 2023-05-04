@@ -5,37 +5,13 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Referrer-Policy: same-origin
-/component---cache-caches-gatsby-plugin-offline-app-shell-js-31b03bec32c91e686694.js
+/webpack-runtime-01b8f600c212b3395448.js
   Cache-Control: public, max-age=31536000, immutable
-/e650ccae0dc8dde622026586afaeaf1c3bea3a11-250724cd62dcf467657f.js
-  Cache-Control: public, max-age=31536000, immutable
-/8432e0cbdba32ca1446177b3ba4a960bbeca3278-54bab5ae03888d2ca9d6.js
-  Cache-Control: public, max-age=31536000, immutable
-/b7ec4a9a53c2f60dbf6d272eea6248b905830475-579cb99eb3554cefc230.js
-  Cache-Control: public, max-age=31536000, immutable
-/component---src-templates-blog-post-jsx-20dfbc09b823512602de.js
-  Cache-Control: public, max-age=31536000, immutable
-/component---src-templates-tags-jsx-23a851d014ea6c76b885.js
-  Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-404-jsx-3e016d49b6c2b7fb1497.js
-  Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-about-jsx-407bf5365801c8f9dde2.js
-  Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-index-jsx-68329eb070069c7edd88.js
-  Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-lab-jsx-b4741e3ef8cf705c0946.js
-  Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-tags-jsx-557d47d9cc4865a3545e.js
-  Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-lab-catalog-jsx-adc4c1f42fb528e0ba0b.js
-  Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-e355dc15a2dcaec5b227.js
-  Cache-Control: public, max-age=31536000, immutable
-/framework-50ab22b30930361b96de.js
+/framework-f744c757fcd7d8b35f3c.js
   Cache-Control: public, max-age=31536000, immutable
 /styles.f5e4d935e93bd924cade.css
   Cache-Control: public, max-age=31536000, immutable
-/app-103cf3e2ad83d91b433f.js
+/app-dbacf9de80b2fc1bff18.js
   Cache-Control: public, max-age=31536000, immutable
 /static/*
   Cache-Control: public, max-age=31536000, immutable

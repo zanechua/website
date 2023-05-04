@@ -58,12 +58,12 @@ Connecting the cluster to GitLab is not…" data-gatsby-head="true"/><meta name=
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="41759009652542420000"
+              data-toaster-id="1260141166081463300"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`, `41759009652542420000`)"
+              onClick="copyToClipboard(`curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`, `1260141166081463300`)"
             >
               <div
                 class="gatsby-code-button"
@@ -92,7 +92,7 @@ I'm leaving this section here but hidden as it's not really required.</p>
 <div class="gatsby-code-title gatsby-remark-code-title">gitlab-admin-service-account.yaml</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="77256642808805440000"
+              data-toaster-id="78695181333101380000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -114,7 +114,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: gitlab
-    namespace: kube-system`, `77256642808805440000`)"
+    namespace: kube-system`, `78695181333101380000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -144,12 +144,12 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="93747606914257470000"
+              data-toaster-id="28573912541129687000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`kubectl apply -f gitlab-admin-service-account.yaml`, `93747606914257470000`)"
+              onClick="copyToClipboard(`kubectl apply -f gitlab-admin-service-account.yaml`, `28573912541129687000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -163,14 +163,14 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="98507569268526990000"
+              data-toaster-id="58535350372112015000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`kubectl config view --raw \
 -o=jsonpath='{.clusters[0].cluster.certificate-authority-data}' \
-| base64 --decode`, `98507569268526990000`)"
+| base64 --decode`, `58535350372112015000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -186,12 +186,12 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="70880182397290300000"
+              data-toaster-id="88402238427202220000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`kubectl -n kube-system describe secret \$(kubectl -n kube-system get secret | grep gitlab | awk '{print \$1}')`, `70880182397290300000`)"
+              onClick="copyToClipboard(`kubectl -n kube-system describe secret \$(kubectl -n kube-system get secret | grep gitlab | awk '{print \$1}')`, `88402238427202220000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -225,7 +225,7 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">gitlab-runner.yaml</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="76495188965445090000"
+              data-toaster-id="97738665976937050000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -766,7 +766,7 @@ secrets: []
 ## Please note that a number of keys are reserved by the runner.
 ## See https://gitlab.com/gitlab-org/charts/gitlab-runner/-/blob/main/templates/configmap.yaml
 ## for a current list.
-configMaps: {}`, `76495188965445090000`)"
+configMaps: {}`, `97738665976937050000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1327,14 +1327,14 @@ configMaps: {}`, `76495188965445090000`)"
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="82564945797288970000"
+              data-toaster-id="75107918318824440000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`kubectl create ns gitlab-runner
 helm repo add gitlab https://charts.gitlab.io
-helm install --namespace gitlab-runner gitlab-runner -f gitlab-runner.yaml gitlab/gitlab-runner`, `82564945797288970000`)"
+helm install --namespace gitlab-runner gitlab-runner -f gitlab-runner.yaml gitlab/gitlab-runner`, `75107918318824440000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1351,12 +1351,12 @@ helm <span class="token function">install</span> <span class="token parameter va
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="8007312051179927000"
+              data-toaster-id="16434741783094964000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`helm uninstall --namespace gitlab-runner gitlab-runner`, `8007312051179927000`)"
+              onClick="copyToClipboard(`helm uninstall --namespace gitlab-runner gitlab-runner`, `16434741783094964000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1373,6 +1373,6 @@ helm <span class="token function">install</span> <span class="token parameter va
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-103cf3e2ad83d91b433f.js\"],\"component---cache-caches-gatsby-plugin-offline-app-shell-js\":[\"/component---cache-caches-gatsby-plugin-offline-app-shell-js-31b03bec32c91e686694.js\"],\"component---src-pages-404-jsx\":[\"/component---src-pages-404-jsx-3e016d49b6c2b7fb1497.js\"],\"component---src-pages-about-jsx\":[\"/component---src-pages-about-jsx-407bf5365801c8f9dde2.js\"],\"component---src-pages-index-jsx\":[\"/component---src-pages-index-jsx-68329eb070069c7edd88.js\"],\"component---src-pages-lab-catalog-jsx\":[\"/component---src-pages-lab-catalog-jsx-adc4c1f42fb528e0ba0b.js\"],\"component---src-pages-lab-jsx\":[\"/component---src-pages-lab-jsx-b4741e3ef8cf705c0946.js\"],\"component---src-pages-tags-jsx\":[\"/component---src-pages-tags-jsx-557d47d9cc4865a3545e.js\"],\"component---src-templates-blog-post-jsx\":[\"/component---src-templates-blog-post-jsx-20dfbc09b823512602de.js\"],\"component---src-templates-tags-jsx\":[\"/component---src-templates-tags-jsx-23a851d014ea6c76b885.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-dbacf9de80b2fc1bff18.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="73de625b8d1b84fe2a5d";</script><script src="/webpack-runtime-e355dc15a2dcaec5b227.js" async></script><script src="/framework-50ab22b30930361b96de.js" async></script><script src="/app-103cf3e2ad83d91b433f.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="297599cdb69586477c58";</script><script src="/webpack-runtime-01b8f600c212b3395448.js" async></script><script src="/framework-f744c757fcd7d8b35f3c.js" async></script><script src="/app-dbacf9de80b2fc1bff18.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
