@@ -75,10 +75,14 @@ Instead I went with this [Custom Made Windows Hello Camera](https://item.taobao.
 
 It's a funky little device which is branded HP but is made by Realtek.
 
-You'll need to install HP drivers along with it. It took me awhile to locate the correct drivers but you can use the drivers provided [here](https://www.station-drivers.com/index.php/ko/forum/usb/240-latest-whql-driver-for-realtek-usb-camera?start=48)
+You'll need to install HP drivers along with it. It took me awhile to locate the correct drivers but you can use the drivers provided [here](https://www.station-drivers.com/index.php/en-us/component/remository/Drivers/Realtek/Camera/Realtek-Camera-Drivers-Version-10.0.22000.20274/lang,en-us/)
 
 ## Conclusion
 
 No other updates so far. The MacOS VM updates to Big Sur just fine but I got myself a M1 MacBook so I probably might not use it as often though it was definitely a very fun experiment.
 
 I might write up a short review/comparison for the two Biometric cameras as there doesn't seem to be much information on them outside of Taobao.
+
+## Change Log
+
+- `2023-07-25` - Update url for Realtek camera driver to version 10.0.22000.20274
