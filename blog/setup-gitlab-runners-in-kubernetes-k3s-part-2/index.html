@@ -51,19 +51,19 @@ Connecting the cluster to GitLab is not…" data-gatsby-head="true"/><meta name=
         }
       }
     })
-  </script><link href="https://fonts.googleapis.com/css?family=Fira+Code:400,700&amp;display=swap" rel="stylesheet"/><title data-gatsby-head="true">Setting up GitLab Runners in Kubernetes (K3S) - Part 2 | Zane Chua</title></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCCLDWG" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="flex flex-col min-h-screen font-firacode blog-post-container"><header class="bg-gray-800"><div class="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8"><a href="/"><h1 class="flex items-center text-white no-underline"><span class="text-xl font-bold tracking-tight">Zane Chua</span></h1></a><button type="button" class="flex items-center block px-3 py-2 text-white border border-white rounded md:hidden"><svg class="w-3 h-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></button><nav class="hidden md:block md:flex md:items-center w-full md:w-auto"><a class="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6" href="/lab/">Lab</a><a class="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6" href="/about/">About</a></nav></div></header><main class="flex flex-col flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8"><section class="blog-post flex-1"><div class="blog-post-meta mb-4"><h1 class="text-2xl font-bold">Setting up GitLab Runners in Kubernetes (K3S) - Part 2</h1><div class="my-1"><a class="px-0.5" href="/tags/homelab/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">homelab</span></a><a class="px-0.5" href="/tags/infrastructure/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">infrastructure</span></a><a class="px-0.5" href="/tags/kubernetes/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">kubernetes</span></a><a class="px-0.5" href="/tags/dev-ops/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">dev ops</span></a><a class="px-0.5" href="/tags/gitlab/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">gitlab</span></a><a class="px-0.5" href="/tags/ci-cd/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">ci cd</span></a><a class="px-0.5" href="/tags/esxi/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">esxi</span></a></div><h2 class="text-sm font-bold">22 October, 2021 • Last Updated at 08 September, 2022 • 13 min read</h2></div><div class="blog-post-featured-image pb-4"><div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained"><div style="max-width:1200px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg%20height=&#x27;500&#x27;%20width=&#x27;1200&#x27;%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:transparent;position:absolute;top:0;left:0;bottom:0;right:0" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAC4jAAAuIwF4pT92AAAA1klEQVQY02MIdW7HhYKdOsNd2sNd2oKdO7EqYMAqGubSHu7aluRRE+jQHuTQleRaG0Kk5jCX9mCHFhfLvnVZztcnu96qVVwV6ujpODHCpZWA5jCXdj/b1oUdk7sKO+cV5fw/4PJ/Bev0jAQv2z7CmiNc2z0t2zdM7v2/XOtOrvb/U9Vvd6QkB3YFOYDMJWhzW4Bjd7Zf2dc2tv/JDP93Je2a1+1j2RLuSqSfndt8HXu3Zdv8Cmf41GBQndLuZ9se7kJ0aIc4d8a6Nea6lWS6lYc5teGKSwDB078BBO8GQgAAAABJRU5ErkJggg==" alt=""/><picture><source type="image/webp" data-srcset="/static/6144034945e35de431500a4fa7d29cba/28281/setup-gitlab-runners-in-kubernetes-k3s.webp 800w,/static/6144034945e35de431500a4fa7d29cba/0b5d5/setup-gitlab-runners-in-kubernetes-k3s.webp 1080w,/static/6144034945e35de431500a4fa7d29cba/a020d/setup-gitlab-runners-in-kubernetes-k3s.webp 1200w" sizes="(min-width: 1200px) 1200px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1200px) 1200px, 100vw" decoding="async" loading="lazy" data-src="/static/6144034945e35de431500a4fa7d29cba/6fc77/setup-gitlab-runners-in-kubernetes-k3s.png" data-srcset="/static/6144034945e35de431500a4fa7d29cba/85ced/setup-gitlab-runners-in-kubernetes-k3s.png 800w,/static/6144034945e35de431500a4fa7d29cba/7c498/setup-gitlab-runners-in-kubernetes-k3s.png 1080w,/static/6144034945e35de431500a4fa7d29cba/6fc77/setup-gitlab-runners-in-kubernetes-k3s.png 1200w" alt="Setting up GitLab Runners in Kubernetes (K3S) - Part 2"/></picture><noscript><picture><source type="image/webp" srcSet="/static/6144034945e35de431500a4fa7d29cba/28281/setup-gitlab-runners-in-kubernetes-k3s.webp 800w,/static/6144034945e35de431500a4fa7d29cba/0b5d5/setup-gitlab-runners-in-kubernetes-k3s.webp 1080w,/static/6144034945e35de431500a4fa7d29cba/a020d/setup-gitlab-runners-in-kubernetes-k3s.webp 1200w" sizes="(min-width: 1200px) 1200px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1200px) 1200px, 100vw" decoding="async" loading="lazy" src="/static/6144034945e35de431500a4fa7d29cba/6fc77/setup-gitlab-runners-in-kubernetes-k3s.png" srcSet="/static/6144034945e35de431500a4fa7d29cba/85ced/setup-gitlab-runners-in-kubernetes-k3s.png 800w,/static/6144034945e35de431500a4fa7d29cba/7c498/setup-gitlab-runners-in-kubernetes-k3s.png 1080w,/static/6144034945e35de431500a4fa7d29cba/6fc77/setup-gitlab-runners-in-kubernetes-k3s.png 1200w" alt="Setting up GitLab Runners in Kubernetes (K3S) - Part 2"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div></div><div id="post-content" class="blog-post-content markdown"><p>Continuing from <a href="/blog/setup-gitlab-runners-in-kubernetes-k3s-part-1">part 1</a> of the setup.</p>
+  </script><link href="https://fonts.googleapis.com/css?family=Fira+Code:400,700&amp;display=swap" rel="stylesheet"/><title data-gatsby-head="true">Setting up GitLab Runners in Kubernetes (K3S) - Part 2 | Zane Chua</title></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCCLDWG" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="flex flex-col min-h-screen font-firacode blog-post-container"><header class="bg-gray-800"><div class="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8"><a href="/"><h1 class="flex items-center text-white no-underline"><span class="text-xl font-bold tracking-tight">Zane Chua</span></h1></a><button type="button" class="flex items-center block px-3 py-2 text-white border border-white rounded md:hidden"><svg class="w-3 h-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></button><nav class="hidden md:block md:flex md:items-center w-full md:w-auto"><a class="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6" href="/lab/">Lab</a><a class="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6" href="/about/">About</a></nav></div></header><main class="flex flex-col flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8"><section class="blog-post flex-1"><div class="blog-post-meta mb-4"><h1 class="text-2xl font-bold">Setting up GitLab Runners in Kubernetes (K3S) - Part 2</h1><div class="my-1"><a class="px-0.5" href="/tags/homelab/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">homelab</span></a><a class="px-0.5" href="/tags/infrastructure/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">infrastructure</span></a><a class="px-0.5" href="/tags/kubernetes/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">kubernetes</span></a><a class="px-0.5" href="/tags/dev-ops/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">dev ops</span></a><a class="px-0.5" href="/tags/gitlab/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">gitlab</span></a><a class="px-0.5" href="/tags/ci-cd/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">ci cd</span></a><a class="px-0.5" href="/tags/esxi/"><span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white bg-blue-500 rounded">esxi</span></a></div><h2 class="text-sm font-bold">22 October, 2021 • Last Updated at 04 August, 2023 • 13 min read</h2></div><div class="blog-post-featured-image pb-4"><div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained"><div style="max-width:1200px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg%20height=&#x27;500&#x27;%20width=&#x27;1200&#x27;%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:transparent;position:absolute;top:0;left:0;bottom:0;right:0" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAC4jAAAuIwF4pT92AAAA1klEQVQY02MIdW7HhYKdOsNd2sNd2oKdO7EqYMAqGubSHu7aluRRE+jQHuTQleRaG0Kk5jCX9mCHFhfLvnVZztcnu96qVVwV6ujpODHCpZWA5jCXdj/b1oUdk7sKO+cV5fw/4PJ/Bev0jAQv2z7CmiNc2z0t2zdM7v2/XOtOrvb/U9Vvd6QkB3YFOYDMJWhzW4Bjd7Zf2dc2tv/JDP93Je2a1+1j2RLuSqSfndt8HXu3Zdv8Cmf41GBQndLuZ9se7kJ0aIc4d8a6Nea6lWS6lYc5teGKSwDB078BBO8GQgAAAABJRU5ErkJggg==" alt=""/><picture><source type="image/webp" data-srcset="/static/6144034945e35de431500a4fa7d29cba/28281/setup-gitlab-runners-in-kubernetes-k3s.webp 800w,/static/6144034945e35de431500a4fa7d29cba/0b5d5/setup-gitlab-runners-in-kubernetes-k3s.webp 1080w,/static/6144034945e35de431500a4fa7d29cba/a020d/setup-gitlab-runners-in-kubernetes-k3s.webp 1200w" sizes="(min-width: 1200px) 1200px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1200px) 1200px, 100vw" decoding="async" loading="lazy" data-src="/static/6144034945e35de431500a4fa7d29cba/6fc77/setup-gitlab-runners-in-kubernetes-k3s.png" data-srcset="/static/6144034945e35de431500a4fa7d29cba/85ced/setup-gitlab-runners-in-kubernetes-k3s.png 800w,/static/6144034945e35de431500a4fa7d29cba/7c498/setup-gitlab-runners-in-kubernetes-k3s.png 1080w,/static/6144034945e35de431500a4fa7d29cba/6fc77/setup-gitlab-runners-in-kubernetes-k3s.png 1200w" alt="Setting up GitLab Runners in Kubernetes (K3S) - Part 2"/></picture><noscript><picture><source type="image/webp" srcSet="/static/6144034945e35de431500a4fa7d29cba/28281/setup-gitlab-runners-in-kubernetes-k3s.webp 800w,/static/6144034945e35de431500a4fa7d29cba/0b5d5/setup-gitlab-runners-in-kubernetes-k3s.webp 1080w,/static/6144034945e35de431500a4fa7d29cba/a020d/setup-gitlab-runners-in-kubernetes-k3s.webp 1200w" sizes="(min-width: 1200px) 1200px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1200px) 1200px, 100vw" decoding="async" loading="lazy" src="/static/6144034945e35de431500a4fa7d29cba/6fc77/setup-gitlab-runners-in-kubernetes-k3s.png" srcSet="/static/6144034945e35de431500a4fa7d29cba/85ced/setup-gitlab-runners-in-kubernetes-k3s.png 800w,/static/6144034945e35de431500a4fa7d29cba/7c498/setup-gitlab-runners-in-kubernetes-k3s.png 1080w,/static/6144034945e35de431500a4fa7d29cba/6fc77/setup-gitlab-runners-in-kubernetes-k3s.png 1200w" alt="Setting up GitLab Runners in Kubernetes (K3S) - Part 2"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div></div><div id="post-content" class="blog-post-content markdown"><p>Continuing from <a href="/blog/setup-gitlab-runners-in-kubernetes-k3s-part-1">part 1</a> of the setup.</p>
 <h1 id="Solve" style="position:relative;">Solve<a href="#Solve" aria-label="Solve permalink" class="remark-header-anchor after"><svg id="header-anchor-icon" aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
 <h2 id="GitLab-Runner-Setup" style="position:relative;">GitLab Runner Setup<a href="#GitLab-Runner-Setup" aria-label="GitLab Runner Setup permalink" class="remark-header-anchor after"><svg id="header-anchor-icon" aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <h3 id="Install-Helm" style="position:relative;">Install Helm<a href="#Install-Helm" aria-label="Install Helm permalink" class="remark-header-anchor after"><svg id="header-anchor-icon" aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h3>
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="50349804243102290000"
+              data-toaster-id="37321954940100690000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`, `50349804243102290000`)"
+              onClick="copyToClipboard(`curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`, `37321954940100690000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -92,7 +92,7 @@ I'm leaving this section here but hidden as it's not really required.</p>
 <div class="gatsby-code-title gatsby-remark-code-title">gitlab-admin-service-account.yaml</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="3353137147756580000"
+              data-toaster-id="27047416343792530000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -114,7 +114,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: gitlab
-    namespace: kube-system`, `3353137147756580000`)"
+    namespace: kube-system`, `27047416343792530000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -144,12 +144,12 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="32715795733457687000"
+              data-toaster-id="93075549087992580000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`kubectl apply -f gitlab-admin-service-account.yaml`, `32715795733457687000`)"
+              onClick="copyToClipboard(`kubectl apply -f gitlab-admin-service-account.yaml`, `93075549087992580000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -163,14 +163,14 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="2663676325138708500"
+              data-toaster-id="40362260312335606000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`kubectl config view --raw \
 -o=jsonpath='{.clusters[0].cluster.certificate-authority-data}' \
-| base64 --decode`, `2663676325138708500`)"
+| base64 --decode`, `40362260312335606000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -186,12 +186,12 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="73909710726803950000"
+              data-toaster-id="74792006163948010000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`kubectl -n kube-system describe secret \$(kubectl -n kube-system get secret | grep gitlab | awk '{print \$1}')`, `73909710726803950000`)"
+              onClick="copyToClipboard(`kubectl -n kube-system describe secret \$(kubectl -n kube-system get secret | grep gitlab | awk '{print \$1}')`, `74792006163948010000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -225,7 +225,7 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">gitlab-runner.yaml</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="62559415202565915000"
+              data-toaster-id="8456406626270275000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -766,7 +766,7 @@ secrets: []
 ## Please note that a number of keys are reserved by the runner.
 ## See https://gitlab.com/gitlab-org/charts/gitlab-runner/-/blob/main/templates/configmap.yaml
 ## for a current list.
-configMaps: {}`, `62559415202565915000`)"
+configMaps: {}`, `8456406626270275000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1327,14 +1327,14 @@ configMaps: {}`, `62559415202565915000`)"
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="9045207975639836000"
+              data-toaster-id="14434296550770043000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`kubectl create ns gitlab-runner
 helm repo add gitlab https://charts.gitlab.io
-helm install --namespace gitlab-runner gitlab-runner -f gitlab-runner.yaml gitlab/gitlab-runner`, `9045207975639836000`)"
+helm install --namespace gitlab-runner gitlab-runner -f gitlab-runner.yaml gitlab/gitlab-runner`, `14434296550770043000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1346,17 +1346,21 @@ helm install --namespace gitlab-runner gitlab-runner -f gitlab-runner.yaml gitla
 <div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">kubectl create ns gitlab-runner
 helm repo <span class="token function">add</span> gitlab https://charts.gitlab.io
 helm <span class="token function">install</span> <span class="token parameter variable">--namespace</span> gitlab-runner gitlab-runner <span class="token parameter variable">-f</span> gitlab-runner.yaml gitlab/gitlab-runner</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<blockquote>
+<p>If you run the <code class="language-text">helm install</code> command and get the error of <code class="language-text">Error: INSTALLATION FAILED: Kubernetes cluster unreachable: the server has asked for the client to provide credentials</code>
+You can try exporting the credentials again <code class="language-text">kubectl config view --raw > ~/.kube/config</code> to see if that helps</p>
+</blockquote>
 <p>That should install smoothly and auto-provision runners as and when they are needed.</p>
 <p>If you want to uninstall the chart you can run:</p>
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="74691391373327810000"
+              data-toaster-id="95173928278998420000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`helm uninstall --namespace gitlab-runner gitlab-runner`, `74691391373327810000`)"
+              onClick="copyToClipboard(`helm uninstall --namespace gitlab-runner gitlab-runner`, `95173928278998420000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1368,6 +1372,7 @@ helm <span class="token function">install</span> <span class="token parameter va
 <div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash">helm uninstall <span class="token parameter variable">--namespace</span> gitlab-runner gitlab-runner</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <h2 id="Change-Log" style="position:relative;">Change Log<a href="#Change-Log" aria-label="Change Log permalink" class="remark-header-anchor after"><svg id="header-anchor-icon" aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
 <ul>
+<li><code class="language-text">2023-08-04</code> - Added a note about potentially encountering an error running the helm command with regards to <code class="language-text">credentials</code></li>
 <li><code class="language-text">2022-09-08</code> - Updated runner manifest to use the new <code class="language-text">podSecurityContext</code> instead of <code class="language-text">securityContext</code> and hide cluster certificate connection</li>
 </ul></div></section><section class="comment-form-section flex-1 pt-8"><h1 class="text-2xl font-bold pb-4">Leave a comment</h1><div class="comment-form-container bg-gray-800 p-6"><form class="rounded mb-4"><input id="fields[slug]" type="hidden" value="setup-gitlab-runners-in-kubernetes-k3s-part-2"/><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[name]">Name *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[name]" type="text" placeholder="Name" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[email]">Email *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[email]" type="text" placeholder="Email" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[message]">Message *</label><div data-replicated-value="" class="grid after:whitespace-pre-wrap after:invisible after:content-[attr(data-replicated-value)] after:[grid-area:1/1/2/2]"><textarea class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight resize-none overflow-hidden [grid-area:1/1/2/2] focus:outline-none focus:shadow-outline" id="fields[message]" placeholder="Message" rows="6"></textarea></div></div><div class="flex items-center justify-between"><button class="flex-1 text-white font-bold rainbow-button p-1" type="button"><div class="bg-gray-800 p-2">Post Comment</div></button></div></form><h3></h3></div></section></main><footer class="bg-gray-800"><nav class="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8"><p class="text-white"><a class="font-bold no-underline" href="/">© zanechua.com <!-- -->2023</a></p><nav><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://gitlab.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitLab</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://github.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitHub</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://twitter.com/zanejchua" target="_blank" rel="nofollow noopener noreferrer">Twitter</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://www.linkedin.com/in/zanejchua/" target="_blank" rel="nofollow noopener noreferrer">LinkedIn</a></nav></nav></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/setup-gitlab-runners-in-kubernetes-k3s-part-2/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
