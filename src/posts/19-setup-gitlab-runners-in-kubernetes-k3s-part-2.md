@@ -1,7 +1,7 @@
 ---
 slug: 'setup-gitlab-runners-in-kubernetes-k3s-part-2'
 date: '2021-10-22'
-updatedAt: ['2022-09-08']
+updatedAt: ['2023-08-04']
 featuredImage: '../assets/featured/setup-gitlab-runners-in-kubernetes-k3s.png'
 title: 'Setting up GitLab Runners in Kubernetes (K3S) - Part 2'
 tags: ['homelab', 'infrastructure', 'kubernetes', 'dev ops', 'gitlab', 'ci cd', 'esxi']
@@ -663,6 +663,9 @@ helm repo add gitlab https://charts.gitlab.io
 helm install --namespace gitlab-runner gitlab-runner -f gitlab-runner.yaml gitlab/gitlab-runner
 ```
 
+> If you run the `helm install` command and get the error of `Error: INSTALLATION FAILED: Kubernetes cluster unreachable: the server has asked for the client to provide credentials`
+> You can try exporting the credentials again `kubectl config view --raw > ~/.kube/config` to see if that helps
+
 That should install smoothly and auto-provision runners as and when they are needed.
 
 If you want to uninstall the chart you can run:
@@ -673,4 +676,5 @@ helm uninstall --namespace gitlab-runner gitlab-runner
 
 ## Change Log
 
+- `2023-08-04` - Added a note about potentially encountering an error running the helm command with regards to `credentials`
 - `2022-09-08` - Updated runner manifest to use the new `podSecurityContext` instead of `securityContext` and hide cluster certificate connection
