@@ -72,6 +72,9 @@
 .markdown blockquote > p {
   @apply mb-0;
 }
+.markdown blockquote code[class*='language-'] {
+  white-space: normal !important;
+}
 
 /* Tables */
 .markdown td,
