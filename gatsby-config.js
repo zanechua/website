@@ -96,6 +96,7 @@ module.exports = {
         }
       }
     },
+    'gatsby-plugin-pnpm',
     'gatsby-plugin-eslint',
     'gatsby-plugin-netlify',
     {

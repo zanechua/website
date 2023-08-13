@@ -25,13 +25,14 @@ Thumbs.db
 # node.js
 .cache
 .yarn
+.pnpm-store
+v8-compile-cache-0
 package-lock.json
 node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnp
-.pnp.js
+.pnp.*
 
 # Test result files
 artifacts

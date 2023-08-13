@@ -9,13 +9,13 @@
   "scripts": {
     "analyze:lint": "eslint --ext .jsx --ext .js .",
     "analyze:prettier": "prettier --list-different \"**/*.{css,js,jsx,json,md}\"",
-    "analyze": "yarn run analyze:lint && yarn run analyze:prettier",
+    "analyze": "pnpm run analyze:lint && pnpm run analyze:prettier",
     "lint": "eslint --ignore-path .gitignore . --ext .jsx --ext .js",
     "format": "prettier --ignore-path .gitignore \"./**/*.+(ts|js|tsx|jsx|css|json|md)\" --write",
-    "fix": "yarn run lint --fix && yarn run format",
+    "fix": "pnpm run lint --fix && pnpm run format",
     "build": "gatsby build",
     "dev": "gatsby develop -H 0.0.0.0",
-    "start": "yarn run develop",
+    "start": "pnpm run develop",
     "release": "standard-version -a",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -26,10 +26,10 @@
   },
   "lint-staged": {
     "./**/*.{ts,js,tsx,jsx}": [
-      "yarn lint --fix"
+      "pnpm lint --fix"
     ],
     "./**/*.{ts,js,tsx,jsx,css,json,md}": [
-      "yarn format"
+      "pnpm format"
     ]
   },
   "keywords": [
@@ -43,7 +43,7 @@
     "@sindresorhus/fnv1a": "^3.0.0",
     "axios": "^1.3.4",
     "date-fns": "^2.29.3",
-    "gatsby": "5.8.1",
+    "gatsby": "5.11.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-google-tagmanager": "^5.8.0",
     "gatsby-plugin-image": "^3.8.0",
@@ -51,6 +51,7 @@
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-nprogress": "^5.8.0",
     "gatsby-plugin-offline": "^6.8.0",
+    "gatsby-plugin-pnpm": "^1.2.10",
     "gatsby-plugin-postcss": "^6.8.0",
     "gatsby-plugin-purgecss": "^6.2.1",
     "gatsby-plugin-sharp": "^5.8.1",
@@ -106,13 +107,6 @@
     "prettier": "^2.8.7",
     "standard-version": "^9.5.0",
     "tailwindcss": "^3.3.1"
-  },
-  "resolutionsComments": {
-    "first": "The sharp resolution is required for M1 Macs as anything below 0.28 doesn't have the sharp binaries for arm64v8"
-  },
-  "resolutions": {
-    "sharp": "^0.30.7",
-    "postcss": "^8.0.0"
   },
   "bugs": {
     "url": "https://github.com/zanechua/website/issues"
