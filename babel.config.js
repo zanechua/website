@@ -13,7 +13,6 @@ module.exports = function (api) {
   ];
 
   const plugins = [
-    ['@babel/plugin-proposal-decorators', { legacy: true }],
     [
       'module-resolver',
       {
