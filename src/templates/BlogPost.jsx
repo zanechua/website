@@ -143,7 +143,7 @@ BlogPostTemplate.propTypes = {
     posts: PropTypes.shape({
       html: PropTypes.string,
       excerpt: PropTypes.string,
-      timeToRead: PropTypes.string,
+      timeToRead: PropTypes.number,
       frontmatter: PropTypes.shape({
         slug: PropTypes.string,
         title: PropTypes.string,
