@@ -13,11 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.5.1
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: 'pnpm'
-      - run: pnpm install --frozen-lockfile --prod
+      - run: pnpm install --frozen-lockfile
       - run: pnpm run build
       - uses: peaceiris/actions-gh-pages@v3
         with:
