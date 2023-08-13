@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import * as axios from 'axios';
 import PropTypes from 'prop-types';
 
 import CatLoader from 'components/CatLoader';
@@ -30,18 +29,21 @@ const CommentForm = ({ slug, className }) => {
       setIsLoading(false);
       setConfirmationMessage('Uh oh. Did you miss something?');
     } else {
-      axios({
+      fetch('https://staticman.zanechua.com/v2/entry/zanechua/website/master/comments', {
         method: 'POST',
-        url: 'https://staticman.zanechua.com/v2/entry/zanechua/website/master/comments',
         data: formData,
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       })
-        .then(() => {
+        .then(response => {
+          if (response.status === 200) {
+            resetInputData();
+            setConfirmationMessage(
+              'Thanks! Your comment will be published after it has been reviewed.'
+            );
+          } else {
+            setConfirmationMessage('Something went wrong.');
+          }
           setIsLoading(false);
-          resetInputData();
-          setConfirmationMessage(
-            'Thanks! Your comment will be published after it has been reviewed.'
-          );
         })
         .catch(() => {
           setIsLoading(false);
