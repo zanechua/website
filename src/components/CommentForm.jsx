@@ -19,23 +19,25 @@ const CommentForm = ({ slug, className }) => {
   const handleSubmission = async () => {
     setIsLoading(true);
     setConfirmationMessage('');
-    const formData = new URLSearchParams();
-    formData.append('fields[slug]', slug);
-    formData.append('fields[name]', name);
-    formData.append('fields[email]', email);
-    formData.append('fields[message]', message);
 
     if (name === '' || email === '' || message === '') {
       setIsLoading(false);
       setConfirmationMessage('Uh oh. Did you miss something?');
     } else {
-      fetch('https://staticman.zanechua.com/v2/entry/zanechua/website/master/comments', {
+      fetch('https://comments.zanechua.com/api/handle/form', {
         method: 'POST',
-        data: formData,
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        body: JSON.stringify({
+          fields: {
+            slug,
+            name,
+            email,
+            message
+          }
+        }),
+        headers: { 'Content-Type': 'application/json' }
       })
         .then(response => {
-          if (response.status === 200) {
+          if (response.status === 200 || response.status === 201) {
             resetInputData();
             setConfirmationMessage(
               'Thanks! Your comment will be published after it has been reviewed.'
