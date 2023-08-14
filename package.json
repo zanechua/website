@@ -22,7 +22,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "deploy": "gatsby build && gh-pages -d public",
     "commit": "cz",
-    "prepare": "husky install"
+    "prepare": "[ -d '.husky' ] && husky install || true"
   },
   "lint-staged": {
     "./**/*.{ts,js,tsx,jsx}": [
