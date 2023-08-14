@@ -93,7 +93,7 @@
 <div class="gatsby-code-title gatsby-remark-code-title">main/worker</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="80172528194680520000"
+              data-toaster-id="28425540437758267000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -111,7 +111,7 @@ mkfs -t ext4 -i 8192  /dev/sdb1
 mkdir -p /mnt/k3s-store
 mount /dev/sdb1 /mnt/k3s-store
 blkid
-nano /etc/fstab`, `80172528194680520000`)"
+nano /etc/fstab`, `28425540437758267000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -138,12 +138,12 @@ blkid
 <div class="gatsby-code-title gatsby-remark-code-title">/etc/fstab</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="94272673343444530000"
+              data-toaster-id="21351791268730550000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`UUID=81cb55b0-c012-4308-9e58-d6b9460887ff /mnt/k3s-store ext4 defaults,discard 0 1`, `94272673343444530000`)"
+              onClick="copyToClipboard(`UUID=81cb55b0-c012-4308-9e58-d6b9460887ff /mnt/k3s-store ext4 defaults,discard 0 1`, `21351791268730550000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -159,14 +159,14 @@ blkid
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="81172847172665180000"
+              data-toaster-id="51476478467937660000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`# Install K3S Server without flannel which is the default CNI
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC=&quot;--flannel-backend=none --disable-network-policy --cluster-cidr=10.42.0.0/16 --data-dir=/mnt/k3s-store&quot; sh -
-wget https://docs.projectcalico.org/manifests/calico.yaml`, `81172847172665180000`)"
+wget https://docs.projectcalico.org/manifests/calico.yaml`, `51476478467937660000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -182,14 +182,14 @@ wget https://docs.projectcalico.org/manifests/calico.yaml`, `8117284717266518000
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="24961733887373726000"
+              data-toaster-id="37684832005465465000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`&quot;container_settings&quot;: {
     &quot;allow_ip_forwarding&quot;: true
-},`, `24961733887373726000`)"
+},`, `37684832005465465000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -206,14 +206,14 @@ wget https://docs.projectcalico.org/manifests/calico.yaml`, `8117284717266518000
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="61792247654342080000"
+              data-toaster-id="85145929189448480000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`kubectl config view --raw > ~/.kube/config
 chmod 600 ~/.kube/config
-kubectl apply -f calico.yaml`, `61792247654342080000`)"
+kubectl apply -f calico.yaml`, `85145929189448480000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -230,12 +230,12 @@ kubectl apply <span class="token parameter variable">-f</span> calico.yaml</code
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="61246970161350880000"
+              data-toaster-id="45835731031302410000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`cat /mnt/k3s-store/server/node-token`, `61246970161350880000`)"
+              onClick="copyToClipboard(`cat /mnt/k3s-store/server/node-token`, `45835731031302410000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -248,13 +248,13 @@ kubectl apply <span class="token parameter variable">-f</span> calico.yaml</code
 <div class="gatsby-code-title gatsby-remark-code-title">worker</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="83859310500874290000"
+              data-toaster-id="34855544082052090000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`# K3S Nodes
-curl -sfL https://get.k3s.io | K3S_URL=https://k3s.example.com:6443 K3S_TOKEN=TOKEN INSTALL_K3S_EXEC=&quot;--data-dir=/mnt/k3s-store&quot; sh -`, `83859310500874290000`)"
+curl -sfL https://get.k3s.io | K3S_URL=https://k3s.example.com:6443 K3S_TOKEN=TOKEN INSTALL_K3S_EXEC=&quot;--data-dir=/mnt/k3s-store&quot; sh -`, `34855544082052090000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -269,6 +269,6 @@ curl -sfL https://get.k3s.io | K3S_URL=https://k3s.example.com:6443 K3S_TOKEN=TO
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-e33dcb3ee87835ea1c85.js\"],\"component---cache-caches-gatsby-plugin-offline-app-shell-js\":[\"/component---cache-caches-gatsby-plugin-offline-app-shell-js-eb19aed394dc31706c5c.js\"],\"component---src-pages-404-jsx\":[\"/component---src-pages-404-jsx-04f6e7324ef3e3974d1a.js\"],\"component---src-pages-about-jsx\":[\"/component---src-pages-about-jsx-f2e1e5a6fd9382004348.js\"],\"component---src-pages-index-jsx\":[\"/component---src-pages-index-jsx-842a6b7aa971fdeb2c4f.js\"],\"component---src-pages-lab-catalog-jsx\":[\"/component---src-pages-lab-catalog-jsx-c4c40915dd7e881e0ca7.js\"],\"component---src-pages-lab-jsx\":[\"/component---src-pages-lab-jsx-911ef13732fe6bc3d454.js\"],\"component---src-pages-tags-jsx\":[\"/component---src-pages-tags-jsx-c3a23590763d3af21c0a.js\"],\"component---src-templates-blog-post-jsx\":[\"/component---src-templates-blog-post-jsx-851a19a2e1c9c0ca8fd2.js\"],\"component---src-templates-tags-jsx\":[\"/component---src-templates-tags-jsx-2393122b3d153ee94561.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-e33dcb3ee87835ea1c85.js\"],\"component---cache-caches-gatsby-plugin-offline-app-shell-js\":[\"/component---cache-caches-gatsby-plugin-offline-app-shell-js-eb19aed394dc31706c5c.js\"],\"component---src-pages-404-jsx\":[\"/component---src-pages-404-jsx-04f6e7324ef3e3974d1a.js\"],\"component---src-pages-about-jsx\":[\"/component---src-pages-about-jsx-f2e1e5a6fd9382004348.js\"],\"component---src-pages-index-jsx\":[\"/component---src-pages-index-jsx-842a6b7aa971fdeb2c4f.js\"],\"component---src-pages-lab-catalog-jsx\":[\"/component---src-pages-lab-catalog-jsx-c4c40915dd7e881e0ca7.js\"],\"component---src-pages-lab-jsx\":[\"/component---src-pages-lab-jsx-911ef13732fe6bc3d454.js\"],\"component---src-pages-tags-jsx\":[\"/component---src-pages-tags-jsx-c3a23590763d3af21c0a.js\"],\"component---src-templates-blog-post-jsx\":[\"/component---src-templates-blog-post-jsx-3d66b0c90ee88ffba51f.js\"],\"component---src-templates-tags-jsx\":[\"/component---src-templates-tags-jsx-2393122b3d153ee94561.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="0786dcb0ce48507d26ab";</script><script src="/webpack-runtime-7c91da52d617f54656f1.js" async></script><script src="/app-e33dcb3ee87835ea1c85.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="b0a423ffae183044bcd7";</script><script src="/webpack-runtime-0020caaf1d2c51fb8120.js" async></script><script src="/app-e33dcb3ee87835ea1c85.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
