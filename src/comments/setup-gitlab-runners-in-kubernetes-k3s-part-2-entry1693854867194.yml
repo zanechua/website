@@ -1,0 +1,27 @@
+id: fpufqmlds301sqdz3vx0u0e3
+name: "Leslie "
+email: cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e
+message: >-
+  Hey Zane, I followed your guide and managed to get the kubernates runners up
+  and online.
+
+
+  However, in the CI, it failed with 
+
+
+  ```
+
+  Waiting for pod gitlab-runner/runner-xozxxtrtr-project-1-concurrent-0-l9o9rcc4 to be running, status is Pending
+
+  Waiting for pod gitlab-runner/runner-xozxxtrtr-project-1-concurrent-0-l9o9rcc4 to be running, status is Pending
+  	ContainersNotInitialized: &quot;containers with incomplete status: [init-permissions]&quot;
+  	PodFailed: &quot;&quot;
+  	PodFailed: &quot;&quot;
+  ERROR: Job failed (system failure): prepare environment: waiting for pod running: pod status is failed. Check https://docs.gitlab.com/runner/shells/index.html#shell-profile-loading for more information
+
+  ```
+
+
+  any idea what might be wrong ?
+slug: setup-gitlab-runners-in-kubernetes-k3s-part-2
+date: 2023-09-04T19:14:27.194Z
