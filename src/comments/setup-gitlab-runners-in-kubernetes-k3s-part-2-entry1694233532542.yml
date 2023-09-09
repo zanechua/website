@@ -1,0 +1,11 @@
+id: whbu9ngk3zpsxi8jpme95wac
+name: Zane
+email: cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e
+message: This looks more like an issue with your kubernetes cluster or
+  permissions? It&#39;s quite hard to tell based on just the runner logs not
+  outputting anything, are you able to check that all your services are running
+  properly in the cluster and there are no errors being thrown from the cluster?
+  The other thing I can think about is kubernetes version support by GitLab
+  which should be at 1.27 now.
+slug: setup-gitlab-runners-in-kubernetes-k3s-part-2
+date: 2023-09-09T04:25:32.542Z
