@@ -1,0 +1,12 @@
+id: ugelzq6wen1vcfydb6uonjet
+name: fieldemser
+email: 2b623d24fd043686ba127f8481492557f2cee62d1302057b53752c3a9e801f368bc353062831af3af5b99b7ecf6c59fabb73f9b62a1ed4e18ab6c94f79824394
+message: Thanks for the info. I am trying to get this to run using a Docker
+  image from a private docker repo and am failing at the login stage when the
+  image is to be pulled from the repo. There isnt much information as to how to
+  handle this in Gitlab CI Services. Do you have any idea how to get this to
+  work? If I understand it correctly, this should work via setting the
+  DOCKER_AUTH_CONFIG in the services' variable section but at least for me no
+  luck thus far.
+slug: dependency-between-services-gitlab-pipelines
+date: 2023-10-13T09:40:21.789Z
