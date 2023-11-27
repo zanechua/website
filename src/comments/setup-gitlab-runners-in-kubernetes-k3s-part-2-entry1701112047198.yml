@@ -1,0 +1,9 @@
+id: bz2o7mkmbqxyf6lif5hchid8
+name: Igor
+email: 34097c75b706102c8716532e4fefaa474e124ce62936d84276961ecb1da676b4e9c7f4a6e9c862fc9f78f3e31a721b89cce5dd76b00fd89d2d4b618dd20fac15
+message: >
+  Hi Zane, i have another error:
+
+  Error: INSTALLATION FAILED: template: gitlab-runner/templates/deployment.yaml:99:19: executing "gitlab-runner/templates/deployment.yaml" at <include "gitlab-runner.cache.secret" .>: error calling include: template: gitlab-runner/templates/_helpers.tpl:44:21: executing "gitlab-runner.cache.secret" at <.Values.runners.cache>: wrong type for value; expected map[string]interface {}; got interface {}
+slug: setup-gitlab-runners-in-kubernetes-k3s-part-2
+date: 2023-11-27T19:07:27.198Z
