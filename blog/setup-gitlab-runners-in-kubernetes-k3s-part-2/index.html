@@ -58,12 +58,12 @@ Connecting the cluster to GitLab is not…" data-gatsby-head="true"/><meta name=
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="37148428190852180000"
+              data-toaster-id="511527067694150800"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`, `37148428190852180000`)"
+              onClick="copyToClipboard(`curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`, `511527067694150800`)"
             >
               <div
                 class="gatsby-code-button"
@@ -92,7 +92,7 @@ I'm leaving this section here but hidden as it's not really required.</p>
 <div class="gatsby-code-title gatsby-remark-code-title">gitlab-admin-service-account.yaml</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="23505374303304126000"
+              data-toaster-id="4041113968468668000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -114,7 +114,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: gitlab
-    namespace: kube-system`, `23505374303304126000`)"
+    namespace: kube-system`, `4041113968468668000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -144,12 +144,12 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="77289362573635650000"
+              data-toaster-id="24327197173313330000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`kubectl apply -f gitlab-admin-service-account.yaml`, `77289362573635650000`)"
+              onClick="copyToClipboard(`kubectl apply -f gitlab-admin-service-account.yaml`, `24327197173313330000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -163,14 +163,14 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="40416200390511256000"
+              data-toaster-id="49354544760641210000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`kubectl config view --raw \
 -o=jsonpath='{.clusters[0].cluster.certificate-authority-data}' \
-| base64 --decode`, `40416200390511256000`)"
+| base64 --decode`, `49354544760641210000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -186,12 +186,12 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="3612454774763596000"
+              data-toaster-id="60713134494148840000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`kubectl -n kube-system describe secret \$(kubectl -n kube-system get secret | grep gitlab | awk '{print \$1}')`, `3612454774763596000`)"
+              onClick="copyToClipboard(`kubectl -n kube-system describe secret \$(kubectl -n kube-system get secret | grep gitlab | awk '{print \$1}')`, `60713134494148840000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -225,7 +225,7 @@ subjects:
 <div class="gatsby-code-title gatsby-remark-code-title">gitlab-runner.yaml</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="78950818084807400000"
+              data-toaster-id="27432902299566453000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -766,7 +766,7 @@ secrets: []
 ## Please note that a number of keys are reserved by the runner.
 ## See https://gitlab.com/gitlab-org/charts/gitlab-runner/-/blob/main/templates/configmap.yaml
 ## for a current list.
-configMaps: {}`, `78950818084807400000`)"
+configMaps: {}`, `27432902299566453000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1327,14 +1327,14 @@ configMaps: {}`, `78950818084807400000`)"
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="98715022187344740000"
+              data-toaster-id="67910414215147810000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`kubectl create ns gitlab-runner
 helm repo add gitlab https://charts.gitlab.io
-helm install --namespace gitlab-runner gitlab-runner -f gitlab-runner.yaml gitlab/gitlab-runner`, `98715022187344740000`)"
+helm install --namespace gitlab-runner gitlab-runner -f gitlab-runner.yaml gitlab/gitlab-runner`, `67910414215147810000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1355,12 +1355,12 @@ You can try exporting the credentials again <code class="language-text">kubectl 
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="39537016470823240000"
+              data-toaster-id="6931864952822431000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`helm uninstall --namespace gitlab-runner gitlab-runner`, `39537016470823240000`)"
+              onClick="copyToClipboard(`helm uninstall --namespace gitlab-runner gitlab-runner`, `6931864952822431000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -1374,7 +1374,7 @@ You can try exporting the credentials again <code class="language-text">kubectl 
 <ul>
 <li><code class="language-text">2023-08-04</code> - Added a note about potentially encountering an error running the helm command with regards to <code class="language-text">credentials</code></li>
 <li><code class="language-text">2022-09-08</code> - Updated runner manifest to use the new <code class="language-text">podSecurityContext</code> instead of <code class="language-text">securityContext</code> and hide cluster certificate connection</li>
-</ul></div></section><section class="comment-section flex-1 pt-8"><h1 class="text-2xl font-bold pb-4">Comments</h1><div class="comment-container bg-gray-800 p-6"><div class="comment py-3"><h3 class="font-bold pb-2">Leslie </h3><h4 class="font-bold pb-6">04 September, 2023 at 7:09 PM</h4><div class="pb-2"><p class="whitespace-pre-wrap">Hey Zane, I followed your guide and managed to get the kubernates runners up and online.</p><p class="whitespace-pre-wrap"></p><p class="whitespace-pre-wrap">However, in the CI, it failed with </p><p class="whitespace-pre-wrap"></p><p class="whitespace-pre-wrap">```</p><p class="whitespace-pre-wrap">Waiting for pod gitlab-runner/runner-xozxxtrtr-project-1-concurrent-0-l9o9rcc4 to be running, status is Pending</p><p class="whitespace-pre-wrap">Waiting for pod gitlab-runner/runner-xozxxtrtr-project-1-concurrent-0-l9o9rcc4 to be running, status is Pending</p><p class="whitespace-pre-wrap">	ContainersNotInitialized: &amp;quot;containers with incomplete status: [init-permissions]&amp;quot;</p><p class="whitespace-pre-wrap">	PodFailed: &amp;quot;&amp;quot;</p><p class="whitespace-pre-wrap">	PodFailed: &amp;quot;&amp;quot;</p><p class="whitespace-pre-wrap">ERROR: Job failed (system failure): prepare environment: waiting for pod running: pod status is failed. Check https://docs.gitlab.com/runner/shells/index.html#shell-profile-loading for more information</p><p class="whitespace-pre-wrap">```</p><p class="whitespace-pre-wrap"></p><p class="whitespace-pre-wrap">any idea what might be wrong ?</p></div><hr/></div><div class="comment py-3"><h3 class="font-bold pb-2">Zane</h3><h4 class="font-bold pb-6">06 September, 2023 at 6:09 PM</h4><div class="pb-2"><p class="whitespace-pre-wrap">@Leslie</p><p class="whitespace-pre-wrap"></p><p class="whitespace-pre-wrap">This looks more like an issue with your kubernetes cluster or permissions?</p><p class="whitespace-pre-wrap"></p><p class="whitespace-pre-wrap">It&amp;#39;s quite hard to tell based on just the runner logs not outputting anything, are you able to check that all your services are running properly in the cluster and there are no errors being thrown from the cluster?</p><p class="whitespace-pre-wrap"></p><p class="whitespace-pre-wrap">The other thing I can think about is kubernetes version support by GitLab which should be at 1.27 now.</p><p class="whitespace-pre-wrap"></p></div><hr/></div></div></section><section class="comment-form-section flex-1 pt-8"><h1 class="text-2xl font-bold pb-4">Leave a comment</h1><div class="comment-form-container bg-gray-800 p-6"><form class="rounded mb-4"><input id="fields[slug]" type="hidden" value="setup-gitlab-runners-in-kubernetes-k3s-part-2"/><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[name]">Name *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[name]" type="text" placeholder="Name" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[email]">Email *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[email]" type="text" placeholder="Email" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[message]">Message *</label><div data-replicated-value="" class="grid after:whitespace-pre-wrap after:invisible after:content-[attr(data-replicated-value)] after:[grid-area:1/1/2/2]"><textarea class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight resize-none overflow-hidden [grid-area:1/1/2/2] focus:outline-none focus:shadow-outline" id="fields[message]" placeholder="Message" rows="6"></textarea></div></div><div class="flex items-center justify-between"><button class="flex-1 text-white font-bold rainbow-button p-1" type="button"><div class="bg-gray-800 p-2">Post Comment</div></button></div></form><h3></h3></div></section></main><footer class="bg-gray-800"><nav class="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8"><p class="text-white"><a class="font-bold no-underline" href="/">© zanechua.com <!-- -->2023</a></p><nav><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://gitlab.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitLab</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://github.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitHub</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://twitter.com/zanejchua" target="_blank" rel="nofollow noopener noreferrer">Twitter</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://www.linkedin.com/in/zanejchua/" target="_blank" rel="nofollow noopener noreferrer">LinkedIn</a></nav></nav></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/setup-gitlab-runners-in-kubernetes-k3s-part-2/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+</ul></div></section><section class="comment-section flex-1 pt-8"><h1 class="text-2xl font-bold pb-4">Comments</h1><div class="comment-container bg-gray-800 p-6"><div class="comment py-3"><h3 class="font-bold pb-2">Leslie </h3><h4 class="font-bold pb-6">04 September, 2023 at 7:09 PM</h4><div class="pb-2"><p class="whitespace-pre-wrap">Hey Zane, I followed your guide and managed to get the kubernates runners up and online.</p><p class="whitespace-pre-wrap"></p><p class="whitespace-pre-wrap">However, in the CI, it failed with </p><p class="whitespace-pre-wrap"></p><p class="whitespace-pre-wrap">```</p><p class="whitespace-pre-wrap">Waiting for pod gitlab-runner/runner-xozxxtrtr-project-1-concurrent-0-l9o9rcc4 to be running, status is Pending</p><p class="whitespace-pre-wrap">Waiting for pod gitlab-runner/runner-xozxxtrtr-project-1-concurrent-0-l9o9rcc4 to be running, status is Pending</p><p class="whitespace-pre-wrap">	ContainersNotInitialized: &amp;quot;containers with incomplete status: [init-permissions]&amp;quot;</p><p class="whitespace-pre-wrap">	PodFailed: &amp;quot;&amp;quot;</p><p class="whitespace-pre-wrap">	PodFailed: &amp;quot;&amp;quot;</p><p class="whitespace-pre-wrap">ERROR: Job failed (system failure): prepare environment: waiting for pod running: pod status is failed. Check https://docs.gitlab.com/runner/shells/index.html#shell-profile-loading for more information</p><p class="whitespace-pre-wrap">```</p><p class="whitespace-pre-wrap"></p><p class="whitespace-pre-wrap">any idea what might be wrong ?</p></div><hr/></div><div class="comment py-3"><h3 class="font-bold pb-2">Zane</h3><h4 class="font-bold pb-6">06 September, 2023 at 6:09 PM</h4><div class="pb-2"><p class="whitespace-pre-wrap">@Leslie</p><p class="whitespace-pre-wrap"></p><p class="whitespace-pre-wrap">This looks more like an issue with your kubernetes cluster or permissions?</p><p class="whitespace-pre-wrap"></p><p class="whitespace-pre-wrap">It&amp;#39;s quite hard to tell based on just the runner logs not outputting anything, are you able to check that all your services are running properly in the cluster and there are no errors being thrown from the cluster?</p><p class="whitespace-pre-wrap"></p><p class="whitespace-pre-wrap">The other thing I can think about is kubernetes version support by GitLab which should be at 1.27 now.</p><p class="whitespace-pre-wrap"></p></div><hr/></div><div class="comment py-3"><h3 class="font-bold pb-2">Igor</h3><h4 class="font-bold pb-6">27 November, 2023 at 7:11 PM</h4><div class="pb-2"><p class="whitespace-pre-wrap">Hi Zane, i have another error:</p><p class="whitespace-pre-wrap">Error: INSTALLATION FAILED: template: gitlab-runner/templates/deployment.yaml:99:19: executing &quot;gitlab-runner/templates/deployment.yaml&quot; at &lt;include &quot;gitlab-runner.cache.secret&quot; .&gt;: error calling include: template: gitlab-runner/templates/_helpers.tpl:44:21: executing &quot;gitlab-runner.cache.secret&quot; at &lt;.Values.runners.cache&gt;: wrong type for value; expected map[string]interface {}; got interface {}</p><p class="whitespace-pre-wrap"></p></div><hr/></div></div></section><section class="comment-form-section flex-1 pt-8"><h1 class="text-2xl font-bold pb-4">Leave a comment</h1><div class="comment-form-container bg-gray-800 p-6"><form class="rounded mb-4"><input id="fields[slug]" type="hidden" value="setup-gitlab-runners-in-kubernetes-k3s-part-2"/><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[name]">Name *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[name]" type="text" placeholder="Name" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[email]">Email *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[email]" type="text" placeholder="Email" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[message]">Message *</label><div data-replicated-value="" class="grid after:whitespace-pre-wrap after:invisible after:content-[attr(data-replicated-value)] after:[grid-area:1/1/2/2]"><textarea class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight resize-none overflow-hidden [grid-area:1/1/2/2] focus:outline-none focus:shadow-outline" id="fields[message]" placeholder="Message" rows="6"></textarea></div></div><div class="flex items-center justify-between"><button class="flex-1 text-white font-bold rainbow-button p-1" type="button"><div class="bg-gray-800 p-2">Post Comment</div></button></div></form><h3></h3></div></section></main><footer class="bg-gray-800"><nav class="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8"><p class="text-white"><a class="font-bold no-underline" href="/">© zanechua.com <!-- -->2023</a></p><nav><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://gitlab.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitLab</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://github.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitHub</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://twitter.com/zanejchua" target="_blank" rel="nofollow noopener noreferrer">Twitter</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://www.linkedin.com/in/zanejchua/" target="_blank" rel="nofollow noopener noreferrer">LinkedIn</a></nav></nav></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/setup-gitlab-runners-in-kubernetes-k3s-part-2/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
