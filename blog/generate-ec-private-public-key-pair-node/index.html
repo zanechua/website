@@ -52,13 +52,13 @@
 <div class="gatsby-code-title gatsby-remark-code-title">terminal</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="14947163793729112000"
+              data-toaster-id="19449077150739534000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`openssl ecparam -genkey -name secp521r1 -noout -out ./ecdsa-p521-private.pem
-openssl ec -in ./ecdsa-p521-private.pem -pubout -out ./ecdsa-p521-public.pem`, `14947163793729112000`)"
+openssl ec -in ./ecdsa-p521-private.pem -pubout -out ./ecdsa-p521-public.pem`, `19449077150739534000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -87,7 +87,7 @@ openssl ec <span class="token parameter variable">-in</span> ./ecdsa-p521-privat
 <div class="gatsby-code-title gatsby-remark-code-title">generateECKeys.js</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="16227659202368594000"
+              data-toaster-id="43734668696406385000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -125,7 +125,7 @@ const formattedPublicKey = publicKeyDer.replace(regex, '\$&\n');
 fs.writeFileSync(
   \`\${relativeDirectory}/ecdsa-p521-public.pem\`,
   \`-----BEGIN PUBLIC KEY-----\n\${formattedPublicKey}\n-----END PUBLIC KEY-----\n\`
-);`, `16227659202368594000`)"
+);`, `43734668696406385000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -173,7 +173,7 @@ fs<span class="token punctuation">.</span><span class="token function">writeFile
 <div class="gatsby-code-title gatsby-remark-code-title">terminal</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="9980608069931907000"
+              data-toaster-id="53844378800538560000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -182,7 +182,7 @@ fs<span class="token punctuation">.</span><span class="token function">writeFile
 openssl pkey -pubout -in privatekey.pem
 
 # Compressed Public Key
-openssl pkey -pubout -ec_conv_form compressed -in privatekey.pem`, `9980608069931907000`)"
+openssl pkey -pubout -ec_conv_form compressed -in privatekey.pem`, `53844378800538560000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -199,7 +199,7 @@ openssl pkey <span class="token parameter variable">-pubout</span> <span class="
 <div class="gatsby-code-title gatsby-remark-code-title">generateECKeys.secp256k1.js</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="36538153028173492000"
+              data-toaster-id="5247172148870294000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -244,7 +244,7 @@ console.log(compressedPublicKeyDer.toString('base64'));
 
 // openssl pkey -pubout -ec_conv_form compressed -in privatekey.pem
 // Compressed Public Key ::
-// MDYwEAYHKoZIzj0CAQYFK4EEAAoDIgACgIjM+1h4s2JROafAyiiGlNooHwTBoKzDRVYAOwTNlpA=`, `36538153028173492000`)"
+// MDYwEAYHKoZIzj0CAQYFK4EEAAoDIgACgIjM+1h4s2JROafAyiiGlNooHwTBoKzDRVYAOwTNlpA=`, `5247172148870294000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -299,7 +299,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <div class="gatsby-code-title gatsby-remark-code-title">generateECKeys.secp521r1.js</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="32184315769918317000"
+              data-toaster-id="62913836804874840000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -345,7 +345,7 @@ console.log(compressedPublicKeyDer.toString('base64'));
 
 // openssl pkey -pubout -ec_conv_form compressed -in privatekey.pem
 // Compressed Public Key ::
-// MFgwEAYHKoZIzj0CAQYFK4EEACMDRAADABeent7uNwvNWV/312BwUQI87LT1GuJC1+0RBn7MrJKxoqRAnMDansARh6yxaW5neOq9zaI53bfBu0CLPkBpz3v8`, `32184315769918317000`)"
+// MFgwEAYHKoZIzj0CAQYFK4EEACMDRAADABeent7uNwvNWV/312BwUQI87LT1GuJC1+0RBn7MrJKxoqRAnMDansARh6yxaW5neOq9zaI53bfBu0CLPkBpz3v8`, `62913836804874840000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -396,7 +396,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token comment">// openssl pkey -pubout -ec_conv_form compressed -in privatekey.pem</span>
 <span class="token comment">// Compressed Public Key ::</span>
 <span class="token comment">// MFgwEAYHKoZIzj0CAQYFK4EEACMDRAADABeent7uNwvNWV/312BwUQI87LT1GuJC1+0RBn7MrJKxoqRAnMDansARh6yxaW5neOq9zaI53bfBu0CLPkBpz3v8</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>You can use <a href="https://lapo.it/asn1js/" target="_blank" rel="nofollow noopener noreferrer">https://lapo.it/asn1js/</a> to validate that the generated keys are valid EC key pairs with the appropriate curves.</p></div></section><section class="comment-form-section flex-1 pt-8"><h1 class="text-2xl font-bold pb-4">Leave a comment</h1><div class="comment-form-container bg-gray-800 p-6"><form class="rounded mb-4"><input id="fields[slug]" type="hidden" value="generate-ec-private-public-key-pair-node"/><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[name]">Name *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[name]" type="text" placeholder="Name" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[email]">Email *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[email]" type="text" placeholder="Email" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[message]">Message *</label><div data-replicated-value="" class="grid after:whitespace-pre-wrap after:invisible after:content-[attr(data-replicated-value)] after:[grid-area:1/1/2/2]"><textarea class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight resize-none overflow-hidden [grid-area:1/1/2/2] focus:outline-none focus:shadow-outline" id="fields[message]" placeholder="Message" rows="6"></textarea></div></div><div class="flex items-center justify-between"><button class="flex-1 text-white font-bold rainbow-button p-1" type="button"><div class="bg-gray-800 p-2">Post Comment</div></button></div></form><h3></h3></div></section></main><footer class="bg-gray-800"><nav class="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8"><p class="text-white"><a class="font-bold no-underline" href="/">© zanechua.com <!-- -->2023</a></p><nav><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://gitlab.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitLab</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://github.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitHub</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://twitter.com/zanejchua" target="_blank" rel="nofollow noopener noreferrer">Twitter</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://www.linkedin.com/in/zanejchua/" target="_blank" rel="nofollow noopener noreferrer">LinkedIn</a></nav></nav></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/generate-ec-private-public-key-pair-node/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<p>You can use <a href="https://lapo.it/asn1js/" target="_blank" rel="nofollow noopener noreferrer">https://lapo.it/asn1js/</a> to validate that the generated keys are valid EC key pairs with the appropriate curves.</p></div></section><section class="comment-form-section flex-1 pt-8"><h1 class="text-2xl font-bold pb-4">Leave a comment</h1><div class="comment-form-container bg-gray-800 p-6"><form class="rounded mb-4"><input id="fields[slug]" type="hidden" value="generate-ec-private-public-key-pair-node"/><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[name]">Name *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[name]" type="text" placeholder="Name" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[email]">Email *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[email]" type="text" placeholder="Email" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[message]">Message *</label><div data-replicated-value="" class="grid after:whitespace-pre-wrap after:invisible after:content-[attr(data-replicated-value)] after:[grid-area:1/1/2/2]"><textarea class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight resize-none overflow-hidden [grid-area:1/1/2/2] focus:outline-none focus:shadow-outline" id="fields[message]" placeholder="Message" rows="6"></textarea></div></div><div class="flex items-center justify-between"><button class="flex-1 text-white font-bold rainbow-button p-1" type="button"><div class="bg-gray-800 p-2">Post Comment</div></button></div></form><h3></h3></div></section></main><footer class="bg-gray-800"><nav class="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8"><p class="text-white"><a class="font-bold no-underline" href="/">© zanechua.com <!-- -->2024</a></p><nav><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://gitlab.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitLab</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://github.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitHub</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://twitter.com/zanejchua" target="_blank" rel="nofollow noopener noreferrer">Twitter</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://www.linkedin.com/in/zanejchua/" target="_blank" rel="nofollow noopener noreferrer">LinkedIn</a></nav></nav></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/generate-ec-private-public-key-pair-node/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
