@@ -1,0 +1,12 @@
+id: yv3hxf6manskiazv6vjismw5
+name: Chasse
+email: 96ba40c42cf8119a23df3e4bfb9d194b0ffd774f9da47df16b4fb158cbc77e862c1d7ba5f329f242e65e7a5bb5389a5b34ac5131f401ff02544d41416e3cfc6e
+message: Hi, I don't know much about the TPI interface but do know from its name
+  it sounds like its serial. In the days of LPC - which not all boards support
+  now the LPC interface could be used to show post codes, much like the post
+  code monitor on your board. For some reason now some manufacturers are
+  choosing to leave this feature out. Is there any way the SPI interface could
+  handle this function and if it is doable could it also provide pass through
+  for the existing add on TPM module?
+slug: diy-tpm-module
+date: 2024-03-15T11:11:37.660Z
