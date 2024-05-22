@@ -1,0 +1,10 @@
+id: kqw9y8k3tftns9rgbz6u3m9i
+name: Derek
+email: 230bbc53f82c794d574536163acfc149ea292fb9d33c7d6e37da50598cba56b178c76587ad16b8f910679c8fc63c005220c2af2ecfc74f2870ea3255725e35de
+message: This is interesting. Is there a reason that you do the build process
+  inside of your dockerfile rather than in the CI environment? I run a separate
+  job first that runs the yarn build and some other dependency building
+  concurrently, then when that is all done, I run the Kaniko job and my
+  dockerfile basically just copies in those artifacts.
+slug: speed-up-kaniko-builds
+date: 2024-05-22T16:57:00.320Z
