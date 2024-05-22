@@ -93,7 +93,7 @@
 <div class="gatsby-code-title gatsby-remark-code-title">main/worker</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="70836224679624580000"
+              data-toaster-id="77446264773722640000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -111,7 +111,7 @@ mkfs -t ext4 -i 8192  /dev/sdb1
 mkdir -p /mnt/k3s-store
 mount /dev/sdb1 /mnt/k3s-store
 blkid
-nano /etc/fstab`, `70836224679624580000`)"
+nano /etc/fstab`, `77446264773722640000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -138,12 +138,12 @@ blkid
 <div class="gatsby-code-title gatsby-remark-code-title">/etc/fstab</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="60672773915201850000"
+              data-toaster-id="49203704235249115000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`UUID=81cb55b0-c012-4308-9e58-d6b9460887ff /mnt/k3s-store ext4 defaults,discard 0 1`, `60672773915201850000`)"
+              onClick="copyToClipboard(`UUID=81cb55b0-c012-4308-9e58-d6b9460887ff /mnt/k3s-store ext4 defaults,discard 0 1`, `49203704235249115000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -159,14 +159,14 @@ blkid
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="37254767928044405000"
+              data-toaster-id="92893461439957960000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`# Install K3S Server without flannel which is the default CNI
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC=&quot;--flannel-backend=none --disable-network-policy --cluster-cidr=10.42.0.0/16 --data-dir=/mnt/k3s-store&quot; sh -
-wget https://docs.projectcalico.org/manifests/calico.yaml`, `37254767928044405000`)"
+wget https://docs.projectcalico.org/manifests/calico.yaml`, `92893461439957960000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -182,14 +182,14 @@ wget https://docs.projectcalico.org/manifests/calico.yaml`, `3725476792804440500
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="93630971560985850000"
+              data-toaster-id="30949281109889550000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`&quot;container_settings&quot;: {
     &quot;allow_ip_forwarding&quot;: true
-},`, `93630971560985850000`)"
+},`, `30949281109889550000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -206,14 +206,14 @@ wget https://docs.projectcalico.org/manifests/calico.yaml`, `3725476792804440500
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="52773084862508710000"
+              data-toaster-id="98601917858436220000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`kubectl config view --raw > ~/.kube/config
 chmod 600 ~/.kube/config
-kubectl apply -f calico.yaml`, `52773084862508710000`)"
+kubectl apply -f calico.yaml`, `98601917858436220000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -230,12 +230,12 @@ kubectl apply <span class="token parameter variable">-f</span> calico.yaml</code
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="21890322148578110000"
+              data-toaster-id="27581536294502105000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`cat /mnt/k3s-store/server/node-token`, `21890322148578110000`)"
+              onClick="copyToClipboard(`cat /mnt/k3s-store/server/node-token`, `27581536294502105000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -248,13 +248,13 @@ kubectl apply <span class="token parameter variable">-f</span> calico.yaml</code
 <div class="gatsby-code-title gatsby-remark-code-title">worker</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="66133822052232020000"
+              data-toaster-id="75925117390216300000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`# K3S Nodes
-curl -sfL https://get.k3s.io | K3S_URL=https://k3s.example.com:6443 K3S_TOKEN=TOKEN INSTALL_K3S_EXEC=&quot;--data-dir=/mnt/k3s-store&quot; sh -`, `66133822052232020000`)"
+curl -sfL https://get.k3s.io | K3S_URL=https://k3s.example.com:6443 K3S_TOKEN=TOKEN INSTALL_K3S_EXEC=&quot;--data-dir=/mnt/k3s-store&quot; sh -`, `75925117390216300000`)"
             >
               <div
                 class="gatsby-code-button"

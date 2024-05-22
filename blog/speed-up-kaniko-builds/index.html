@@ -75,7 +75,7 @@
 <div class="gatsby-code-title gatsby-remark-code-title">gitlab-ci.yml</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="61902883001497820000"
+              data-toaster-id="39295873674455350000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -136,7 +136,7 @@
   retry: 2
   needs:
     - job: cache_job
-      artifacts: true`, `61902883001497820000`)"
+      artifacts: true`, `39295873674455350000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -217,7 +217,7 @@
 <div class="gatsby-code-title gatsby-remark-code-title">Dockerfile</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="55961938957024990000"
+              data-toaster-id="48409559197389500000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -281,7 +281,7 @@ RUN yarn install --frozen-lockfile --production --prefer-offline
 HEALTHCHECK CMD wget --no-verbose --tries=1 --spider http://localhost:8080/probe || exit 1
 EXPOSE 8080
 ENTRYPOINT [&quot;docker-entrypoint.sh&quot;]
-CMD [&quot;yarn&quot;, &quot;start:server&quot;]`, `55961938957024990000`)"
+CMD [&quot;yarn&quot;, &quot;start:server&quot;]`, `48409559197389500000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -354,7 +354,7 @@ CMD [&quot;yarn&quot;, &quot;start:server&quot;]`, `55961938957024990000`)"
 <p>Hope that helped you, please feel free to leave a comment to let me know if this worked or did not work for you.</p>
 <blockquote>
 <p>Disclaimer: This post was written when I was employed at GitLab. The content written above was done in my individual capacity.</p>
-</blockquote></div></section><section class="comment-form-section flex-1 pt-8"><h1 class="text-2xl font-bold pb-4">Leave a comment</h1><div class="comment-form-container bg-gray-800 p-6"><form class="rounded mb-4"><input id="fields[slug]" type="hidden" value="speed-up-kaniko-builds"/><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[name]">Name *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[name]" type="text" placeholder="Name" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[email]">Email *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[email]" type="text" placeholder="Email" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[message]">Message *</label><div data-replicated-value="" class="grid after:whitespace-pre-wrap after:invisible after:content-[attr(data-replicated-value)] after:[grid-area:1/1/2/2]"><textarea class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight resize-none overflow-hidden [grid-area:1/1/2/2] focus:outline-none focus:shadow-outline" id="fields[message]" placeholder="Message" rows="6"></textarea></div></div><div class="flex items-center justify-between"><button class="flex-1 text-white font-bold rainbow-button p-1" type="button"><div class="bg-gray-800 p-2">Post Comment</div></button></div></form><h3></h3></div></section></main><footer class="bg-gray-800"><nav class="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8"><p class="text-white"><a class="font-bold no-underline" href="/">© zanechua.com <!-- -->2024</a></p><nav><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://gitlab.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitLab</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://github.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitHub</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://twitter.com/zanejchua" target="_blank" rel="nofollow noopener noreferrer">Twitter</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://www.linkedin.com/in/zanejchua/" target="_blank" rel="nofollow noopener noreferrer">LinkedIn</a></nav></nav></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/speed-up-kaniko-builds/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+</blockquote></div></section><section class="comment-section flex-1 pt-8"><h1 class="text-2xl font-bold pb-4">Comments</h1><div class="comment-container bg-gray-800 p-6"><div class="comment py-3"><h3 class="font-bold pb-2">Derek</h3><h4 class="font-bold pb-6">22 May, 2024 at 4:05 PM</h4><div class="pb-2"><p class="whitespace-pre-wrap">This is interesting. Is there a reason that you do the build process inside of your dockerfile rather than in the CI environment? I run a separate job first that runs the yarn build and some other dependency building concurrently, then when that is all done, I run the Kaniko job and my dockerfile basically just copies in those artifacts.</p></div><hr/></div></div></section><section class="comment-form-section flex-1 pt-8"><h1 class="text-2xl font-bold pb-4">Leave a comment</h1><div class="comment-form-container bg-gray-800 p-6"><form class="rounded mb-4"><input id="fields[slug]" type="hidden" value="speed-up-kaniko-builds"/><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[name]">Name *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[name]" type="text" placeholder="Name" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[email]">Email *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[email]" type="text" placeholder="Email" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[message]">Message *</label><div data-replicated-value="" class="grid after:whitespace-pre-wrap after:invisible after:content-[attr(data-replicated-value)] after:[grid-area:1/1/2/2]"><textarea class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight resize-none overflow-hidden [grid-area:1/1/2/2] focus:outline-none focus:shadow-outline" id="fields[message]" placeholder="Message" rows="6"></textarea></div></div><div class="flex items-center justify-between"><button class="flex-1 text-white font-bold rainbow-button p-1" type="button"><div class="bg-gray-800 p-2">Post Comment</div></button></div></form><h3></h3></div></section></main><footer class="bg-gray-800"><nav class="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8"><p class="text-white"><a class="font-bold no-underline" href="/">© zanechua.com <!-- -->2024</a></p><nav><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://gitlab.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitLab</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://github.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitHub</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://twitter.com/zanejchua" target="_blank" rel="nofollow noopener noreferrer">Twitter</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://www.linkedin.com/in/zanejchua/" target="_blank" rel="nofollow noopener noreferrer">LinkedIn</a></nav></nav></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/speed-up-kaniko-builds/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
