@@ -1,0 +1,13 @@
+id: z87ypen18y6dp7v3ogfpllk9
+name: Zane
+email: 8cf90c82fa3a655768d153d09c724996a8c920d643d9e55042166b8e36fccade8b20f78c19448c47dba57d2fba6cc98fd757ace37c9d00ac2e22e1ef1b5802d4
+message: >-
+  @Derek
+
+
+  I haven't touched Kaniko in awhile but I believe it was due to some issues with the `COPY` command which Kaniko has some edge case issues processing and based on my memory, it doesn't end up using the cache with the `COPY` command so you end up with longer build times. 
+
+
+  In your testing, do you see improvements with just doing the build outside and using the `COPY` command?
+slug: speed-up-kaniko-builds
+date: 2024-06-03T09:50:44.319Z
