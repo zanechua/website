@@ -93,7 +93,7 @@
 <div class="gatsby-code-title gatsby-remark-code-title">main/worker</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="74386154167768990000"
+              data-toaster-id="78864283900654580000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
@@ -111,7 +111,7 @@ mkfs -t ext4 -i 8192  /dev/sdb1
 mkdir -p /mnt/k3s-store
 mount /dev/sdb1 /mnt/k3s-store
 blkid
-nano /etc/fstab`, `74386154167768990000`)"
+nano /etc/fstab`, `78864283900654580000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -138,12 +138,12 @@ blkid
 <div class="gatsby-code-title gatsby-remark-code-title">/etc/fstab</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="27632509504044610000"
+              data-toaster-id="88603942737212260000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`UUID=81cb55b0-c012-4308-9e58-d6b9460887ff /mnt/k3s-store ext4 defaults,discard 0 1`, `27632509504044610000`)"
+              onClick="copyToClipboard(`UUID=81cb55b0-c012-4308-9e58-d6b9460887ff /mnt/k3s-store ext4 defaults,discard 0 1`, `88603942737212260000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -159,14 +159,14 @@ blkid
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="37655909020186050000"
+              data-toaster-id="19669891587872735000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`# Install K3S Server without flannel which is the default CNI
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC=&quot;--flannel-backend=none --disable-network-policy --cluster-cidr=10.42.0.0/16 --data-dir=/mnt/k3s-store&quot; sh -
-wget https://docs.projectcalico.org/manifests/calico.yaml`, `37655909020186050000`)"
+wget https://docs.projectcalico.org/manifests/calico.yaml`, `19669891587872735000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -182,14 +182,14 @@ wget https://docs.projectcalico.org/manifests/calico.yaml`, `3765590902018605000
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="11342420979484280000"
+              data-toaster-id="68230634840880340000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`&quot;container_settings&quot;: {
     &quot;allow_ip_forwarding&quot;: true
-},`, `11342420979484280000`)"
+},`, `68230634840880340000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -206,14 +206,14 @@ wget https://docs.projectcalico.org/manifests/calico.yaml`, `3765590902018605000
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="97025484082009650000"
+              data-toaster-id="26213477548015706000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`kubectl config view --raw > ~/.kube/config
 chmod 600 ~/.kube/config
-kubectl apply -f calico.yaml`, `97025484082009650000`)"
+kubectl apply -f calico.yaml`, `26213477548015706000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -230,12 +230,12 @@ kubectl apply <span class="token parameter variable">-f</span> calico.yaml</code
 <div class="gatsby-code-title gatsby-remark-code-title">main</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="63158145768990060000"
+              data-toaster-id="81173707660961560000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
-              onClick="copyToClipboard(`cat /mnt/k3s-store/server/node-token`, `63158145768990060000`)"
+              onClick="copyToClipboard(`cat /mnt/k3s-store/server/node-token`, `81173707660961560000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -248,13 +248,13 @@ kubectl apply <span class="token parameter variable">-f</span> calico.yaml</code
 <div class="gatsby-code-title gatsby-remark-code-title">worker</div>
 <div
               class="gatsby-code-button-container"
-              data-toaster-id="71514391101353116000"
+              data-toaster-id="39222775806419770000"
               data-toaster-class="gatsby-code-button-toaster"
               data-toaster-text-class="gatsby-code-button-toaster-text"
               data-toaster-text="Copied"
               data-toaster-duration="3000"
               onClick="copyToClipboard(`# K3S Nodes
-curl -sfL https://get.k3s.io | K3S_URL=https://k3s.example.com:6443 K3S_TOKEN=TOKEN INSTALL_K3S_EXEC=&quot;--data-dir=/mnt/k3s-store&quot; sh -`, `71514391101353116000`)"
+curl -sfL https://get.k3s.io | K3S_URL=https://k3s.example.com:6443 K3S_TOKEN=TOKEN INSTALL_K3S_EXEC=&quot;--data-dir=/mnt/k3s-store&quot; sh -`, `39222775806419770000`)"
             >
               <div
                 class="gatsby-code-button"
@@ -265,7 +265,7 @@ curl -sfL https://get.k3s.io | K3S_URL=https://k3s.example.com:6443 K3S_TOKEN=TO
             </div>
 <div class="gatsby-highlight" data-language="bash"><pre style="counter-reset: linenumber NaN" class="language-bash line-numbers"><code class="language-bash"><span class="token comment"># K3S Nodes</span>
 <span class="token function">curl</span> <span class="token parameter variable">-sfL</span> https://get.k3s.io <span class="token operator">|</span> <span class="token assign-left variable">K3S_URL</span><span class="token operator">=</span>https://k3s.example.com:6443 <span class="token assign-left variable">K3S_TOKEN</span><span class="token operator">=</span>TOKEN <span class="token assign-left variable">INSTALL_K3S_EXEC</span><span class="token operator">=</span><span class="token string">"--data-dir=/mnt/k3s-store"</span> <span class="token function">sh</span> -</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
-<p>Now that the cluster is set up, follow part 2 <a href="/blog/setup-gitlab-runners-in-kubernetes-k3s-part-2">here</a> to complete the runner setup.</p></div></section><section class="comment-form-section flex-1 pt-8"><h1 class="text-2xl font-bold pb-4">Leave a comment</h1><div class="comment-form-container bg-gray-800 p-6"><form class="rounded mb-4"><input id="fields[slug]" type="hidden" value="setup-gitlab-runners-in-kubernetes-k3s-part-1"/><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[name]">Name *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[name]" type="text" placeholder="Name" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[email]">Email *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[email]" type="text" placeholder="Email" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[message]">Message *</label><div data-replicated-value="" class="grid after:whitespace-pre-wrap after:invisible after:content-[attr(data-replicated-value)] after:[grid-area:1/1/2/2]"><textarea class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight resize-none overflow-hidden [grid-area:1/1/2/2] focus:outline-none focus:shadow-outline" id="fields[message]" placeholder="Message" rows="6"></textarea></div></div><div class="flex items-center justify-between"><button class="flex-1 text-white font-bold rainbow-button p-1" type="button"><div class="bg-gray-800 p-2">Post Comment</div></button></div></form><h3></h3></div></section></main><footer class="bg-gray-800"><nav class="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8"><p class="text-white"><a class="font-bold no-underline" href="/">© zanechua.com <!-- -->2024</a></p><nav><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://gitlab.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitLab</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://github.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitHub</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://twitter.com/zanejchua" target="_blank" rel="nofollow noopener noreferrer">Twitter</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://www.linkedin.com/in/zanejchua/" target="_blank" rel="nofollow noopener noreferrer">LinkedIn</a></nav></nav></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/setup-gitlab-runners-in-kubernetes-k3s-part-1/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<p>Now that the cluster is set up, follow part 2 <a href="/blog/setup-gitlab-runners-in-kubernetes-k3s-part-2">here</a> to complete the runner setup.</p></div></section><section class="comment-form-section flex-1 pt-8"><h1 class="text-2xl font-bold pb-4">Leave a comment</h1><div class="comment-form-container bg-gray-800 p-6"><form class="rounded mb-4"><input id="fields[slug]" type="hidden" value="setup-gitlab-runners-in-kubernetes-k3s-part-1"/><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[name]">Name *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[name]" type="text" placeholder="Name" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[email]">Email *</label><input class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" id="fields[email]" type="text" placeholder="Email" value=""/></div><div class="mb-4"><label class="block text-sm font-bold mb-2" for="fields[message]">Message *</label><div data-replicated-value="" class="grid after:whitespace-pre-wrap after:invisible after:content-[attr(data-replicated-value)] after:[grid-area:1/1/2/2]"><textarea class="shadow appearance-none border rounded w-full text-black py-2 px-3 leading-tight resize-none overflow-hidden [grid-area:1/1/2/2] focus:outline-none focus:shadow-outline" id="fields[message]" placeholder="Message" rows="6"></textarea></div></div><div class="flex items-center justify-between"><button class="flex-1 text-white font-bold rainbow-button p-1" type="button"><div class="bg-gray-800 p-2">Post Comment</div></button></div></form><h3></h3></div></section></main><footer class="bg-gray-800"><nav class="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8"><p class="text-white"><a class="font-bold no-underline" href="/">© zanechua.com <!-- -->2025</a></p><nav><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://gitlab.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitLab</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://github.com/zanechua" target="_blank" rel="nofollow noopener noreferrer">GitHub</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://twitter.com/zanejchua" target="_blank" rel="nofollow noopener noreferrer">Twitter</a><a class="block mt-4 font-bold text-white no-underline md:inline-block md:mt-0 md:ml-6" href="https://www.linkedin.com/in/zanejchua/" target="_blank" rel="nofollow noopener noreferrer">LinkedIn</a></nav></nav></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/setup-gitlab-runners-in-kubernetes-k3s-part-1/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
