@@ -1,4 +1,5 @@
 /* Markdown Styles */
+@reference './style.css';
 
 /* Global */
 .markdown {
@@ -11,7 +12,7 @@
 }
 
 .markdown h2 {
-  @apply text-sxl my-3 font-semibold;
+  @apply text-xl my-3 font-semibold;
 }
 
 .markdown h3 {

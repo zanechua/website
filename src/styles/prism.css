@@ -1,3 +1,5 @@
+@reference './style.css';
+
 pre[class*='language-'].line-numbers {
   white-space: pre-wrap !important;
 }

@@ -33,7 +33,7 @@ const ServiceWorkerUpdate = () => {
       leaveTo="opacity-0">
       <div className="bg-blue-500 px-4 pt-5 pb-4 sm:(p-6 pb-4)">
         <div className="sm:(flex items-start)">
-          <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full sm:(mx-0 h-10 w-10)">
+          <div className="mx-auto shrink-0 flex items-center justify-center h-12 w-12 rounded-full sm:(mx-0 h-10 w-10)">
             <ExclamationIcon />
           </div>
           <div className="mt-3 text-center sm:(mt-0 ml-4 text-left)">

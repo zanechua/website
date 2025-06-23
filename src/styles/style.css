@@ -1,80 +1,20 @@
 /* purgecss start ignore */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* purgecss end ignore */
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
 
-html,
-body,
-div,
-span,
-object,
-iframe,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-del,
-dfn,
-em,
-font,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-article,
-main,
-nav,
-ins {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  outline: 0;
-  line-height: inherit;
-  vertical-align: baseline;
-  font-family: inherit;
-  font-size: 100%;
-  min-width: 0;
+@theme {
+  --font-firacode: Fira Code, monospace;
 }
+
+@layer base {
+  :root {
+    font-size: 16px;
+  }
+  input {
+    background-color: #ffffff;
+  }
+}
+/* purgecss end ignore */
 
 html {
   scroll-behavior: smooth;
