@@ -76,6 +76,10 @@ ins {
   min-width: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #ffffff;
   color: #000000;

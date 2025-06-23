@@ -54,7 +54,7 @@
   @apply mb-0;
 }
 .markdown ol {
-  @apply ml-2;
+  @apply ml-10;
   @apply list-decimal;
 }
 .markdown ul {
@@ -84,6 +84,8 @@
 
 .markdown table {
   @apply mb-6;
+  @apply block;
+  @apply overflow-auto;
 }
 
 .markdown a.remark-header-anchor {
@@ -93,6 +95,10 @@
 .markdown a #header-anchor-icon {
   @apply fill-current;
   @apply text-blue-500;
+}
+
+.markdown .accented-text {
+  color: #ff5074;
 }
 
 /* Images */

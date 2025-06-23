@@ -17,7 +17,7 @@ import TagLink from 'components/TagLink';
 const BlogPostTemplate = ({ data }) => {
   const [width, height] = useWindowSize();
   const { posts, comments } = data; // data.posts holds your post data
-  const { timeToRead, frontmatter, html } = posts;
+  const { timeToRead, frontmatter, html, headings } = posts;
   const { tags } = frontmatter;
   const updatedAtArray = frontmatter?.updatedAt;
   const lastUpdatedAt = Array.isArray(updatedAtArray)
@@ -44,6 +44,13 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <Layout className="blog-post-container">
+      <nav className="blog-post-fast-nav fixed transform right-0 mr-4 space-y-2 hidden border-solid border-l-2 pl-2 border-white xl:flex xl:flex-col">
+        {headings.map(heading => (
+          <a href={`#${heading.id}`} key={heading.id} className="hover:underline">
+            {heading.value}
+          </a>
+        ))}
+      </nav>
       <section className="blog-post flex-1">
         <div className="blog-post-meta mb-4">
           <h1 className="text-2xl font-bold">{frontmatter.title}</h1>
@@ -101,6 +108,11 @@ export const pageQuery = graphql`
     }
     posts: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
+      headings(depth: h1) {
+        id
+        value
+        depth
+      }
       excerpt(pruneLength: 250)
       timeToRead
       frontmatter {
@@ -116,7 +128,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    comments: allCommentsYaml(filter: { slug: { eq: $slug } }, sort: { date: ASC }) {
+    comments: allCommentsYaml(
+      filter: { slug: { eq: $slug }, name: { ne: "root" } }
+      sort: { date: ASC }
+    ) {
       edges {
         node {
           id
