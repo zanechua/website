@@ -1,6 +1,6 @@
 ---
 slug: 'accidental-guide-project-managing-house-rebuild-in-singapore'
-date: '2025-06-22'
+date: '2025-06-23'
 featuredImage: '../assets/featured/accidental-guide-project-managing-house-rebuild-in-singapore.png'
 title: 'Accidental Guide to Project Managing a House Rebuild in Singapore'
 tags:
