@@ -44,7 +44,7 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <Layout className="blog-post-container">
-      <nav className="blog-post-fast-nav fixed transform right-0 mr-4 space-y-2 hidden border-solid border-l-2 pl-2 border-white xl:flex xl:flex-col">
+      <nav className="blog-post-fast-nav fixed transform right-0 mr-4 space-y-2 hidden border-solid border-l-2 pl-2 border-white 2xl:flex 2xl:flex-col">
         {headings.map(heading => (
           <a href={`#${heading.id}`} key={heading.id} className="hover:underline">
             {heading.value}
