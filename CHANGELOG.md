@@ -1,5 +1,53 @@
 # Changelog
 
+## [5.0.0](https://github.com/zanechua/website/compare/v4.0.0...v5.0.0) (2025-06-23)
+
+### ⚠ BREAKING CHANGES
+
+- update to tailwind v4
+- update dev packages
+
+### Features
+
+- add accidental guide project managing house rebuild in singapore post ([eb94ecd](https://github.com/zanechua/website/commit/eb94ecd64a66b24f85fe3b48c5a292a355db69f4))
+- add automated versioning and releases with node js in gitlab pipelines post ([c00a711](https://github.com/zanechua/website/commit/c00a71106d4d60b060a220bcf6b76190bceabcd9))
+- add forced updates with react native app post ([e68f70e](https://github.com/zanechua/website/commit/e68f70eaae6f5cf197ce8086058816480799c08e))
+- add generating ec private public key pair in node post ([c5d7cd1](https://github.com/zanechua/website/commit/c5d7cd171283ca15cd15e53fadc01d244e001dbd))
+- add post headers navigation ([162fa93](https://github.com/zanechua/website/commit/162fa93cf868174938ff22dd09151688a703bc1e))
+- add potential fix for helm install failures on k3s part 2 post ([e411a37](https://github.com/zanechua/website/commit/e411a37595207cd494e13edcd7e59dc5ef725c8f))
+- add speed up kaniko builds post ([9eb2cd9](https://github.com/zanechua/website/commit/9eb2cd9e8214a30562f9b0c69f6842eca90ef0ce))
+- use comment-worker instead of staticman ([8f67de0](https://github.com/zanechua/website/commit/8f67de07d86399c20356ebe62945fe17d9d791a7))
+
+### Bug Fixes
+
+- broken comment submission by switching to fetch instead of axios ([344ffb9](https://github.com/zanechua/website/commit/344ffb91712f6af63790ba29b76bb56f48d07c8b))
+- incorrect updatedAt date for improve-git-pipelines-node post ([31b159e](https://github.com/zanechua/website/commit/31b159e7acb77c7164607806102243af5f3226ad))
+- overflow of span of code ([8ff5e4b](https://github.com/zanechua/website/commit/8ff5e4b2a9eb54fd21f25219fa826948f2a12363))
+- post navigation on smaller screens ([e5d20e7](https://github.com/zanechua/website/commit/e5d20e758c288966932474d11e648bc7e089fc74))
+- sitemap not being generated properly ([52e8493](https://github.com/zanechua/website/commit/52e8493a159be26e339a452cb78e43830885995f))
+- wrong typing for timeToRead ([26770c8](https://github.com/zanechua/website/commit/26770c87cc7adc6317a36355f6972ab7ca858341))
+
+### Maintenance
+
+- add multiple dates to updated at ([087c1c3](https://github.com/zanechua/website/commit/087c1c3577dadd8a5970a8f1af177c259cffd2d9))
+- New comment on dependency-between-services-gitlab-pipelines ([9557d98](https://github.com/zanechua/website/commit/9557d98a63ee4ad106efd1707a5bbc8190bba5c6))
+- New comment on diy-tpm-module ([a2bc435](https://github.com/zanechua/website/commit/a2bc435785fa1a5d0186933744b390dcb73f6d0e))
+- New comment on diy-tpm-module ([7fc5c2e](https://github.com/zanechua/website/commit/7fc5c2e71ed676a8050ae57cb439e9dccd671508))
+- New comment on diy-tpm-module ([45ea035](https://github.com/zanechua/website/commit/45ea035bc39374d4b61941cbc11a212fba858545))
+- New comment on forced-updates-react-native ([fdd196e](https://github.com/zanechua/website/commit/fdd196e1690940e3557d29937d51b1b6292a149a))
+- New comment on setup-gitlab-runners-in-kubernetes-k3s-part-2 ([51dcb04](https://github.com/zanechua/website/commit/51dcb042498cceff395002d5c3fbe3b16c6aca70))
+- New comment on setup-gitlab-runners-in-kubernetes-k3s-part-2 ([e9418c3](https://github.com/zanechua/website/commit/e9418c328d896c469744d6241415b0e422edee54))
+- New comment on setup-gitlab-runners-in-kubernetes-k3s-part-2 ([57c46fb](https://github.com/zanechua/website/commit/57c46fbde1db1aeebab4fd57ce5218e0e66d13e2))
+- New comment on speed-up-kaniko-builds ([b907752](https://github.com/zanechua/website/commit/b907752ae226e56636b76f508b1fd22af8a4c885))
+- New comment on speed-up-kaniko-builds ([1306c20](https://github.com/zanechua/website/commit/1306c20dcc2666bdbb5e13536f102a4d847c234a))
+- update dev packages ([cb42ad4](https://github.com/zanechua/website/commit/cb42ad4ee09a108633d1ed47aedbc6d70d6a0aef))
+- update dev packages ([117bb83](https://github.com/zanechua/website/commit/117bb832652b3960ec41dbb792ba1abb1eee2688))
+- update formatting ([371fccf](https://github.com/zanechua/website/commit/371fccfce70e24a1da5c4e882947236bb44f82ae))
+- update packages ([ed3e054](https://github.com/zanechua/website/commit/ed3e0545152403a5d606141da50ba2e765c2348a))
+- update packages ([a855cbc](https://github.com/zanechua/website/commit/a855cbc72d4e03c0fc6a69d58cc4b8f44b6acdf6))
+- update to tailwind v4 ([8e039fd](https://github.com/zanechua/website/commit/8e039fd2ae1a5f7c8e75d279c6c676571503a1fc))
+- use new variable name for comment-worker ([df775f8](https://github.com/zanechua/website/commit/df775f86f99f0ea963fb68ad41fdd9d7e8d232f4))
+
 ## [4.0.0](https://github.com/zanechua/website/compare/v3.5.0...v4.0.0) (2023-03-30)
 
 ### ⚠ BREAKING CHANGES
