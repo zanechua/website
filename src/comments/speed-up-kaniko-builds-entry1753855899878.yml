@@ -1,0 +1,17 @@
+id: na1u1fkyhvac0l89l64memv5
+name: "Martin Zihlmann "
+email: 1dc0cd1137aa496f5194f25029b283a4cb888155dfc61ce456a46299f8db070fac99997f387ed4687bdd939a721d0adcb7340999307fbcffc5f2a5a0f5d4a058
+message: >-
+  It's not a bug. Kaniko doesn't do a cleanup of the container prior to starting
+  the build, but doesn't snapshot those pre-existing files either. Usually this
+  causes issues with customiyed imsges, but leveraging this, you can implement
+  secrets- and cache-"mounts" as you did here, but it's pretty unintuitive. They
+  also only exist in the first stage, as they will get wiped when we switch
+  stages. I added a --preserve-context cli arg to prevent this. I'm also
+  planning to add proper cli args for cache- and secret-"mounts" too.
+
+  On a sidenote, I see some other issues you run into around caching with this Dockerfile and google's kaniko version. You could give my fork a try, it should fix all of them and give you way faster build times: https://github.com/mzihlmann/kaniko
+
+  Thank you
+slug: speed-up-kaniko-builds
+date: 2025-07-30T06:11:39.878Z
